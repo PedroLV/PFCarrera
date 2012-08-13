@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/answer/complexanswer'
+   xmlns:ca='http://ltcs.uned.es/lo/evaluation/answer/complexanswer'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='complexAnswer'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='test'
+           type='ca:TTest'/>
+        <xs:element
+           name='answers'
+           type='ca:TAnswers'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TTest'>
+    <xs:attribute
+       name='ref'
+       type='lo:TExternalReference'/>
+    <xs:attribute
+       name='class'
+       type='lo:TExternalReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAnswers'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='answer'
+         type='ca:TAnser'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAnser'>
+    <xs:attribute
+       name='ref'
+       type='lo:TExternalReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

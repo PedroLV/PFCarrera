@@ -1,0 +1,58 @@
+<ls:likertSheet
+    xmlns:ls='http://ltcs.uned.es/lo/evaluation/question/likertsheet'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/likertsheet ./../../../../../../../LClasses/LO/Evaluation/Question/LikertSheet/.lClass/schema/LikertSheet.xsd'>
+    
+    <ls:title/>
+    <ls:description/>
+    <ls:sheet>
+  	    <ls:header>
+    		<ls:question/>
+    		<ls:options/>
+    	</ls:header>
+    	<ls:questions>
+    		<ls:question>
+		   		<ls:label/>
+		   		<ls:description/>
+		   		<ls:reference ls:ref='LO'/>
+		   	</ls:question>
+		   	<ls:question>
+		   		<ls:label/>
+		   		<ls:description/>
+		   		<ls:reference ls:ref='LO'/>
+		   	</ls:question>
+			<ls:question>
+		   		<ls:label/>
+		   		<ls:description/>
+		   		<ls:reference ls:ref='LO'/>
+		   	</ls:question>
+    	</ls:questions>
+    	<ls:options>
+	    	<ls:option ls:id='a' ls:weight='25'>
+	    		<ls:label> Malo </ls:label>
+	    		<ls:description/>
+	    		<ls:reference ls:ref='LO'/>
+	    		<ls:comment/>
+	    	</ls:option>
+	    	<ls:option ls:id='b' ls:weight='25'>
+	    		<ls:label> Regular </ls:label>
+	    		<ls:description/>
+	    		<ls:reference ls:ref='LO'/>
+	    		<ls:comment/>
+	    	</ls:option>
+	    	<ls:option ls:id='c' ls:weight='25'>
+	    		<ls:label> Bueno </ls:label>
+	    		<ls:description/>
+	    		<ls:reference ls:ref='LO'/>
+	    		<ls:comment/>
+	    	</ls:option>
+	    	<ls:option ls:id='d' ls:weight='25'>
+	    		<ls:label> Muy bueno </ls:label>
+	    		<ls:description/>
+	    		<ls:reference ls:ref='LO'/>
+	    		<ls:comment/>
+	    	</ls:option>
+    	</ls:options>
+    </ls:sheet>
+    <ls:comment/>
+</ls:likertSheet>

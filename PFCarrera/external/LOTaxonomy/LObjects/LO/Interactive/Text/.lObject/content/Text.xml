@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<tx:text
+    xmlns:tx='http://ltcs.uned.es/lo/interactive/text'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/text ./../../../../../../LClasses/LO/Interactive/Text/.lClass/schema/Text.xsd'>
+
+	<tx:title/>
+	<tx:description/>
+	<tx:text tx:name='answer'>None</tx:text>
+	
+</tx:text>

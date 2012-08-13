@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<res:resource 
+	xmlns:res='http://ltcs.uned.es/lo/content/exposition/reference/resource'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/resource ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Resource/.lClass/schema/Resource.xsd'>
+
+	<res:title> Ejercicios de mecánica clásica </res:title>
+	<res:description>
+	  En este documento se encuentra una colección de ejercdicios de 
+	  mecanica clásica detalladamente resueltos y comentados que servirán
+	  de modelo de estudio al estudiante
+	</res:description>
+	
+	<res:file res:type='/app/ms-word/doc'
+			  res:name='Ejercicios.doc'
+	          res:size='32480'
+	          res:date='2002-05-30T09:00:00'
+	          res:path='./../../references/ej001.doc'>
+		<res:properties>
+			<res:property res:name='pages' res:value='15'/> 
+			<res:property res:name='style' res:value='book'/>
+			<res:property res:name='paper' res:value='a3'/>
+		</res:properties>
+	</res:file>
+</res:resource>

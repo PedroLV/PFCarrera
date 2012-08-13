@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+
+<al:algorithm
+    xmlns:al='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/computer/algorithm'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/computer/algorithm ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Computer/Algorithm/.lClass/schema/Algorithm.xsd'>
+
+	<al:title/>
+	<al:caption/>
+	<al:description/>
+	<al:code/>
+	
+	<al:format>
+		<al:reservedWords>
+			<al:reservedWord>if</al:reservedWord>
+			<al:reservedWord>for</al:reservedWord>
+			<al:reservedWord>while</al:reservedWord>
+			<al:reservedWord>switch</al:reservedWord>
+		</al:reservedWords>
+		<al:comments>
+			<al:comment>...</al:comment>
+			<al:comment>...</al:comment>
+		</al:comments>
+		<al:strings>
+			<al:string>...</al:string>
+			<al:string>...</al:string>
+		</al:strings>
+		<al:literals>
+			<al:literal>...</al:literal>
+			<al:literal>...</al:literal>
+		</al:literals>
+	</al:format>
+</al:algorithm>

@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<dc:document
+    xmlns:dc='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/document'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/document ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Resource/Document/.lClass/schema/Document.xsd'>
+
+	<dc:title/>
+	<dc:caption/>
+	<dc:description/>
+	<dc:resource dc:uri=''>
+		<dc:property dc:name='propA' dc:value='a'/>
+		<dc:property dc:name='propB' dc:value='b'/>
+		<dc:property dc:name='propC' dc:value='c'/>
+	</dc:resource>
+	
+</dc:document>

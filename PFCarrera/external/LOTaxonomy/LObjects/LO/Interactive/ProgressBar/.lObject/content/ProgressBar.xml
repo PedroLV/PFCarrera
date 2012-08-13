@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<pb:progressBar
+    xmlns:pb='http://ltcs.uned.es/lo/interactive/progressbar'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/progressbar ./../../../../../../LClasses/LO/Interactive/ProgressBar/.lClass/schema/ProgressBar.xsd'>
+
+	<pb:title/>
+	<pb:description/>
+	<pb:bar pb:name='myBar' pb:url='http://foo.com/bar'>25</pb:bar>
+	
+</pb:progressBar>

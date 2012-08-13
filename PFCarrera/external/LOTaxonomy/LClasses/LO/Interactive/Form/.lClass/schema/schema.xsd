@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/interactive/form'
+   xmlns:fr='http://ltcs.uned.es/lo/interactive/form'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='form'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='form'
+           type='fr:TForm'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:group
+     name='GForm'>
+    <xs:choice>
+      <xs:element
+         name='box'
+         type='fr:TBox'/>
+      <xs:element
+         name='section'
+         type='fr:TSection'/>
+      <xs:element
+         name='field'
+         type='fr:TField'/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:complexType
+     name='TForm'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:group
+         ref='fr:GForm'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TBox'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:group
+         ref='fr:GForm'/>
+    </xs:sequence>
+    <xs:attribute
+       name='label'
+       type='lo:TTitle'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSection'>
+    <xs:attribute
+       name='label'
+       type='lo:TTitle'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TField'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='0'
+         name='term'
+         type='fr:TTerm'/>
+    </xs:sequence>
+    <xs:attribute
+       name='name'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       name='label'
+       type='lo:TTitle'
+       use='required'/>
+    <xs:attribute
+       name='type'
+       type='fr:TType'
+       use='required'/>
+    <xs:attribute
+       name='value'
+       type='xs:string'/>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TType'>
+    <xs:restriction
+       base='xs:token'>
+      <xs:enumeration
+         value='text'/>
+      <xs:enumeration
+         value='area'/>
+      <xs:enumeration
+         value='number'/>
+      <xs:enumeration
+         value='date'/>
+      <xs:enumeration
+         value='vocabulary'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType
+     name='TTerm'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:string'>
+        <xs:attribute
+           name='id'
+           type='xs:ID'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/definition'
+   xmlns:def='http://ltcs.uned.es/lo/content/exposition/illustration/commons/definition'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='definition'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='term'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='reference'
+           type='def:TReference'/>
+        <xs:element
+           minOccurs='0'
+           name='seeAlso'
+           type='def:TSeeAlso'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+        <xs:attribute
+           name='uri'
+           type='lo:TExternalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSeeAlso'>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'
+       use='required'/>
+  </xs:complexType>
+
+</xs:schema>

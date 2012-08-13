@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+
+<sa:simpleAnswer
+    xmlns:sa='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer ./../../../../../../../LClasses/LO/Evaluation/Answer/SimpleAnswer/.lClass/schema/SimpleAnswer.xsd'>
+
+	<sa:question sa:ref='LO.12345'
+				 sa:class='LO.Evaluation.Question.Order'/>
+	
+	<sa:list>
+		<sa:id sa:value='a'/>
+		<sa:id sa:value='e'/>
+		<sa:id sa:value='b'/>
+		<sa:id sa:value='d'/>
+		<sa:id sa:value='c'/>
+	</sa:list>			 
+	
+</sa:simpleAnswer>

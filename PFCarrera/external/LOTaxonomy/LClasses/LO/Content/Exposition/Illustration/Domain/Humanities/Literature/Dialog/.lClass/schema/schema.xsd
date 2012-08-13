@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/dialog'
+   xmlns:dg='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/dialog'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='dialog'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='characters'
+           type='dg:TCharacters'/>
+        <xs:element
+           maxOccurs='unbounded'
+           name='act'
+           type='dg:TAct'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TCharacters'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='character'
+         type='dg:TCharacter'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TCharacter'>
+    <xs:sequence>
+      <xs:element
+         name='name'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAct'>
+    <xs:sequence>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         maxOccurs='unbounded'
+         name='scene'
+         type='dg:TScene'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TScene'>
+    <xs:sequence>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         name='dialog'
+         type='dg:TDialog'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TDialog'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='line'
+         type='dg:TLine'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLine'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:token'>
+        <xs:attribute
+           name='character'
+           type='xs:IDREF'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

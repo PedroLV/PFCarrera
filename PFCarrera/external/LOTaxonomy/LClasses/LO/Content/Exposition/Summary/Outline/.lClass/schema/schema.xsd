@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/summary/outline'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:ol='http://ltcs.uned.es/lo/content/exposition/summary/outline'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='outline'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='contents'
+           type='ol:TContents'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TContents'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='topic'
+         type='ol:TTopic'/>
+    </xs:sequence>
+    <xs:attribute
+       name='style'
+       type='ol:TStyle'/>
+  </xs:complexType>
+
+  <xs:complexType
+     mixed='true'
+     name='TTopic'>
+    <xs:sequence
+       minOccurs='0'>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='contents'
+         type='ol:TContents'/>
+    </xs:sequence>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TStyle'>
+    <xs:restriction
+       base='xs:NMTOKEN'>
+      <xs:enumeration
+         value='alpha'/>
+      <xs:enumeration
+         value='Alpha'/>
+      <xs:enumeration
+         value='roman'/>
+      <xs:enumeration
+         value='Roman'/>
+      <xs:enumeration
+         value='arabic'/>
+      <xs:enumeration
+         value='symbol'/>
+      <xs:enumeration
+         value='none'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

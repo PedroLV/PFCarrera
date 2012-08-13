@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/orientation/didyouknow'
+   xmlns:dyk='http://ltcs.uned.es/lo/content/exposition/orientation/didyouknow'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='didYouKnow'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           minOccurs='0'
+           name='seeAlso'
+           type='dyk:TSeeAlso'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TSeeAlso'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='reference'
+         type='dyk:TReference'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:string'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+        <xs:attribute
+           name='uri'
+           type='lo:TExternalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

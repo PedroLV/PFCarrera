@@ -1,0 +1,53 @@
+<co:course
+    xmlns:co='http://ltcs.uned.es/lo/content/structure/course'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/structure/course ./../../../../../../../LClasses/LO/Content/Structure/Course/.lClass/schema/Course.xsd'>
+    
+	<co:requisites co:evaluation='and'>
+		<co:requisite> 
+			<co:title> Ser mayor de edad </co:title>
+			<co:description> El usuario debe ser mayor de edad </co:description>
+			<co:expression> $currentUser.age &lt; 18 </co:expression>
+		</co:requisite>
+		<co:requisite> 
+			<co:title> Haber cursado el curso 'Prevención laboral I' </co:title>
+			<co:description> El usuario debe cursar el curso 'Prevención laboral I' </co:description>
+			<co:expression> 'Prevención laboral I' in $currentUser.courses </co:expression>
+		</co:requisite>
+		<co:requisite> 
+			<co:title> Ser estudiante </co:title>
+			<co:description> El usuario debe ser estudiante </co:description>
+			<co:expression> $currentUser.actor == 'student' </co:expression>
+		</co:requisite>
+	</co:requisites>
+	
+	<co:objectives>
+		<co:objective>
+			<co:title> Prevención laboral </co:title>
+			<co:description> El alumno obtiene conocimiento de prevencion laboral </co:description>
+			<co:expression> $currentUser.skills += 'prevención laboral' </co:expression>
+		</co:objective>
+		<co:objective>
+			<co:title> Promoción generencial </co:title>
+			<co:description> El alumno adquiere rol de gestor </co:description>
+			<co:expression> $currentUser.role = 'manager' </co:expression>
+		</co:objective>
+	</co:objectives>
+	
+	<co:title/>
+	<co:description/>
+	<co:image co:path='./../image.gif'> </co:image>
+	<co:quote co:ref='LO.Content.Reference.Quote'/>
+	
+	<co:contents>
+		<co:abstract co:ref='LO.Content.Summary.Abstract'/>
+		<co:outline co:ref='LO.Content.Summary.Outline'/>
+		<co:unit co:ref='LO.Content.Structure.Unit'/>
+		<co:unit co:ref='LO.Content.Structure.Unit'/>
+		<co:unit co:ref='LO.Content.Structure.Unit'/>
+		<co:index co:ref='LO.Content.Summary.Index'/>
+		<co:glossary co:ref='LO.Content.Summary.Glossary'/>
+		<co:synopsis co:ref='LO.Content.Summary.Synopsis'/>		
+	</co:contents>
+	
+</co:course>

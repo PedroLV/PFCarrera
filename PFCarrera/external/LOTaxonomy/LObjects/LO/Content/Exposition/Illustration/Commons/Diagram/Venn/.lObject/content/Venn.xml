@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+
+<vn:venn
+    xmlns:vn='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/venn'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/venn ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/Venn/.lClass/schema/Venn.xsd'>
+
+	<vn:set>
+		<vn:element>
+			<vn:label/>
+			<vn:caption/>
+		</vn:element>
+		<vn:element>
+			<vn:label/>
+			<vn:caption/>
+		</vn:element>
+		<vn:element>
+			<vn:label/>
+			<vn:caption/>
+		</vn:element>
+	</vn:set>
+	
+	<vn:set>
+		<vn:element>
+			<vn:label/>
+			<vn:caption/>
+		</vn:element>
+		<vn:element>
+			<vn:label/>
+			<vn:caption/>
+		</vn:element>
+		<vn:element>
+			<vn:label/>
+			<vn:caption/>
+		</vn:element>
+	</vn:set>
+</vn:venn>

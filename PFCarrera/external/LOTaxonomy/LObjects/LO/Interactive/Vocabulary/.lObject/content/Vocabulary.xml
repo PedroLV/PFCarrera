@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+
+<vc:vocabulary
+    xmlns:vc='http://ltcs.uned.es/lo/interactive/vocabulary'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/vocabulary ./../../../../../../LClasses/LO/Interactive/Vocabulary/.lClass/schema/Vocabulary.xsd'>
+
+	<vc:title/>
+	<vc:description/>
+	<vc:vocabulary vc:name='choice' vc:value='red'>
+		<vc:term vc:id='red'>RED</vc:term>
+		<vc:term vc:id='green'>GREEN</vc:term>
+		<vc:term vc:id='blue'>BLUE</vc:term>
+	</vc:vocabulary>
+	
+</vc:vocabulary>

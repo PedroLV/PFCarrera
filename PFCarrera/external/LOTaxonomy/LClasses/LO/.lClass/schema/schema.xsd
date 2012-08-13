@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:simpleType
+     name='TTitle'>
+    <xs:restriction
+       base='xs:normalizedString'/>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TText'>
+    <xs:restriction
+       base='xs:normalizedString'/>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TPath'>
+    <xs:restriction
+       base='xs:normalizedString'>
+      <xs:pattern
+         value='(\c)*(\/(\c)*)*'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TLocalReference'>
+    <xs:restriction
+       base='xs:normalizedString'>
+      <xs:pattern
+         value='(\c)*(\.(\c)*)*'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TExternalReference'>
+    <xs:restriction
+       base='xs:anyURI'/>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TReference'>
+    <xs:union
+       memberTypes='lo:TLocalReference lo:TExternalReference'/>
+  </xs:simpleType>
+
+</xs:schema>
+

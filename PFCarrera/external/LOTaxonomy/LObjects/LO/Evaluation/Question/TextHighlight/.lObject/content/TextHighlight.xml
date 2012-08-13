@@ -1,0 +1,33 @@
+<th:textHighlight
+    xmlns:th='http://ltcs.uned.es/lo/evaluation/question/textHighlight'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/textHighlight ./../../../../../../../LClasses/LO/Evaluation/Question/TextHighlight/.lClass/schema/TextHighlight.xsd'>
+    
+    <th:title/>
+    <th:question/>
+    <th:text>
+	    Lorem ipsum dolor sit amet, nec nisl pulvinar pulvinar. Arcu vestibulum nec fusce, tempor blandit,
+	    turpis sed enim arcu convallis, proin pellentesque donec, nibh quam velit morbi in vestibulum. 
+	    Morbi phasellus sapien ornare dapibus. Gravida dolor erat, cursus a, nibh imperdiet sociis sit interdum
+	    cursus, dolor magna  tincidunt auctor. Ut facilisis et, nibh 
+	    
+	    <th:highlight th:id='hl1' 
+	    		      th:weight='50'
+	    		      th:type='red'>dignissim, tincidunt</th:highlight>
+	    
+	                          at viverra, arcu bibendum. Pulvinar ultricies. Quam wisi rutrum mauris sed donec in, 
+	    turpis nunc pharetra, metus in sociosqu sodales dolor hendrerit, aptent leo ac id vel quis nullam. Justo
+	    vitae non praesent nibh, lacus varius ultricies condimentum, cras sodales dictum ad, pede facilisis ac turpis. 
+
+	    Conubia convallis molestie vestibulum, enim 
+	    
+	    <th:highlight th:id='hl2' 
+	    		      th:weight='50'>ligula, ut lacus pellentesque in</th:highlight>
+	    
+	                               , nullam sit elit tellus aliquam tristique at. Sed mauris et aliquet vestibulum
+	    praesent nibh, ultricies ante at in ullamcorper quisque placerat. Dapibus orci porta ac enim, curabitur quis
+	    eget urna. Et ultricies proin duis, quam lacinia mi proin erat sagittis, volutpat sit in commodo, sociosqu et.
+    </th:text>
+    
+
+</th:textHighlight>

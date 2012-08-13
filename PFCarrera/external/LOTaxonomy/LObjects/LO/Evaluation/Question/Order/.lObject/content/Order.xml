@@ -1,0 +1,41 @@
+<or:order
+    xmlns:or='http://ltcs.uned.es/lo/evaluation/question/order'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/order ./../../../../../../../LClasses/LO/Evaluation/Question/Order/.lClass/schema/Order.xsd'>
+    
+    <or:title/>
+    <or:question/>
+  	<or:set>
+  		<or:element or:id='a' or:index='1' or:weight='20'>
+  			<or:name/>
+  			<or:description/>
+  			<or:reference or:ref='LO'/>
+  			<or:comment/>
+  		</or:element>
+  		<or:element or:id='b' or:index='2' or:weight='20'>
+  			<or:name/>
+  			<or:description/>
+  			<or:reference or:ref='LO'/>
+  			<or:comment/>
+  		</or:element>
+  		<or:element or:id='c' or:index='3' or:weight='20'>
+  			<or:name/>
+  			<or:description/>
+  			<or:reference or:ref='LO'/>
+  			<or:comment/>
+  		</or:element>
+  		<or:element or:id='d' or:index='4' or:weight='20'>
+  			<or:name/>
+  			<or:description/>
+  			<or:reference or:ref='LO'/>
+  			<or:comment/>
+  		</or:element>
+  		<or:element or:id='e' or:index='5' or:weight='20'>
+  			<or:name/>
+  			<or:description/>
+  			<or:reference or:ref='LO'/>
+  			<or:comment/>
+  		</or:element>
+  	</or:set>
+	
+</or:order>

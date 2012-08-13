@@ -1,0 +1,113 @@
+<?xml version='1.0'?>
+
+<cv:canvas
+    xmlns:cv='http://ltcs.uned.es/lo/evaluation/question/canvas'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/canvas ./../../../../../../../LClasses/LO/Evaluation/Question/Canvas/.lClass/schema/Canvas.xsd'>
+
+	<cv:title/>
+	<cv:question/>
+	<cv:canvas>
+		<cv:componentBars>
+			<cv:componentBar>
+				<cv:component cv:id='A' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:component>
+				<cv:component cv:id='B' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:component>
+			</cv:componentBar>
+			<cv:componentBar>
+				<cv:component cv:id='C' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:component>
+				<cv:component cv:id='D' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:component>
+			</cv:componentBar>
+		</cv:componentBars>
+		
+		<cv:linkBars>
+			<cv:linkBar>
+				<cv:link cv:id='M' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:link>
+				<cv:link cv:id='N' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:link>
+			</cv:linkBar>
+			<cv:linkBar>
+				<cv:link cv:id='O' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:link>
+				<cv:link cv:id='P' cv:class='LO'>
+					<cv:label/>
+					<cv:description/>
+					<cv:icon cv:ref='LO'/>
+					<cv:properties>
+						<cv:property cv:name='' cv:value=''/>
+						<cv:property cv:name='' cv:value=''/>
+					</cv:properties>
+				</cv:link>
+			</cv:linkBar>
+		</cv:linkBars>
+		<cv:grid cv:width='100'
+				 cv:height='100'
+				 cv:background='LO'>
+			<cv:default>
+				<cv:compoment cv:x='2' cv:y='3' cv:ref='A'/>
+				<cv:link cv:fromX='3' cv:fromY='2' cv:toX='2' cv:toY='2' cv:ref='M'/>
+				<cv:link cv:fromX='3' cv:fromY='2' cv:toX='2' cv:toY='2' cv:ref='N'/>
+				<cv:compoment cv:x='2' cv:y='3' cv:ref='B'/>
+			</cv:default>
+			<cv:solution>
+				<cv:compoment cv:x='2' cv:y='2' cv:ref='C'/>
+				<cv:link cv:fromX='3' cv:fromY='2' cv:toX='2' cv:toY='2' cv:ref='O'/>
+				<cv:link cv:fromX='3' cv:fromY='2' cv:toX='2' cv:toY='2' cv:ref='P'/>
+				<cv:compoment cv:x='2' cv:y='3' cv:ref='D'/>
+			</cv:solution>
+		</cv:grid>
+	</cv:canvas>
+</cv:canvas>

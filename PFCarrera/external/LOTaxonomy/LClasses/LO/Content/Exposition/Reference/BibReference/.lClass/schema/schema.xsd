@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/reference/bibReference'
+   xmlns:bib='http://ltcs.uned.es/lo/content/exposition/reference/bibReference'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='bibReference'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='1'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           minOccurs='0'
+           name='subtitle'
+           type='lo:TTitle'/>
+        <xs:element
+           minOccurs='1'
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           minOccurs='1'
+           name='authors'
+           type='bib:TAuthors'/>
+        <xs:element
+           minOccurs='1'
+           name='publisher'
+           type='bib:TPublisher'/>
+        <xs:element
+           minOccurs='0'
+           name='editors'
+           type='bib:TEditors'/>
+        <xs:element
+           minOccurs='1'
+           name='volume'
+           type='xs:integer'/>
+        <xs:element
+           minOccurs='1'
+           name='number'
+           type='xs:integer'/>
+        <xs:element
+           minOccurs='0'
+           name='month'
+           type='xs:gMonth'/>
+        <xs:element
+           minOccurs='1'
+           name='year'
+           type='xs:gYear'/>
+        <xs:element
+           minOccurs='0'
+           name='pages'
+           type='bib:TPages'/>
+        <xs:element
+           minOccurs='0'
+           name='isbn'
+           type='bib:TISN'/>
+        <xs:element
+           minOccurs='0'
+           name='issn'
+           type='bib:TISN'/>
+        <xs:element
+           minOccurs='0'
+           name='uri'
+           type='xs:anyURI'/>
+      </xs:sequence>
+      <xs:attribute
+         name='type'
+         type='bib:TType'
+         use='required'/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TAuthors'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='author'
+         type='bib:AuthorType'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='AuthorType'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TPublisher'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TEditors'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='editor'
+         type='bib:TEditor'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TEditor'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TPages'>
+    <xs:restriction
+       base='xs:string'>
+      <xs:pattern
+         value='(\d)+-(\d)+'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TISN'>
+    <xs:restriction
+       base='xs:normalizedString'/>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TType'>
+    <xs:restriction
+       base='xs:normalizedString'>
+      <xs:enumeration
+         value='book'/>
+      <xs:enumeration
+         value='paper'/>
+      <xs:enumeration
+         value='poster'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

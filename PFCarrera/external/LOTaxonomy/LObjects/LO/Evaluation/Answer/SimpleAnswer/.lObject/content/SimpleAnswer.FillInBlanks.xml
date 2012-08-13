@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+
+<sa:simpleAnswer
+    xmlns:sa='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer ./../../../../../../../LClasses/LO/Evaluation/Answer/SimpleAnswer/.lClass/schema/SimpleAnswer.xsd'>
+
+	<sa:question sa:ref='LO.12345'
+				 sa:class='LO.Evaluation.Question.FillInBlanks'/>
+	<sa:list>
+		<sa:pair>
+			<sa:id sa:value='b1'/>
+			<sa:text/>
+		</sa:pair>
+		<sa:pair>
+			<sa:id sa:value='b2'/>
+			<sa:text/>
+		</sa:pair>
+		<sa:pair>
+			<sa:id sa:value='b3'/>
+			<sa:empty/>
+		</sa:pair>
+	</sa:list>	
+	
+</sa:simpleAnswer>

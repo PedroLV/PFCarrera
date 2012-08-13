@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<nb:number
+    xmlns:nb='http://ltcs.uned.es/lo/interactive/number'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/number ./../../../../../../LClasses/LO/Interactive/Number/.lClass/schema/Number.xsd'>
+
+	<nb:title/>
+	<nb:description/>
+	<nb:number nb:name='times'>10</nb:number>
+	  
+</nb:number>

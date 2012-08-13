@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+
+<ch:choice
+    xmlns:ch='http://ltcs.uned.es/lo/interactive/choice'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/choice ./../../../../../../LClasses/LO/Interactive/Choice/.lClass/schema/Choice.xsd'>
+
+	<ch:title/>
+	<ch:description/>
+	<ch:options>
+		<ch:option ch:name='a'>A</ch:option>
+		<ch:option ch:name='b'>B</ch:option>
+		<ch:option ch:name='c'>C</ch:option>
+	</ch:options>
+	
+</ch:choice>

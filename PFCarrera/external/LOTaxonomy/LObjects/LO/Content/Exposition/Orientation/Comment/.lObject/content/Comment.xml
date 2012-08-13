@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cm:comment
+	xmlns:cm='http://ltcs.uned.es/lo/content/exposition/orientation/comment'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/comment ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/Comment/.lClass/schema/Comment.xsd'>
+
+	<cm:title/>
+	<cm:description/>
+	<cm:seeAlso>
+		<cm:reference cm:ref='LO'/>
+		<cm:reference cm:ref='LO'/>
+	</cm:seeAlso>
+</cm:comment>

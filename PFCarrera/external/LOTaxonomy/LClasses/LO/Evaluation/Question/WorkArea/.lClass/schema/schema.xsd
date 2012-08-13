@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/workarea'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:wa='http://ltcs.uned.es/lo/evaluation/question/workarea'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='workArea'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='question'
+           type='lo:TText'/>
+        <xs:element
+           name='elementBar'
+           type='wa:TElementBar'/>
+        <xs:element
+           name='area'
+           type='wa:TArea'/>
+        <xs:element
+           name='comment'
+           type='lo:TText'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TElementBar'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='element'
+         type='wa:TElement'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElement'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         name='icon'
+         type='wa:TReference'/>
+      <xs:element
+         name='reference'
+         type='wa:TReference'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TArea'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='region'
+         type='wa:TRegion'/>
+    </xs:sequence>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TRegion'>
+    <xs:sequence>
+      <xs:element
+         name='elements'
+         type='wa:TElements'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       name='x'
+       type='xs:int'
+       use='required'/>
+    <xs:attribute
+       name='y'
+       type='xs:int'
+       use='required'/>
+    <xs:attribute
+       name='width'
+       type='xs:int'
+       use='required'/>
+    <xs:attribute
+       name='height'
+       type='xs:int'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElements'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='element'
+         type='wa:TElementRef'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElementRef'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='xs:IDREF'
+           use='required'/>
+        <xs:attribute
+           name='weight'
+           type='wa:TWeight'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:attribute
+       name='ref'
+       type='lo:TExternalReference'/>
+    <xs:attribute
+       name='uri'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

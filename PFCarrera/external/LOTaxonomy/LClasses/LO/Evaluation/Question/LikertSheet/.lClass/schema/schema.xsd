@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/likertsheet'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:ls='http://ltcs.uned.es/lo/evaluation/question/likertsheet'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='likertSheet'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='sheet'
+           type='ls:TSheet'/>
+        <xs:element
+           minOccurs='0'
+           name='comment'
+           type='lo:TText'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TSheet'>
+    <xs:sequence>
+      <xs:element
+         name='header'
+         type='ls:THeader'/>
+      <xs:element
+         name='questions'
+         type='ls:TQuestions'/>
+      <xs:element
+         name='options'
+         type='ls:TOptions'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='THeader'>
+    <xs:sequence>
+      <xs:element
+         name='question'
+         type='lo:TTitle'/>
+      <xs:element
+         name='options'
+         type='lo:TTitle'>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TQuestions'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='question'
+         type='ls:TQuestion'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TQuestion'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='reference'
+         type='ls:TReference'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TOptions'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='option'
+         type='ls:TOption'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TOption'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='reference'
+         type='ls:TReference'/>
+      <xs:element
+         minOccurs='0'
+         name='comment'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       default='0'
+       name='weight'
+       type='ls:TWeight'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

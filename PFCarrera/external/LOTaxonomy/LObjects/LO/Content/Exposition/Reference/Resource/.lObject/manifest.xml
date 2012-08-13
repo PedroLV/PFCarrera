@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Content.Exposition.Reference.Resource.manifest.xml'
+          version='1.0'>
+    <lObject id='LO.Content.Exposition.Reference.Resource'
+            version='1.0'>
+           <label>LO.Content.Exposition.Reference.Resource</label>
+           <description/>
+    </lObject>
+    <lClass id='LO.Content.Exposition.Reference.Resource'
+            version='1.0'/>
+    <views>
+        <view name='default'>
+            <scripts>
+                <script id=''/>
+                <script id=''/>
+            </scripts>
+            <resources>
+                <resource key='' id=''/>
+                <resource key='' id=''/>
+            </resources>
+        </view>
+    </views>
+</manifest>

@@ -1,0 +1,40 @@
+<dd:dragDrop
+    xmlns:dd='http://ltcs.uned.es/lo/evaluation/question/dragDrop'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/dragDrop ./../../../../../../../LClasses/LO/Evaluation/Question/DragDrop/.lClass/schema/DragDrop.xsd'>
+    
+    <dd:title/>
+    <dd:question/>
+    <dd:sourceSet>
+    	<dd:title/>
+    	<dd:description/>
+    	<dd:element dd:id='a' dd:ref='A' dd:weight='33'>
+    		<dd:name/>
+    		<dd:description/>
+    		<dd:reference dd:uri='LO'/>
+    		<dd:comment/>
+    	</dd:element>
+    	<dd:element dd:id='b' dd:ref='B' dd:weight='33'>
+    		<dd:name/>
+    		<dd:description/>
+    		<dd:reference dd:uri='LO'/>
+    		<dd:comment/>
+    	</dd:element>
+    	<dd:element dd:id='c' dd:ref='A' dd:weight='33'>
+    		<dd:name/>
+    		<dd:description/>
+    		<dd:reference dd:uri='LO'/>
+    		<dd:comment/>
+    	</dd:element>
+    </dd:sourceSet>
+    <dd:targetSets>
+	    <dd:targetSet dd:id='A'>
+	    	<dd:title/>
+	    	<dd:description/>
+	    </dd:targetSet>
+	    <dd:targetSet dd:id='B'>
+	    	<dd:title/>
+	    	<dd:description/>
+	    </dd:targetSet>
+    </dd:targetSets>
+</dd:dragDrop>

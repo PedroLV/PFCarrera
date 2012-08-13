@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Evaluation.Question.Choice.manifest.xml'
+          version='1.0'>
+    <lClass id='LO.Evaluation.Question.Choice'
+            version='1.0'>
+           <label>LO.Evaluation.Question.Choice</label>
+           <description/>
+    </lClass>
+    <views>
+		<view name='teacher'>	
+			<filter>
+				<property name='user-role' value='teacher'/>
+			</filter>
+            <settings>
+                <layout id='LO.Evaluation.Question.Choice.layout.teacher.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Question.Choice.style.teacher.css'/>
+                </styles>
+				<scripts>
+					<script id='LO.Evaluation.Question.Choice.script.js.jquery.js'/>
+				</scripts>
+				<resources>
+					<resource key='icon' id='LO.Evaluation.Question.Choice.resource.images.icon.png'/>
+					<resource key='correct' id='LO.Evaluation.Question.Choice.resource.images.check.png'/>
+					<resource key='incorrect' id='LO.Evaluation.Question.Choice.resource.images.uncheck.png'/>
+					<resource key='expand' id='LO.Evaluation.Question.Choice.resource.images.expand.gif'/>
+					<resource key='collapse' id='LO.Evaluation.Question.Choice.resource.images.collapse.gif'/>
+				</resources>
+            </settings>
+         </view>
+		<view name='auto-test'>	
+			<filter>
+				<property name='user-role' value='student'/>
+				<property name='user-mode' value='auto-test'/>
+			</filter>
+            <settings>
+                <layout id='LO.Evaluation.Question.Choice.layout.autotest.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Question.Choice.style.autotest.css'/>
+					<style id='LO.Evaluation.Question.Choice.style.jqtransform.css'/>
+                </styles>
+				<scripts>
+					<script id='LO.Evaluation.Question.Choice.script.js.jquery.js'/>
+					<script id='LO.Evaluation.Question.Choice.script.js.jqtransform.js'/>
+				</scripts>
+				<resources>
+					<resource key='icon' id='LO.Evaluation.Question.Choice.resource.images.icon.png'/>
+					<resource key='correct' id='LO.Evaluation.Question.Choice.resource.images.correct.png'/>
+					<resource key='incorrect' id='LO.Evaluation.Question.Choice.resource.images.incorrect.png'/>
+				</resources>
+            </settings>
+        </view>
+		<view name='test'>
+            <settings>
+                <layout id='LO.Evaluation.Question.Choice.layout.test.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Question.Choice.style.test.css'/>
+					<style id='LO.Evaluation.Question.Choice.style.jqtransform.css'/>
+                </styles>
+				<scripts>
+					<script id='LO.Evaluation.Question.Choice.script.js.jquery.js'/>
+					<script id='LO.Evaluation.Question.Choice.script.js.jqtransform.js'/>
+				</scripts>
+				<resources>
+					<resource key='icon' id='LO.Evaluation.Question.Choice.resource.images.icon.png'/>
+				</resources>
+            </settings>
+        </view>
+    </views>
+</manifest>

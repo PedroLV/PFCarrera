@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+
+<tb:table
+    xmlns:tb='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/table'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/table ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Data/Table/.lClass/schema/Table.xsd'>
+
+	<tb:title/>
+	<tb:caption/>
+	<tb:description/>
+	<tb:header>
+		<tb:columns>
+			<tb:column tb:name='Units'/> 
+			<tb:column tb:name='Prices'/> 
+			<tb:column tb:name='Total'/> 
+		</tb:columns>
+		<tb:rows>
+			<tb:row tb:name='Intel'/>
+			<tb:row tb:name='Motorola'/>
+		</tb:rows>
+	</tb:header>
+	<tb:data>
+		<tb:row>
+			<tb:column>250</tb:column>
+			<tb:column>$1500</tb:column>
+			<tb:column tb:hexpand='2'>$375000</tb:column>
+		</tb:row>
+		<tb:row>
+			<tb:column>125</tb:column>
+			<tb:column>$3000</tb:column>
+			<tb:column>$375000</tb:column>
+		</tb:row>
+	</tb:data>	
+
+</tb:table>

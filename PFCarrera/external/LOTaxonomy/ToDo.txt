@@ -1,0 +1,17 @@
+      
+Corregir todos los atributos obligatorios a use="required"
+  - Course
+Revisar definición de LClass: 
+  - Instruction
+  - Outline 
+TODO:
+  - Recents
+  - Illustration.*
+  - Evaluation.*
+      - checksheet
+      - choicesheet
+      - likertsheet
+      - textsheet
+  - LearningPath
+  - Objeto Recomendación
+  

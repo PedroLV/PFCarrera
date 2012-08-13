@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/bars'
+   xmlns:br='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/bars'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='bars'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='axes'
+           type='br:TAxes'/>
+        <xs:element
+           name='series'
+           type='br:TSeries'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TAxes'>
+    <xs:sequence>
+      <xs:element
+         name='horizontal'
+         type='br:TAxis'/>
+      <xs:element
+         name='vertical'
+         type='br:TAxis'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAxis'>
+    <xs:sequence>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSeries'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='serie'
+         type='br:TSerie'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSerie'>
+    <xs:sequence>
+      <xs:element
+         name='legend'
+         type='br:TLegend'/>
+      <xs:element
+         name='data'
+         type='br:TData'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLegend'>
+    <xs:sequence>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TData'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='element'
+         type='br:TElement'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElement'>
+    <xs:attribute
+       name='label'
+       type='xs:NMTOKEN'
+       use='required'/>
+    <xs:attribute
+       name='value'
+       type='xs:decimal'
+       use='required'/>
+  </xs:complexType>
+
+</xs:schema>
+

@@ -1,0 +1,38 @@
+<gl:glossary
+    xmlns:gl='http://ltcs.uned.es/lo/content/exposition/summary/glossary'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/summary/glossary ./../../../../../../../../LClasses/LO/Content/Exposition/Summary/Glossary/.lClass/schema/Glossary.xsd'>
+    
+	<gl:title/>
+	<gl:description/>
+	<gl:entries>
+		<gl:entry>
+			<gl:term/>
+			<gl:description/>
+			<gl:seeAlso>
+				<gl:reference gl:ref='LO'/>
+				<gl:reference gl:ref='LO'/>
+				<gl:reference gl:ref='LO'/>
+			</gl:seeAlso>
+		</gl:entry>
+		<gl:entry>
+			<gl:term/>
+			<gl:description/>
+			<gl:seeAlso>
+				<gl:reference gl:ref='LO'/>
+				<gl:reference gl:ref='LO'/>
+				<gl:reference gl:ref='LO'/>
+			</gl:seeAlso>
+		</gl:entry>
+		<gl:entry>
+			<gl:term/>
+			<gl:description/>
+			<gl:seeAlso>
+				<gl:reference gl:ref='LO'/>
+				<gl:reference gl:ref='LO'/>
+				<gl:reference gl:ref='LO'/>
+			</gl:seeAlso>
+		</gl:entry>
+	</gl:entries>
+	
+</gl:glossary>

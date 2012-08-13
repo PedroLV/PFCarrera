@@ -1,0 +1,90 @@
+<ch:choice
+    xmlns:ch='http://ltcs.uned.es/lo/evaluation/question/choice'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/choice ./../../../../../../../LClasses/LO/Evaluation/Question/Choice/.lClass/schema/Choice.xsd'>
+    
+    <ch:title>Lorem Ipsum</ch:title>
+    <ch:question>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque nunc sollicitudin urna lobortis pellentesque.
+	Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sed tellus risus, vitae 
+	posuere arcu. Donec non purus neque, at pellentesque enim. Mauris pulvinar fermentum ornare. Fusce et tellus vitae leo 
+	consequat ornare. In hac habitasse platea dictumst. Integer volutpat ultrices elit auctor auctor. Etiam porttitor congue 
+	vulputate. Donec eleifend tincidunt hendrerit. Integer sit amet commodo justo. Etiam id eros ac lorem gravida dictum id sed 
+	mauris. </p>
+
+	<p>Integer vitae mi sem, in hendrerit ligula. Vivamus quis erat lorem. Sed in faucibus tellus. Curabitur vel gravida nulla.
+	Donec eu odio sed mi consequat viverra. Duis in posuere tortor. Suspendisse eros dolor, fringilla et consequat sit amet,
+	varius sit amet lorem. Nullam ornare venenatis tellus, vitae dapibus nunc convallis ac. Fusce at nunc sapien. Suspendisse
+	egestas, tortor nec viverra auctor, mi augue viverra nibh, et tempor nibh velit ac augue. In non arcu ut odio lacinia 
+	tristique at non neque. Donec vel lacus sapien, a molestie nunc. Sed iaculis enim at metus vestibulum molestie. Nulla quam 
+	ligula, scelerisque lacinia interdum et, interdum ac elit. Quisque eu ipsum nunc. Sed viverra, nunc ut vehicula molestie,
+	urna magna sagittis leo, sed dignissim est tellus in tortor. Nulla semper libero at quam ornare sollicitudin. Sed congue 
+	nulla augue.</p>
+	</ch:question>
+  	<ch:options>
+  		<ch:option ch:id='a'>
+  			<ch:label>Maecenas non odio in sapien fringilla laoreet vel eget nunc.</ch:label>
+  			<ch:description>
+			Maecenas non odio in sapien fringilla laoreet vel eget nunc. Cras euismod, nunc ac viverra ultrices,
+			arcu nibh sagittis leo, ac pellentesque nulla ipsum at nulla. In id porttitor tellus. Nullam ultricies
+			ante a quam molestie aliquet. Cum sociis natoque penatibus et magnis dis parturient montes.
+			</ch:description>
+  			<ch:comment>
+			Duis ultricies nisl tortor, vitae malesuada leo. Nulla facilisi. Aliquam id magna mauris, sit amet aliquet
+			sapien. Crasegestas interdum neque, nec dignissim est tincidunt eget.
+			</ch:comment>
+  		</ch:option>
+  		<ch:option ch:id='b'>
+  			<ch:label>Fusce ut nunc rutrum lacus suscipit viverra quis sed nulla.</ch:label>
+  			<ch:description>
+			Maecenas non odio in sapien fringilla laoreet vel eget nunc. Cras euismod, nunc ac viverra ultrices,
+			arcu nibh sagittis leo, ac pellentesque nulla ipsum at nulla. In id porttitor tellus. Nullam ultricies
+			ante a quam molestie aliquet. Cum sociis natoque penatibus et magnis dis parturient montes.
+			</ch:description>
+			<ch:reference ch:ref='LO'/>
+  			<ch:comment>
+			Duis ultricies nisl tortor, vitae malesuada leo. Nulla facilisi. Aliquam id magna mauris, sit amet aliquet
+			sapien. Crasegestas interdum neque, nec dignissim est tincidunt eget.
+			</ch:comment>
+  		</ch:option>
+  		<ch:option ch:id='c'>
+  			<ch:label>Cras ac lectus euismod velit auctor feugiat.</ch:label>
+  			<ch:description>
+			Maecenas non odio in sapien fringilla laoreet vel eget nunc. Cras euismod, nunc ac viverra ultrices,
+			arcu nibh sagittis leo, ac pellentesque nulla ipsum at nulla. In id porttitor tellus. Nullam ultricies
+			ante a quam molestie aliquet. Cum sociis natoque penatibus et magnis dis parturient montes.
+			</ch:description>
+			<ch:reference ch:ref='LO'/>
+  			<ch:comment>
+			Duis ultricies nisl tortor, vitae malesuada leo. Nulla facilisi. Aliquam id magna mauris, sit amet aliquet
+			sapien. Crasegestas interdum neque, nec dignissim est tincidunt eget.
+			</ch:comment>
+  		</ch:option>
+  		<ch:option ch:id='d' ch:correct='true'>
+  			<ch:label>Pellentesque nisi mauris semper et gravida vel facilisis ut elit.</ch:label>
+  			<ch:description>
+			Maecenas non odio in sapien fringilla laoreet vel eget nunc. Cras euismod, nunc ac viverra ultrices,
+			arcu nibh sagittis leo, ac pellentesque nulla ipsum at nulla. In id porttitor tellus. Nullam ultricies
+			ante a quam molestie aliquet. Cum sociis natoque penatibus et magnis dis parturient montes.
+			</ch:description>
+			<ch:reference ch:ref='LO'/>
+  			<ch:comment>
+			Duis ultricies nisl tortor, vitae malesuada leo. Nulla facilisi. Aliquam id magna mauris, sit amet aliquet
+			sapien. Crasegestas interdum neque, nec dignissim est tincidunt eget.
+			</ch:comment>
+  		</ch:option>
+		<ch:option ch:id='e'>
+  			<ch:label>Maecenas non odio in sapien fringilla laoreet vel eget nunc.</ch:label>
+  			<ch:description>
+			Maecenas non odio in sapien fringilla laoreet vel eget nunc. Cras euismod, nunc ac viverra ultrices,
+			arcu nibh sagittis leo, ac pellentesque nulla ipsum at nulla. In id porttitor tellus. Nullam ultricies
+			ante a quam molestie aliquet. Cum sociis natoque penatibus et magnis dis parturient montes.
+			</ch:description>
+  			<ch:comment>
+			Duis ultricies nisl tortor, vitae malesuada leo. Nulla facilisi. Aliquam id magna mauris, sit amet aliquet
+			sapien. Crasegestas interdum neque, nec dignissim est tincidunt eget.
+			</ch:comment>
+  		</ch:option>
+  	</ch:options>
+	
+</ch:choice>

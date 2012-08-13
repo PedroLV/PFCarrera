@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<ot:openText
+    xmlns:ot='http://ltcs.uned.es/lo/interactive/opentext'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/opentext ./../../../../../../LClasses/LO/Interactive/OpenText/.lClass/schema/OpenText.xsd'>
+
+	<ot:title/>
+	<ot:description/>
+	<ot:text ot:name='answer'>None</ot:text>
+	
+</ot:openText>

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:metadata
+    xmlns:ns='http://ltcs.uned.es/lo/evaluation/question/dragdrop'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/dragdrop ./../../../../../../../temp/LObjects/LO/Evaluation/Question/DragDrop/.lClass/schema/specific.mdata.xsd'>
+
+</ns:metadata>

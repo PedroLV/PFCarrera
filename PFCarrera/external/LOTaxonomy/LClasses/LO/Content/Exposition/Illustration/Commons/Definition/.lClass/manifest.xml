@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Content.Exposition.Illustration.Commons.Definition.manifest.xml'
+          version='1.0'>
+    <lClass id='LO.Content.Exposition.Illustration.Commons.Definition'
+            version='1.0'>
+           <label>LO.Content.Exposition.Illustration.Commons.Definition</label>
+           <description/>
+    </lClass>
+    <views>
+        <view name='default'>
+            <settings>
+                <layout id='LO.Content.Exposition.Illustration.Commons.Definition.layout.default.vm'/>
+                <styles>
+                    <style id='LO.Content.Exposition.Illustration.Commons.Definition.style.default.css'/>
+                </styles>
+                <resources>
+                    <resource key='defIcon' id='LO.Content.Exposition.Illustration.Commons.Definition.resource.images.book.png'/>
+                </resources>
+            </settings>
+          </view>
+    </views>
+</manifest>

@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<tx:text
+    xmlns:tx='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/text'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/text ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Humanities/Literature/Text/.lClass/schema/Text.xsd'>
+
+	<tx:title/>
+	<tx:summary/>
+	<tx:text/>
+	
+</tx:text>

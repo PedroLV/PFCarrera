@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:portal
+    xmlns:ns='http://ltcs.uned.es/lo/arrangement/layout/portal'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/arrangement/layout/portal ./../../../../../../../temp/LObjects/LO/Arrangement/Layout/Portal/.lClass/schema/Portal.xsd'>
+
+</ns:portal>

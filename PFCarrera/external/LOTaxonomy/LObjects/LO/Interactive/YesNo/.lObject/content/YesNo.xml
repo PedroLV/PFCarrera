@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<yn:yesNo
+    xmlns:yn='http://ltcs.uned.es/lo/interactive/yesno'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/yesno ./../../../../../../LClasses/LO/Interactive/YesNo/.lClass/schema/YesNo.xsd'>
+
+	<yn:title/>
+	<yn:description/>
+	<yn:yes yn:name='answer' yn:label='Si'>1</yn:yes>
+	<yn:no  yn:name='answer' yn:label='No'>0</yn:no>
+	
+</yn:yesNo>

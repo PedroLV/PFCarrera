@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<wt:wait
+    xmlns:wt='http://ltcs.uned.es/lo/interactive/wait'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/wait ./../../../../../../LClasses/LO/Interactive/Wait/.lClass/schema/Wait.xsd'>
+
+	<wt:title/>
+	<wt:description/>
+	<wt:wait wt:name='clock'>50</wt:wait>
+	
+</wt:wait>

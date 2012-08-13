@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/conceptmap'
+   xmlns:cm='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/conceptmap'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='conceptMap'>
+    <xs:complexType>
+      <xs:sequence
+         maxOccurs='unbounded'>
+        <xs:element
+           name='concept'
+           type='cm:TConcept'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TConcept'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         name='caption'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='links'
+         type='cm:TLinks'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       name='icon'
+       type='lo:TLocalReference'/>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLinks'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='link'
+         type='cm:TLink'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLink'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         name='caption'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='icon'
+       type='lo:TLocalReference'/>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+    <xs:attribute
+       name='concept'
+       type='xs:IDREF'
+       use='required'/>
+  </xs:complexType>
+
+</xs:schema>
+

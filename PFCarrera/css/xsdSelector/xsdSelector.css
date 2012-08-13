@@ -1,0 +1,157 @@
+﻿._element 
+{
+	/*width:100%;
+	float:left;*/
+}
+.element_node 
+{
+	/*width:100%;
+	float:left;*/
+}
+.element_conector 
+{
+	width:15px;
+	min-height:25px;
+	background-image:url(images/horizontal.png);
+	background-position:center center;
+	background-repeat:repeat-x;
+	float:left;
+}
+.element_conector img
+{
+    float:right;margin-right:3px;vertical-align:middle;
+    
+    cursor:pointer;
+}
+.element_name_ct 
+{
+	float:left;
+}
+.element_attr_ct
+{
+	float:left;
+	margin-left:5px;
+}
+.element_item 
+{
+	vertical-align:middle;
+	text-align:center;
+	float:left;
+	min-width:34px;
+	padding-left:3px;
+	padding-right:3px;
+	
+	margin-top:5px;
+	margin-right:5px;
+     
+    BORDER: #a5acb5 1px solid; 
+	-moz-border-radius: 4px; 
+	border-radius: 4px; 
+	-khtml-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	font-size: 100%;
+	
+	/*background-color:#dfeff9;*/
+	
+	cursor:pointer;
+	
+}
+.Tcomplex
+{
+    padding-top:3px;
+	padding-bottom:3px;
+    background: #dfeff9 url(images/ui-bg_highlight-hard_75_dfeff9_1x100.png) 50% 50% repeat-x;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1), 0 -2px rgba(99, 149, 185, 0.1) inset, 0 -5px 15px rgba(223, 239, 249, 0.8) inset; 
+}
+.Tcomplex:hover
+{
+    background-color:#c4e3f6;
+    background: none; 
+}
+.Tsimple
+{
+    padding-top:3px;
+	padding-bottom:3px;
+    background: #9ef4b2 url(images/ui-bg_highlight-hard_75_9ef4b2_1x100.png) 50% 50% repeat-x;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1), 0 -2px rgba(207, 242, 215, 0.1) inset, 0 -5px 15px rgba(158, 244, 178, 0.8) inset; 
+}
+.Tsimple:hover
+{
+    background-color:#cff2d7;
+    background: none; 
+}
+
+.Tcollection
+{
+    padding-top:3px;
+	padding-bottom:3px;
+    background: #ef9ef4 url(images/ui-bg_highlight-hard_75_ef9ef4_1x100.png) 50% 50% repeat-x;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1), 0 -2px rgba(242, 210, 244, 0.1) inset, 0 -5px 15px rgba(239, 158, 244, 0.8) inset; 
+}
+.Tcollection:hover
+{
+    background-color:#f2d2f4;
+    background: none; 
+}
+
+.element_attr 
+{
+	vertical-align:middle;
+	text-align:center;
+	float:left;
+	min-width:25px;
+	padding:2px;
+	margin-top:5px;
+	margin-right:3px;
+    BORDER: #a5acb5 1px solid; 
+	-moz-border-radius: 4px; 
+	border-radius: 4px; 
+	-khtml-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	font-size: 100%;
+	background: #e9f49e url(images/ui-bg_inset-soft_75_e9f49e_1x100.png) 50% 50% repeat-x; 
+	box-shadow: 0 2px rgba(0, 0, 0, 0.1), 0 -2px rgba(219, 240, 81, 0.1) inset, 0 -5px 15px rgba(233, 244, 158, 0.8) inset;
+	cursor:pointer;
+}
+.element_attr:hover
+{
+    background-color:#dbf051;
+    background: none; 
+}
+.element_body
+{
+	/*width:100%;
+	float:left;	*/
+}
+.element_line
+{
+	/*background-image: url(images/treeview-black-line.gif);
+	background-repeat:repeat-y;*/
+	
+}
+.element_childs
+{
+	border-left: 1px solid #000000;
+	float:left;
+}
+
+._connExpanded
+{
+    background-image:url(images/minus.gif) !important;
+}
+
+._connImg
+{
+    background-image:url(images/plus.gif);
+    background-repeat:no-repeat;
+    margin-top:10px;
+}
+
+._collapseBox
+{
+    width:100%;
+	float:left;	
+}
+
+
+

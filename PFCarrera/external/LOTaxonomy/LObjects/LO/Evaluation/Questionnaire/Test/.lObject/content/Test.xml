@@ -1,0 +1,16 @@
+<ts:test
+    xmlns:ts='http://ltcs.uned.es/lo/evaluation/questionnaire/test'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/questionnaire/test ./../../../../../../../LClasses/LO/Evaluation/Questionnaire/Test/.lClass/schema/Test.xsd'>
+    
+    <ts:title>Lorem Ipsum</ts:title>
+    <ts:description/>
+    <ts:instructions ts:ref='LO'/>
+    <ts:questions ts:time='PT15M'>
+    	<ts:question ts:weight='25' ts:ref='LO.Evaluation.Question.Check' ts:time='PT15M'/>
+    	<ts:question ts:weight='25' ts:ref='LO.Evaluation.Question.CheckSheet' ts:time='PT15M'/>
+    	<ts:question ts:weight='25' ts:ref='LO.Evaluation.Question.Choice' ts:time='PT15M'/>
+    	<ts:question ts:weight='25' ts:ref='LO.Evaluation.Question.ChoiceSheet' ts:time='PT15M'/>
+    </ts:questions>	    
+
+</ts:test>

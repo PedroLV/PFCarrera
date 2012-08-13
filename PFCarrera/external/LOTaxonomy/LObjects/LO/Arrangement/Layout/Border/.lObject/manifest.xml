@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Arrangement.Layout.Border.manifest.xml'
+          version='1.0'>
+    <lObject id='LO.Arrangement.Layout.Border'
+            version='1.0'>
+           <label>LO.Arrangement.Layout.Border</label>
+           <description/>
+    </lObject>
+    <lClass id='LO.Arrangement.Layout.Border'
+            version='1.0'/>
+    <views>
+        <view name='default'>
+            <scripts>
+                <script id=''/>
+                <script id=''/>
+            </scripts>
+            <resources>
+                <resource key='' id=''/>
+                <resource key='' id=''/>
+            </resources>
+        </view>
+    </views>
+</manifest>

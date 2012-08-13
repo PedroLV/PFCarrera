@@ -1,0 +1,82 @@
+
+<script language='javascript'>
+	$(document).ready(function() {
+		$('#${rrId} .cho-comment').hide();
+	});
+</script>
+
+<div id='${rrId}' class='cho-choice'>
+	<div class='cho-title'> 
+		<img src='${settings.getResource('icon').location}' />
+		${content.getText('ch:choice/ch:title')} 
+	</div>
+	<div class='cho-question'> ${content.getText('ch:choice/ch:question')}  </div>
+	
+	<div class='cho-options'>
+		#set ( $imgCorrect = ${settings.getResource('correct').location} )
+		#set ( $imgIncorrect = ${settings.getResource('incorrect').location} )
+		#set ( $expand = ${settings.getResource('expand').location} )
+		#set ( $collapse = ${settings.getResource('collapse').location} )
+		
+		#set ( $ids = ${content.getAllTexts('ch:choice/ch:options//ch:option/@ch:id')} )
+		#set ( $labels = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:label')} )
+		#set ( $descriptions = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:description')} )
+		#set ( $comments = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:comment')} )
+		#set ( $correct = ${content.getText('ch:choice/ch:options//ch:option[@ch:correct="true"]/@ch:id')} )
+		#set ( $index = 0 )
+		#foreach ($id in $ids)
+			<div class='cho-option'>
+				#set ( $label = ${labels.get($index)} )
+				#set ( $description = ${descriptions.get($index)} )
+				#set ( $comment = ${comments.get($index)} )
+				<div class='cho-label'>					
+					#if ($id == $correct)
+						<img src='${imgCorrect}'/>
+					#else
+						<img src='${imgIncorrect}'/>
+					#end
+					$label
+				</div>
+				<div class='cho-description'>$description</div>
+					<span id='cho-expand-${id}' class='cho-teacher'> <img src='${expand}' /> </span> 
+				<div id='cho-comment-${id}' class='cho-comment'>
+					<span id='cho-collapse-${id}'> <img src='${collapse}' /> </span> <br />
+					$comment
+				</div>
+			</div>			
+			#set ( $index = $index + 1 )
+		#end
+		<div class='cho-buttons'>
+			<span id='ayuda' class='cho-button'> Ayuda </span>
+		</div>
+		
+		<script language='javascript'>
+			$('#${rrId} .cho-button').hover(
+				function () {
+					$(this).css('font-weight', 'bold');
+				}, 
+				function () {
+					$(this).css('font-weight', 'normal');
+				}
+			);
+			
+			#foreach ($id in $ids)
+				$('#${rrId} #cho-expand-${id}').click(function () {
+					$('#${rrId} #cho-comment-${id}').show('slow');
+					$('#${rrId} #cho-expand-${id}').hide();
+					return true;
+				});
+				
+				$('#${rrId} #cho-collapse-${id}').click(function () {
+					$('#${rrId} #cho-comment-${id}').hide('slow');
+					$('#${rrId} #cho-expand-${id}').show();
+					return true;
+				});
+			#end
+				
+			$('#${rrId} #ayuda').click(function () {
+				return true;
+			});
+		</script>
+	</div>
+</div>

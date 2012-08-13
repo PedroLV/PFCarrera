@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/interactive/okcancel'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:oc='http://ltcs.uned.es/lo/interactive/okcancel'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='okCancel'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='ok'
+           type='oc:TButton'/>
+        <xs:element
+           name='cancel'
+           type='oc:TButton'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TButton'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:string'>
+        <xs:attribute
+           name='name'
+           type='xs:token'
+           use='required'/>
+        <xs:attribute
+           name='label'
+           type='lo:TTitle'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

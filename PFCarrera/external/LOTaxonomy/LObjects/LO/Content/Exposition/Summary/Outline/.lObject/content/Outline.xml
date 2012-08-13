@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ol:outline
+    xmlns:ol='http://ltcs.uned.es/lo/content/exposition/summary/outline'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/summary/outline ./../../../../../../../../LClasses/LO/Content/Exposition/Summary/Outline/.lClass/schema/Outline.xsd'>
+    
+	<ol:title/>
+	<ol:description/>
+    <ol:contents ol:style='arabic'>
+        <ol:topic ol:ref='LO'> topic A </ol:topic>
+        <ol:topic ol:ref='LO'> topic B </ol:topic>
+        <ol:topic ol:ref='LO'> 
+            <ol:title> topic C </ol:title> 
+            <ol:contents ol:style='alpha'>
+                <ol:topic ol:ref='LO'> topic C.A </ol:topic>
+                <ol:topic ol:ref='LO'> topic C.B </ol:topic>
+                <ol:topic ol:ref='LO'> topic C.C </ol:topic>
+                <ol:topic ol:ref='LO'> topic C.D </ol:topic>
+            </ol:contents>
+        </ol:topic>
+        <ol:topic> topic A </ol:topic>
+        <ol:topic> topic B </ol:topic>
+    </ol:contents>
+    
+</ol:outline>

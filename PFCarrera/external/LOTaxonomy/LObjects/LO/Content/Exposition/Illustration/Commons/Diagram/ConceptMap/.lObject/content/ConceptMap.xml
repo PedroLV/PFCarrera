@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+
+<cm:conceptMap
+    xmlns:cm='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/conceptmap'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/conceptmap ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/ConceptMap/.lClass/schema/ConceptMap.xsd'>
+
+	<cm:concept cm:id='A'
+				cm:icon='cIconA.jpg'
+				cm:ref='LO'>
+		<cm:label/>
+		<cm:caption/>
+		<cm:links>
+			<cm:link cm:icon='lIconA.jpg'
+				     cm:ref='LO'
+				     cm:concept='A'>
+				<cm:label/>
+				<cm:caption/>
+			</cm:link>
+			<cm:link cm:icon='lIconB.jpg'
+				     cm:ref='LO'
+				     cm:concept='B'>
+				<cm:label/>
+				<cm:caption/>
+			</cm:link>
+		</cm:links>
+	</cm:concept>
+	
+	<cm:concept cm:id='B'
+				cm:icon='cIconB.jpg'
+				cm:ref='LO'>
+		<cm:label/>
+		<cm:caption/>
+	</cm:concept>
+</cm:conceptMap>

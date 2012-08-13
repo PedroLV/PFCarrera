@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+
+<dg:dialog
+    xmlns:dg='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/dialog'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/dialog ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Humanities/Literature/Dialog/.lClass/schema/Dialog.xsd'>
+
+	<dg:characters>
+		<dg:character dg:id='Hamlet'>
+			<dg:name/>
+			<dg:description/>
+		</dg:character>
+		<dg:character dg:id='Claudius'>
+			<dg:name/>
+			<dg:description/>
+		</dg:character>
+		<dg:character dg:id='Polonius'>
+			<dg:name/>
+			<dg:description/>
+		</dg:character>
+	</dg:characters>
+	<dg:act>
+		<dg:description/>
+		<dg:scene>
+			<dg:description/>
+			<dg:dialog>
+				<dg:line dg:character='Hamlet'> Hello! </dg:line>
+				<dg:line dg:character='Claudius'> Hello! </dg:line>
+				<dg:line dg:character='Claudius'> To be or not to be... </dg:line>
+			</dg:dialog>
+		</dg:scene>
+	</dg:act>
+</dg:dialog>

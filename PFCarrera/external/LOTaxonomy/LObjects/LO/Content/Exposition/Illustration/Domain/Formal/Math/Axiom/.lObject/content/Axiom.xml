@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+
+<ax:axiom
+	xmlns:ax='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/math/axiom'
+	xmlns:mt='http://www.w3.org/1998/Math/MathML'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/math/axiom ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Math/Axiom/.lClass/schema/Axiom.xsd'>
+	
+	<ax:title/>
+	<ax:caption/>
+	<ax:label/>
+	<ax:description/>
+	<ax:statement>
+	    <mt:mrow>
+	      <mt:mi>a</mt:mi>
+	      <mt:mo>&#x2062;</mt:mo>
+	      <mt:msup>
+	        <mt:mi>x</mt:mi>
+	        <mt:mn>2</mt:mn>
+	      </mt:msup>
+	      <mt:mo>+</mt:mo>
+	      <mt:mi>b</mt:mi>
+	      <mt:mo>&#x2062;</mt:mo>
+	      <mt:mi>x</mt:mi>
+	      <mt:mo>+</mt:mo>
+	      <mt:mi>c</mt:mi>
+	    </mt:mrow>
+	</ax:statement>
+	
+</ax:axiom>

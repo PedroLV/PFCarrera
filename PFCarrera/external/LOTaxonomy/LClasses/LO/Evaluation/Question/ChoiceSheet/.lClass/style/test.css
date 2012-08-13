@@ -1,0 +1,171 @@
+.cos-choicesheet {
+	margin: 12px;
+    padding: 12px;
+}
+.cos-choicesheet  input {
+	float: left;
+}
+.cos-choicesheet .cos-title {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #036;
+	color:#036;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+.cos-choicesheet .cos-description {
+	margin-left: 12px;
+	margin-top: 12px;
+	color: #555555;
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	text-align: justify;
+}
+
+.cos-choicesheet  .cos-header-options {
+	background-color: #F4F4F4;
+	margin: 12px 12px 12px 40px;
+    padding: 12px 12px 12px 12px;
+	width: 600px;
+	border: 1px; 
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	border-left-color: #036;
+	border-left-width: 6px;	
+}
+.cos-choicesheet  .cos-header-options-title {
+	color:#036;
+	margin: 20px 12px 12px 40px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+.cos-choicesheet  .cos-header-options-inner-title {
+	color:#036;
+	margin: 5px 5px 10px 5px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+.cos-choicesheet  .cos-header-option { 
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+.cos-choicesheet  .cos-header-option .cos-header-label {
+	margin-left: 20px;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cos-choicesheet  .cos-header-option .cos-header-description {
+	margin-top: 6px;
+	margin-left: 60px;
+	color:#555555;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	text-align: justify;
+}
+
+.cos-choicesheet .cos-options {
+	color: #FFFFFF;
+	background-color: #036;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+.cos-choicesheet .cos-option {
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+}
+
+.cos-choicesheet .cos-questions {
+	margin: 20px 40px 20px 40px;
+}
+.cos-choicesheet .cos-questions-title {
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-width:80%;
+}
+.cos-choicesheet .cos-question {
+	padding-top: 10px;
+	padding-right: 20px;
+	background-color:#F5F5F5;
+}
+.cos-choicesheet .cos-question .cos-label {
+	margin-left: 20px;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cos-choicesheet .cos-question .cos-description {
+	margin-top: 6px;
+	margin-bottom: 10px;
+	margin-left: 35px;
+	color:#555555;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	text-align: justify;
+}
+.cos-choicesheet .cos-check {
+	vertical-align: top;
+	text-align: center;
+	background-color:#F7F7F7;
+}
+.cos-choicesheet .cos-buttons {	
+	margin-top: 40px;
+	padding: 5px;
+	padding-right: 10px;
+	width:100%;
+	text-align: right;
+}
+.cos-choicesheet .cos-buttons .cos-button {	
+	margin: 5px;
+	padding: 10px;
+	border-style: solid;
+	border-color: #E0E0E0;
+	border-width: 1px;
+	border-bottom-color: #B0B0B0;
+	border-bottom-width: 1px;
+	border-right-color: #B0B0B0;
+	border-right-width: 1px;
+	color: #036;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+.cos-choicesheet.cos-buttons .cos-button a:link {
+	color:#036;
+	font-weight: bold;
+	text-decoration:none;
+}
+.cos-choicesheet.cos-buttons .cos-button  a:visited {
+	color:#036;
+	font-weight: bold;
+	text-decoration:none;
+}
+.cos-choicesheet.cos-buttons .cos-button  a:hover {
+	color:#03F;
+	font-weight: bold;
+	text-decoration:none;
+}
+.cos-choicesheet.cos-buttons .cos-button a:active {
+	color:#03F;
+	font-weight: bold;
+	text-decoration:none;
+}

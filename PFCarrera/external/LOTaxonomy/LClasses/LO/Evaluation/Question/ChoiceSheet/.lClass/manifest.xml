@@ -1,0 +1,83 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Evaluation.Question.ChoiceSheet.manifest.xml'
+          version='1.0'>
+    <lClass id='LO.Evaluation.Question.ChoiceSheet'
+            version='1.0'>
+           <label>LO.Evaluation.Question.ChoiceSheet</label>
+           <description/>
+    </lClass>
+    <views>
+		<view name='teacher'>	
+			<filter>
+				<property name='user-role' value='teacher'/>
+			</filter>
+            <settings>
+                <layout id='LO.Evaluation.Question.ChoiceSheet.layout.teacher.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Question.ChoiceSheet.style.teacher.css'/>
+					<style id='LO.Evaluation.Question.ChoiceSheet.style.table-pagination.css'/>
+                </styles>
+				<scripts>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.jquery.js'/>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.table-pagination.js'/>
+				</scripts>
+				<resources>
+					<resource key='icon' id='LO.Evaluation.Question.ChoiceSheet.resource.images.icon.png'/>
+					<resource key='correct' id='LO.Evaluation.Question.ChoiceSheet.resource.images.check.png'/>
+					<resource key='incorrect' id='LO.Evaluation.Question.ChoiceSheet.resource.images.uncheck.png'/>
+					<resource key='expand' id='LO.Evaluation.Question.ChoiceSheet.resource.images.expand.gif'/>
+					<resource key='collapse' id='LO.Evaluation.Question.ChoiceSheet.resource.images.collapse.gif'/>
+				</resources>
+            </settings>
+         </view>
+		 <view name='auto-test'>	
+			<filter>
+				<property name='user-role' value='student'/>
+				<property name='user-mode' value='auto-test'/>
+			</filter>
+            <settings>
+                <layout id='LO.Evaluation.Question.ChoiceSheet.layout.autotest.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Question.ChoiceSheet.style.autotest.css'/>
+					<style id='LO.Evaluation.Question.ChoiceSheet.style.jqtransform.css'/>
+					<style id='LO.Evaluation.Question.ChoiceSheet.style.table-pagination.css'/>
+                </styles>
+				<scripts>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.jquery.js'/>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.jqtransform.js'/>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.table-pagination.js'/>
+				</scripts>
+				<resources>
+					<resource key='icon' id='LO.Evaluation.Question.ChoiceSheet.resource.images.icon.png'/>
+					<resource key='correct' id='LO.Evaluation.Question.ChoiceSheet.resource.images.correct-16.png'/>
+					<resource key='incorrect' id='LO.Evaluation.Question.ChoiceSheet.resource.images.incorrect-16.png'/>
+					<resource key='commentCorrect' id='LO.Evaluation.Question.ChoiceSheet.resource.images.correct-24.png'/>
+					<resource key='commentIncorrect' id='LO.Evaluation.Question.ChoiceSheet.resource.images.incorrect-24.png'/>
+					<resource key='expand' id='LO.Evaluation.Question.ChoiceSheet.resource.images.expand.gif'/>
+					<resource key='collapse' id='LO.Evaluation.Question.ChoiceSheet.resource.images.collapse.gif'/>
+				</resources>
+            </settings>
+        </view>
+	    <view name='test'>
+            <settings>
+                <layout id='LO.Evaluation.Question.ChoiceSheet.layout.test.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Question.ChoiceSheet.style.test.css'/>
+					<style id='LO.Evaluation.Question.ChoiceSheet.style.jqtransform.css'/>
+					<style id='LO.Evaluation.Question.ChoiceSheet.style.table-pagination.css'/>
+                </styles>
+				<scripts>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.jquery.js'/>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.jqtransform.js'/>
+					<script id='LO.Evaluation.Question.ChoiceSheet.script.js.table-pagination.js'/>
+				</scripts>
+				<resources>
+					<resource key='icon' id='LO.Evaluation.Question.ChoiceSheet.resource.images.icon.png'/>
+					<resource key='expand' id='LO.Evaluation.Question.ChoiceSheet.resource.images.expand.gif'/>
+					<resource key='collapse' id='LO.Evaluation.Question.ChoiceSheet.resource.images.collapse.gif'/>
+				</resources>
+            </settings>
+         </view>
+    </views>
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+
+<yc:yesNoCancel
+    xmlns:yc='http://ltcs.uned.es/lo/interactive/yesnocancel'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/yesnocancel ./../../../../../../LClasses/LO/Interactive/YesNoCancel/.lClass/schema/YesNoCancel.xsd'>
+
+	<yc:title/>
+	<yc:description/>
+	<yc:yes    yc:name='answer' yc:label='Si'>1</yc:yes>
+	<yc:no     yc:name='answer' yc:label='No'>0</yc:no>
+	<yc:cancel yc:name='answer' yc:label='Calcelar'>-1</yc:cancel>
+	
+</yc:yesNoCancel>

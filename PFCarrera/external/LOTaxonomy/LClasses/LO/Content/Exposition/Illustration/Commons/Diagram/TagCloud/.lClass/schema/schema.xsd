@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/tagcloud'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:tc='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/tagcloud'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='tagCloud'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='cloud'
+           type='tc:TCloud'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TCloud'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='tag'
+         type='tc:TTag'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTag'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TTitle'>
+        <xs:attribute
+           name='weight'
+           type='tc:TWeight'/>
+        <xs:attribute
+           name='ref'
+           type='lo:TExternalReference'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='1'/>
+      <xs:maxInclusive
+         value='20'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

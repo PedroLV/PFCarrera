@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/orientation/remark'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:rm='http://ltcs.uned.es/lo/content/exposition/orientation/remark'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='message'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+      </xs:sequence>
+      <xs:attribute
+         name='type'
+         type='rm:TType'
+         use='required'/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType
+     name='TType'>
+    <xs:restriction
+       base='xs:NMTOKEN'>
+      <xs:enumeration
+         value='note'/>
+      <xs:enumeration
+         value='hint'/>
+      <xs:enumeration
+         value='info'/>
+      <xs:enumeration
+         value='warning'/>
+      <xs:enumeration
+         value='error'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

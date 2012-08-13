@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/radial'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:rd='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/radial'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='radial'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='axes'
+           type='rd:TAxes'/>
+        <xs:element
+           name='series'
+           type='rd:TSeries'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TAxes'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='axis'
+         type='rd:TAxis'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAxis'>
+    <xs:sequence>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSeries'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='serie'
+         type='rd:TSerie'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSerie'>
+    <xs:sequence>
+      <xs:element
+         name='legend'
+         type='rd:TLegend'/>
+      <xs:element
+         name='data'
+         type='rd:TData'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLegend'>
+    <xs:sequence>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TData'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='axis'
+         type='rd:TDataAxis'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TDataAxis'>
+    <xs:attribute
+       name='value'
+       type='xs:decimal'
+       use='required'/>
+  </xs:complexType>
+
+</xs:schema>
+

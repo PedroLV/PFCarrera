@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+
+<lt:list
+    xmlns:lt='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/list'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/list ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Data/List/.lClass/schema/List.xsd'>
+
+	<lt:title/>
+	<lt:caption/>
+	<lt:description/>	
+	<lt:header>
+		<lt:column lt:name='User'/> 
+		<lt:column lt:name='Salary'/> 
+		<lt:column lt:name='Responsiblity'/> 
+		<lt:column lt:name='Level'/> 
+	</lt:header>
+	<lt:data>
+		<lt:record>
+			<lt:item>Mary Hills</lt:item>
+			<lt:item>$35000</lt:item>
+			<lt:item>Developer</lt:item>
+			<lt:item>2</lt:item>
+		</lt:record>
+		<lt:record>
+			<lt:item>Peter Smith</lt:item>
+			<lt:item>$35000</lt:item>
+			<lt:item>Developer</lt:item>
+			<lt:item>3</lt:item>
+		</lt:record>
+		<lt:record>
+			<lt:item>Daniel Truman</lt:item>
+			<lt:item>$70000</lt:item>
+			<lt:item>Team Leader</lt:item>
+			<lt:item>7</lt:item>
+		</lt:record>
+	</lt:data>
+		
+</lt:list>

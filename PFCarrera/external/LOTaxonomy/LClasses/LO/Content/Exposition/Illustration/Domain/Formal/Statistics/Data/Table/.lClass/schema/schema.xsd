@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/table'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:tb='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/table'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='table'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='caption'
+           type='lo:TText'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='header'
+           type='tb:THeader'/>
+        <xs:element
+           name='data'
+           type='tb:TData'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='THeader'>
+    <xs:sequence>
+      <xs:element
+         name='columns'
+         type='tb:THColumns'/>
+      <xs:element
+         name='rows'
+         type='tb:THRows'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='THColumns'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='column'
+         type='tb:THColumn'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='THRows'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='row'
+         type='tb:THRow'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='THColumn'>
+    <xs:attribute
+       name='name'
+       type='lo:TTitle'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='THRow'>
+    <xs:attribute
+       name='name'
+       type='lo:TTitle'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TData'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='row'
+         type='tb:TRow'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TRow'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='column'
+         type='tb:TColumn'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TColumn'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:string'>
+        <xs:attribute
+           name='hexpand'
+           type='xs:byte'/>
+        <xs:attribute
+           name='vexpand'
+           type='xs:byte'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

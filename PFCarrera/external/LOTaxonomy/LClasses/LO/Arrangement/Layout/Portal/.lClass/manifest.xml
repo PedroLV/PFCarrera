@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Arrangement.Layout.Portal.manifest.xml'
+          version='1.0'>
+    <lClass id='LO.Arrangement.Layout.Portal'
+            version='1.0'>
+           <label>LO.Arrangement.Layout.Portal</label>
+           <description/>
+    </lClass>
+    <views>
+        <view name='default'>
+            <filter>
+                <property name='' value=''/>
+                <property name='' value=''/>
+            </filter>
+            <settings>
+                <layout id=''/>
+                <styles>
+                    <style id=''/>
+                    <style id=''/>
+                </styles>
+                <scripts>
+                    <script id=''/>
+                    <script id=''/>
+                </scripts>
+                <resources>
+                    <resource key='' id=''/>
+                    <resource key='' id=''/>
+                </resources>
+            </settings>
+          </view>
+    </views>
+</manifest>

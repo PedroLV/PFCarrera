@@ -1,0 +1,197 @@
+<script language="javascript">
+	$(document).ready(function() {
+		$('#${rrId} #cos-form').jqTransform({imgPath:'../resource/images/jqtransform/'});
+		$('#${rrId} .cos-header-description').hide ();
+		$('#${rrId} .cos-header-options').hide ();
+		$('#${rrId} .cos-checked').hide ();
+		$('#${rrId} .cos-comment').hide ();
+		$('#${rrId} .cos-questions').tablePagination({}); 
+	});
+</script>
+
+<div id='${rrId}' class='cos-choicesheet'>
+	<div class='cos-title'> 
+		<img src='${settings.getResource('icon').location}' />
+		${content.getText('cs:choiceSheet/cs:title')} 
+	</div>
+	<div class='cos-description'> ${content.getText('cs:choiceSheet/cs:description')}  </div>
+
+	#set ( $expand = ${settings.getResource('expand').location} )
+	#set ( $collapse = ${settings.getResource('collapse').location} )
+	#set ( $headerIds = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:header/cs:options//cs:option/@cs:id')} )
+	#set ( $headerLabels = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:header/cs:options//cs:option/cs:label')} )
+	#set ( $headerDescriptions = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:header/cs:options//cs:option/cs:description')} )
+	#set ( $index = 0 )
+	
+	<div id='cos-header-expand' class='cos-header-options-title'> 
+		Ver leyenda <img src='${expand}' /> 
+	</div>
+	
+	<div class='cos-header-options'>
+		<div id='cos-header-collapse' class='cos-header-options-inner-title'>
+			<img src='${collapse}' /> &emsp; Leyenda
+		</div>
+		#foreach ($id in $headerIds)
+			#set ( $headerLabel = ${headerLabels.get($index)} )
+			#set ( $headerDescription = ${headerDescriptions.get($index)} )
+			<div class='cos-header-option'>
+				<div class='cos-header-label'>
+					${id}. ${headerLabel}  
+					<span id='cos-header-description-expand-${id}'> <img src='${expand}' /> </span>
+				</div>
+				<div id='cos-header-description-${id}' class='cos-header-description'>
+					<span id='cos-header-description-collapse-${id}'> <img src='${collapse}' /> </span>
+					${headerDescription}
+				</div>
+			</div>
+		#end
+	</div>
+
+	#set ( $questionLabels = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:rows//cs:row/cs:question/cs:label')} )
+	#set ( $questionDescriptions = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:rows//cs:row/cs:question/cs:description')} )
+	<form id='cos-form'>
+		<table id='${rrId}-table' class='cos-questions'>
+			<thead>
+				<tr class='cos-options'>
+					<th class='cos-questions-title'>Pregunta</th>
+					#foreach ($id in $headerIds)
+						<th class='cos-option'>${id}</th>
+					#end
+				</tr>
+			</thead>
+			<tbody>
+				#set ( $index = 0 )
+				#foreach ($label in $questionLabels)
+					#set ( $description = ${questionDescriptions.get($index)} )
+					<tr>
+						<td class='cos-question'>
+							#set ( $nQuestion = $index + 1 )
+							<div class='cos-label'>${nQuestion}. ${label}</div class='cos-label'>
+							<div class='cos-description'>${description}</div>	
+						</td>
+						#foreach ($id in $headerIds)
+							<td class='cos-check'>
+								<input id='cos-radio-${index}-${id}' type='radio' name='response-${index}' value='${id}'/>
+								<div id='cos-checked-${index}-${id}' class='cos-checked'></div>
+							</td>
+						#end							
+					</tr>
+					#set ( $index = $index + 1 )
+				#end
+			</tbody>
+		</table>
+		
+		#set ($comment = ${content.getText('cs:choiceSheet/cs:comment')} )
+		#if ($comment.trim().length() > 0)
+			<div class='cos-comment'>${comment}</div>
+		#end
+		
+		<div class='cos-buttons'>
+			<span id='resolver' class='cos-button'> Resolver </span>
+			<span id='ayuda' class='cos-button'> Ayuda </span>				
+		</div>
+	</form>
+	
+	#set ( $imgCorrect = ${settings.getResource('correct').location} )
+	#set ( $imgIncorrect = ${settings.getResource('incorrect').location} )
+	#set ( $imgCommentCorrect = ${settings.getResource('commentCorrect').location} )
+	#set ( $imgCommentIncorrect = ${settings.getResource('commentIncorrect').location} )
+	#set ( $corrects = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:rows//cs:row/@cs:correct')} )
+	<script language='javascript'>
+	
+		var _${rrId}_makeCorrects = function () {
+			var correct = new Array ();
+			#set ( $index = 0 )
+			#foreach ($correct in $corrects)
+				correct [${index}] = '${correct}';
+				#set ( $index = $index + 1 )
+			#end
+			return correct;
+		}
+		
+		var _${rrId}_check = function (nQuestion, option) {
+			var value        = $('#${rrId} #cos-radio-' + nQuestion + '-' + option + ':checked').val();
+			var correct      = _${rrId}_makeCorrects ();
+			var correctMsg   = "<img src='$imgCorrect' />";
+			var incorrectMsg = "<img src='$imgIncorrect' />";
+			var isCorrect    = ((correct[nQuestion] == option && value != null) ||
+						        (correct[nQuestion] != option && value == null));
+			var message = '';
+			if ((value != null))
+				if (isCorrect == true) message = correctMsg;
+				else message = incorrectMsg;
+			else
+				if (correct[nQuestion] == option) message = correctMsg;
+				
+			$('#${rrId} #cos-checked-' + nQuestion + '-' + option).prepend(message);
+			return correct;
+		}
+		
+		var _${rrId}_checkAll = function () {
+			var correctMsg   = "<div> <img src='$imgCommentCorrect' /> <strong> Correcto! </strong> </div>";
+			var incorrectMsg = "<div> <img src='$imgCommentIncorrect' /> <strong> Incorrecto! </strong> </div>";
+			var  message;
+			var allCorrect = true;
+			
+			#set ( $index = 0 )
+			#foreach ($label in $questionLabels)
+				#foreach ($id in $headerIds)
+					allCorrect &= _${rrId}_check(${index}, '${id}');
+				#end
+				#set ( $index = $index + 1 )
+			#end
+			(allCorrect == true)? message = correctMsg : message = incorrectMsg;
+			$('#${rrId} .cos-comment').prepend(message); 
+		}
+						
+	</script>
+	
+	<script language='javascript'>
+		$('#${rrId} .cos-button').hover(
+			function () {
+				$(this).css('font-weight', 'bold');
+			}, 
+			function () {
+				$(this).css('font-weight', 'normal');
+			}
+		);
+		
+		$('#${rrId} #cos-header-expand').click(function () {
+			$('#${rrId} .cos-header-options').show('slow');
+			$('#${rrId} #cos-header-expand').hide();
+			return true;
+		});
+		
+		$('#${rrId} #cos-header-collapse').click(function () {
+			$('#${rrId} .cos-header-options').hide('slow');
+			$('#${rrId} #cos-header-expand').show();
+			return true;
+		});
+		
+		#foreach ($id in $headerIds)
+			$('#${rrId} #cos-header-description-expand-${id}').click(function () {
+				$('#${rrId} #cos-header-description-${id}').show('slow');
+				$('#${rrId} #cos-header-description-expand-${id}').hide();
+				return true;
+			});
+			
+			$('#${rrId} #cos-header-description-collapse-${id}').click(function () {
+				$('#${rrId} #cos-header-description-${id}').hide('slow');
+				$('#${rrId} #cos-header-description-expand-${id}').show();
+				return true;
+			});
+		#end
+		
+		$('#${rrId} #resolver').click(function () {
+				_${rrId}_checkAll();
+				$('#${rrId} .cos-checked').show ('slow');
+				$('#${rrId} .cos-comment').show ('slow');
+				$('#${rrId} #resolver').hide ();
+				return true;
+			});
+		
+		$('#${rrId} #ayuda').click(function () {
+				return true;
+			});
+	</script>
+</div>

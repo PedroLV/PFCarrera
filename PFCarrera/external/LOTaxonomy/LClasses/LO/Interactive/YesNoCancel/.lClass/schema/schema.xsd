@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/interactive/yesnocancel'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'
+   xmlns:yc='http://ltcs.uned.es/lo/interactive/yesnocancel'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='yesNoCancel'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='yes'
+           type='yc:TButton'/>
+        <xs:element
+           name='no'
+           type='yc:TButton'/>
+        <xs:element
+           name='cancel'
+           type='yc:TButton'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TButton'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:string'>
+        <xs:attribute
+           name='name'
+           type='xs:token'
+           use='required'/>
+        <xs:attribute
+           name='label'
+           type='lo:TTitle'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

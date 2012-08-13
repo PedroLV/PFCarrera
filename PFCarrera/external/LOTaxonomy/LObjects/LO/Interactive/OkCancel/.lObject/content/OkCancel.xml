@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<oc:okCancel
+    xmlns:oc='http://ltcs.uned.es/lo/interactive/okcancel'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/okcancel ./../../../../../../LClasses/LO/Interactive/OkCancel/.lClass/schema/OkCancel.xsd'>
+
+	<oc:title/>
+	<oc:description/>
+	<oc:ok     oc:name='action' oc:label='Enviar'>Enviar</oc:ok>
+	<oc:cancel oc:name='action' oc:label='Cancelar'>Cancelar</oc:cancel>
+	
+</oc:okCancel>

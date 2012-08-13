@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bn:banner 
+	xmlns:bn='http://ltcs.uned.es/lo/content/exposition/reference/banner'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/banner ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Banner/.lClass/schema/Banner.xsd'>
+
+	<bn:title/>
+	<bn:description/>
+	<bn:contents/>
+
+</bn:banner>

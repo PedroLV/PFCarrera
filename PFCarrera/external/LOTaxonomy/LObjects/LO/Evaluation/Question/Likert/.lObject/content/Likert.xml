@@ -1,0 +1,35 @@
+<lk:likert
+    xmlns:lk='http://ltcs.uned.es/lo/evaluation/question/likert'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/likert ./../../../../../../../LClasses/LO/Evaluation/Question/Likert/.lClass/schema/Likert.xsd'>
+    
+    <lk:title/>
+    <lk:question/>
+    <lk:options>
+    	<lk:option lk:id='a' lk:weight='25'>
+    		<lk:label> Malo </lk:label>
+    		<lk:description/>
+    		<lk:reference lk:ref='LO'/>
+    		<lk:comment/>
+    	</lk:option>
+    	<lk:option lk:id='b'  lk:weight='25'>
+    		<lk:label> Regular </lk:label>
+    		<lk:description/>
+    		<lk:reference lk:ref='LO'/>
+    		<lk:comment/>
+    	</lk:option>
+    	<lk:option lk:id='c'  lk:weight='25'>
+    		<lk:label> Bueno </lk:label>
+    		<lk:description/>
+    		<lk:reference lk:ref='LO'/>
+    		<lk:comment/>
+    	</lk:option>
+    	<lk:option lk:id='d'  lk:weight='25'>
+    		<lk:label> Muy bueno </lk:label>
+    		<lk:description/>
+    		<lk:reference lk:ref='LO'/>
+    		<lk:comment/>
+    	</lk:option>
+    </lk:options>
+  
+</lk:likert>

@@ -1,0 +1,52 @@
+<wa:workArea
+    xmlns:wa='http://ltcs.uned.es/lo/evaluation/question/workarea'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/workarea ./../../../../../../../LClasses/LO/Evaluation/Question/WorkArea/.lClass/schema/WorkArea.xsd'>
+    
+    <wa:title/>
+    <wa:question/>
+    <wa:elementBar>
+    	<wa:element wa:id='A'>
+    		<wa:label/>
+    		<wa:description/>
+    		<wa:icon wa:uri='LO'/>
+    		<wa:reference wa:ref='LO'/>
+    	</wa:element>
+    	<wa:element wa:id='B'>
+    		<wa:label/>
+    		<wa:description/>
+    		<wa:icon wa:uri='LO'/>
+    		<wa:reference wa:ref='LO'/>
+    	</wa:element>
+    	<wa:element wa:id='C'>
+    		<wa:label/>
+    		<wa:description/>
+    		<wa:icon wa:uri='LO'/>
+    		<wa:reference wa:ref='LO'/>
+    	</wa:element>
+    </wa:elementBar>
+    <wa:area wa:ref='LO'>
+    	<wa:region wa:id='r1'
+    			   wa:x='100'
+    	           wa:y='100'
+    	           wa:width='10'
+    	           wa:height='15'>
+    		<wa:elements>
+    			<wa:element wa:ref='A' wa:weight='25'/>
+    			<wa:element wa:ref='B' wa:weight='5'/>
+    		</wa:elements>
+    	</wa:region>
+    	<wa:region wa:id='r2'
+    	           wa:x='200'
+    	           wa:y='200'
+    	           wa:width='20'
+    	           wa:height='20'>
+    		<wa:elements>
+    			<wa:element wa:ref='A' wa:weight='25'/>
+    			<wa:element wa:ref='C' wa:weight='50'/>
+    		</wa:elements>
+    	</wa:region>  	    
+    </wa:area>
+    <wa:comment/>
+    
+</wa:workArea>

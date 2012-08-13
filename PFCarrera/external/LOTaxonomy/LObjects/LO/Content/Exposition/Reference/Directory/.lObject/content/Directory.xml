@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dir:directory 
+	xmlns:dir='http://ltcs.uned.es/lo/content/exposition/reference/directory'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/directory ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Directory/.lClass/schema/Directory.xsd'>
+
+	<dir:title/>
+	<dir:description/>
+	<dir:entries>
+		<dir:entry>
+			<dir:title/>
+			<dir:description/>
+			<dir:references>
+				<dir:reference dir:ref='LO'/>
+				<dir:reference dir:ref='LO'/>
+				<dir:reference dir:ref='LO'/>
+			</dir:references>		
+		</dir:entry>
+		<dir:entry>
+			<dir:title/>
+			<dir:description/>
+			<dir:reference dir:ref='LO'/>	
+		</dir:entry>
+	</dir:entries>
+	
+
+</dir:directory>

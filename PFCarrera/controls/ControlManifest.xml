@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Manifest>
+	<ToolBoxInfo Tab="general">
+		<Text>Cycle Plugin</Text>
+		<ControlName>jQuery_Cycle_Control</ControlName>
+		<URL>controls/jquery/Cycle_Plugin/</URL>
+		<Icon>toolbox.png</Icon>
+		<Type>js</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="general">
+		<Text>Masonry Plugin</Text>
+		<ControlName>Masonry_Control</ControlName>
+		<URL>controls/jquery/Masonry_Plugin/</URL>
+		<Icon>toolbox.png</Icon>
+		<Type>js</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="contenedores">
+		<Text>Text Panel</Text>
+		<ControlName>TextPanel_Control</ControlName>
+		<URL>controls/standar/TextPanel/</URL>
+		<Icon>toolbox.png</Icon>
+		<Type>js</Type>
+	</ToolBoxInfo>
+  <ToolBoxInfo Tab="contenedores">
+    <Text>Stack Panel</Text>
+    <ControlName>StackPanel</ControlName>
+    <URL>controls/xml/StackPanel/</URL>
+    <Icon>toolbox.png</Icon>
+    <Type>xml</Type>
+  </ToolBoxInfo>
+  <ToolBoxInfo Tab="contenedores">
+    <Text>Repeater</Text>
+    <ControlName>Repeater</ControlName>
+    <URL>controls/xml/Repeater/</URL>
+    <Icon>toolbox.png</Icon>
+    <Type>xml</Type>
+  </ToolBoxInfo>
+	<ToolBoxInfo Tab="contenedores">
+		<Text>Panel</Text>
+		<ControlName>Panel_Control</ControlName>
+		<URL>controls/standar/Panel/</URL>
+		<Icon>toolbox.png</Icon>
+		<Type>js</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="forms">
+		<Text>TextBox</Text>
+		<ControlName>TextBox</ControlName>
+		<URL>controls/xml/TextBox/</URL>
+		<Icon>TextBox.png</Icon>
+		<Type>xml</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="forms">
+		<Text>Label</Text>
+		<ControlName>Label</ControlName>
+		<URL>controls/xml/Label/</URL>
+		<Icon>textlabel.png</Icon>
+		<Type>xml</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="data">
+		<Text>XMLDataSource</Text>
+		<ControlName>XMLDataSource</ControlName>
+		<URL>controls/xml/XMLDataSource/</URL>
+		<Icon>toolboxIcon.png</Icon>
+		<Type>xml</Type>
+	</ToolBoxInfo>
+</Manifest>

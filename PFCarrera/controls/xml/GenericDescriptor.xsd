@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GenericDescriptor"
+    targetNamespace="http://controls/xml/GenericDescriptor.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://controls/xml/GenericDescriptor.xsd"
+    xmlns:mstns="http://controls/xml/GenericDescriptor.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="GenericDescriptor">
+		<xs:complexType>
+			<xs:sequence>
+				<!--<xs:element name="URL" type="xs:token" default="controls/xml/"/>
+				<xs:element name="Tab" type="xs:token" default="Editor" />
+				<xs:element name="ToolboxBitmap" type="xs:token"/>-->
+				<xs:element name="Designer" type="xs:token" minOccurs="1"/>
+				<xs:element name="Settings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AllowResize">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="none|all|width|height"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ResizeContainer" type="xs:boolean" default="false"/>
+							<xs:element name="ResizeContent" type="xs:boolean" default="true"/>
+							<xs:element name="IsContainer" type="xs:boolean" default="false" minOccurs="0"/>
+							<xs:element name="IsDataSource" type="xs:boolean" default="false" minOccurs="0"/>
+              <xs:element name="PositionMode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="Absolute|FlowLayout"/>
+                  </xs:restriction>
+                </xs:simpleType>
+                
+              </xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Properties">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Property" type="ControlProperty" maxOccurs="unbounded" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+        <xs:element name="TemplateInfo" type="TemplateInfoType" minOccurs="0"  maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="Name" type="xs:token" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:simpleType name="ResizeMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="all"/>
+			<xs:enumeration value="width"/>
+			<xs:enumeration value="height"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ControlProperty">
+		<xs:sequence>
+			<xs:element name="PropertyType" type="PropertyType" minOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:token" use="required"/>
+		<xs:attribute name="Category" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="Style|Data|Control|Settings|Editor"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Behavior">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="Size|Position"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="cssStyle" type="xs:token" use="optional" default="null"/>
+		<xs:attribute name="Visible" type="xs:boolean" use="optional" default="true"/>
+	</xs:complexType>
+	<xs:complexType name="PropertyType">
+		<xs:sequence>
+			<xs:element name="DefaultValue" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:token">
+							<xs:attribute name="valueType" type="xs:token" />
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="HtmlContent" type="xs:string" minOccurs="0" default="" maxOccurs="1"/>
+			<xs:element name="Properties" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Property" type="ControlProperty" maxOccurs="unbounded" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+		</xs:sequence>
+		<xs:attribute name="typeName" type="xs:token" use="required"/>
+		<xs:attribute name="HasHtmlContent" type="xs:boolean" use="optional"/>
+		<xs:attribute name="RenderTarget" type="xs:token" use="optional"/>
+		<xs:attribute name="cssStyle" type="xs:token" use="optional"/>
+		<xs:attribute name="ReadOnly" type="xs:boolean" use="optional"/>
+		<xs:attribute name="TextToDisplayFormat" type="xs:token" use="optional"/>
+		
+	</xs:complexType>
+
+  <xs:complexType name="TemplateInfoType">
+      <xs:sequence>
+        <xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="Template">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+      <xs:element name="Template" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+      <xs:element name="Destination" type="xs:string" minOccurs="0" default="" maxOccurs="1"/>
+    </xs:sequence>
+    
+
+  </xs:complexType>
+  <xs:complexType name="File">
+    <xs:sequence>
+      <xs:element name="Source" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+      <xs:element name="Destination" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Directory">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+      <xs:element name="Path" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+      <xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

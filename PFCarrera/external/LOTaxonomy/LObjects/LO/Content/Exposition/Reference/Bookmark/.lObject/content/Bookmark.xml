@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bm:bookmark 
+	xmlns:bm='http://ltcs.uned.es/lo/content/exposition/reference/bookmark'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/bookmark ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Bookmark/.lClass/schema/Bookmark.xsd'>
+
+	<bm:title>SIRI para iPhone</bm:title>
+	<bm:description> virtual assistant </bm:description>
+	<bm:annotations>
+		<bm:annotation bm:tag='UNED' bm:level='to-do'/>
+		<bm:annotation bm:tag='UNED/crease' bm:level='to-do'/>
+	</bm:annotations>
+	<bm:reference bm:ref='LO'>siri app for the iphone</bm:reference>
+</bm:bookmark>

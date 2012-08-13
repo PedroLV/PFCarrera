@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDescriptor Name="Repeater" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
+  <Designer><![CDATA[<div class="_ctrGrid grid8"  style="background-color:#ef9ef4;float:left"></div> ]]></Designer>
+	<Settings>
+		<AllowResize>all</AllowResize>
+		<ResizeContainer>true</ResizeContainer>
+		<ResizeContent>true</ResizeContent>
+    <IsContainer>true</IsContainer>
+		<IsDataSource>false</IsDataSource>
+	</Settings>
+	<Properties>
+    <Property Name="Size" Category="Style" Behavior="Size">
+      <PropertyType typeName="Designer.PropertyTypes.Size">
+        <DefaultValue valueType="Designer.Size">250,120</DefaultValue>
+        <!-- width x height-->
+      </PropertyType>
+    </Property>
+    <Property Name="Position" Category="Style" Behavior="Position">
+      <PropertyType typeName="Designer.PropertyTypes.Position">
+        <DefaultValue valueType="Designer.Position"></DefaultValue>
+      </PropertyType>
+    </Property>
+    <Property Name="Border" Category="Style">
+      <PropertyType typeName="Designer.PropertyTypes.Borders">
+        <DefaultValue valueType="Designer.Borders"></DefaultValue>
+      </PropertyType>
+    </Property>
+    <Property  Name="Title" Category="Editor">
+      <PropertyType HasHtmlContent="false" typeName="Designer.PropertyTypes.StringValue">
+        <DefaultValue></DefaultValue>
+      </PropertyType>
+    </Property>
+    <Property  Name="DataSource" Category="Data">
+      <PropertyType HasHtmlContent="false" typeName="Designer.PropertyTypes.DataSourceType">
+        <DefaultValue>;;;Collection</DefaultValue>
+      </PropertyType>
+    </Property>
+	</Properties>
+  <TemplateInfo>
+    <Template>
+      <Name></Name>
+      <Template>
+		  <![CDATA[
+		   <div>
+			  <div>
+			    #set ( $${ID}s = ${} ${content.getAllTexts('${DataSource.Member}')} ) //POR AKI VOY  necesito caracteres de escape para ${content
+				#set ( $index = 0 )
+				  #foreach ($id in $${ID}s)
+					${Designer.Model.ControlManager.RenderTemplate(ID)}
+					#set ( $index = $index + 1 )
+				  #end
+			  </div>
+		  </div>
+	  ]]>
+		  
+	  </Template>
+      <Destination></Destination>
+    </Template>
+    
+    
+  </TemplateInfo>
+</GenericDescriptor>

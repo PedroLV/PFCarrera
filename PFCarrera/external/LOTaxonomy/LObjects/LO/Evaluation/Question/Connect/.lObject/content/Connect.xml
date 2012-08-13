@@ -1,0 +1,46 @@
+<cn:connect
+    xmlns:cn='http://ltcs.uned.es/lo/evaluation/question/connect'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/connect ./../../../../../../../LClasses/LO/Evaluation/Question/Connect/.lClass/schema/Connect.xsd'>
+    
+    <cn:title/>
+    <cn:question/>
+    <cn:sets>
+    	<cn:sourceSet>
+    		<cn:element cn:id='a'>
+    			<cn:name/>
+    			<cn:description/>
+    			<cn:reference cn:ref='LO'/>
+    		</cn:element>
+    		<cn:element cn:id='b'>
+    			<cn:name/>
+    			<cn:description/>
+    		</cn:element>
+    		<cn:element cn:id='c'>
+    			<cn:name/>
+    			<cn:description/>
+    			<cn:reference cn:ref='LO'/>
+    		</cn:element>
+    	</cn:sourceSet>
+    	<cn:targetSet>
+    		<cn:element cn:id='x' cn:ref='c' cn:weight='33'>
+    			<cn:name/>
+    			<cn:description/>
+    			<cn:comment/>
+    		</cn:element>
+    		<cn:element cn:id='y' cn:ref='b' cn:weight='33'>
+    			<cn:name/>
+    			<cn:description/>
+    			<cn:reference cn:ref='LO'/>
+    			<cn:comment/>
+    		</cn:element>
+    		<cn:element cn:id='z' cn:ref='a' cn:weight='33'>
+    			<cn:name/>
+    			<cn:description/>
+    			<cn:reference cn:ref='LO'/>
+    			<cn:comment/>
+    		</cn:element>
+    	</cn:targetSet>
+    </cn:sets>
+	
+</cn:connect>

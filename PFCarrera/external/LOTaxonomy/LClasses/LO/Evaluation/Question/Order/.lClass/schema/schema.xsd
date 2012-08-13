@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/order'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:or='http://ltcs.uned.es/lo/evaluation/question/order'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='order'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='question'
+           type='lo:TText'/>
+        <xs:element
+           name='set'
+           type='or:TSet'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TSet'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='element'
+         type='or:TElement'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElement'>
+    <xs:sequence>
+      <xs:element
+         name='name'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='reference'
+         type='or:TReference'/>
+      <xs:element
+         minOccurs='0'
+         name='comment'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       name='index'
+       type='xs:byte'
+       use='required'/>
+    <xs:attribute
+       default='0'
+       name='weight'
+       type='or:TWeight'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+        <xs:attribute
+           name='uri'
+           type='lo:TExternalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

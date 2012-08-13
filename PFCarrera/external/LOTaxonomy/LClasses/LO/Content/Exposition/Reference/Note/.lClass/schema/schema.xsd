@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/reference/note'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:nt='http://ltcs.uned.es/lo/content/exposition/reference/note'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='note'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+      </xs:sequence>
+      <xs:attribute
+         name='type'
+         type='nt:TType'
+         use='required'/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType
+     name='TType'>
+    <xs:restriction
+       base='xs:normalizedString'>
+      <xs:enumeration
+         value='foot'/>
+      <xs:enumeration
+         value='margin'/>
+      <xs:enumeration
+         value='end'/>
+      <xs:enumeration
+         value='inline'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

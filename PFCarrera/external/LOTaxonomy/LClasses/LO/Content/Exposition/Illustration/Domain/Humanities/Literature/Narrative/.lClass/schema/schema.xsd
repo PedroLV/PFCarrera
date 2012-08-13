@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/text'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:tx='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/text'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='text'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='summary'
+           type='lo:TText'/>
+        <xs:element
+           name='text'
+           type='lo:TText'/>
+        <xs:element
+           name='author'
+           type='tx:TAuthor'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TAuthor'>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

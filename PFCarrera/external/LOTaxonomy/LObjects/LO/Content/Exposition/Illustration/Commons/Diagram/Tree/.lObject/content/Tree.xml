@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+
+<tr:tree
+    xmlns:tr='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/tree'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/tree ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/Tree/.lClass/schema/Tree.xsd'>
+
+	<tr:element tr:icon='ico.jpg'
+				tr:ref='LO'>
+		<tr:label/>
+		<tr:caption/>
+		<tr:branches>
+			<tr:element tr:icon='ico.jpg'
+						tr:ref='LO'>
+				<tr:label/>
+				<tr:caption/>
+			</tr:element>
+			<tr:element tr:icon='ico.jpg'
+						tr:ref='LO'>
+				<tr:label/>
+				<tr:caption/>
+			</tr:element>
+			<tr:element tr:icon='ico.jpg'
+						tr:ref='LO'>
+				<tr:label/>
+				<tr:caption/>
+			</tr:element>
+		</tr:branches>
+	</tr:element>
+	
+</tr:tree>

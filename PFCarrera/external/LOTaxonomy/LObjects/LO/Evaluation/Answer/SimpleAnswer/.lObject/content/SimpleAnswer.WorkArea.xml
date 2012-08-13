@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+
+<sa:simpleAnswer
+    xmlns:sa='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer ./../../../../../../../LClasses/LO/Evaluation/Answer/SimpleAnswer/.lClass/schema/SimpleAnswer.xsd'>
+
+	<sa:question sa:ref='LO.12345'
+				 sa:class='LO.Evaluation.Question.WorkArea'/>
+	<sa:list>
+		<sa:element sa:type='component'>
+			<sa:property sa:name='type'  sa:value='impedance'/>
+			<sa:property sa:name='model' sa:value='L03'/>
+			<sa:property sa:name='Ohm'   sa:value='50'/>
+			<sa:property sa:name='x'     sa:value='10'/>
+			<sa:property sa:name='y'     sa:value='10'/>		
+		</sa:element>
+		<sa:element sa:type='component'>
+			<sa:property sa:name='type' sa:value='capacitor'/>
+			<sa:property sa:name='C'    sa:value='50'/>
+			<sa:property sa:name='x'    sa:value='20'/>
+			<sa:property sa:name='y'    sa:value='20'/>			
+		</sa:element>
+		<sa:element sa:type='link'>
+			<sa:property sa:name='type'      sa:value='pair'/>
+			<sa:property sa:name='impedance' sa:value='.6'/>
+			<sa:property sa:name='fromX'     sa:value='20'/>
+			<sa:property sa:name='fromY'     sa:value='20'/>
+			<sa:property sa:name='toX'       sa:value='10'/>
+			<sa:property sa:name='toY'       sa:value='10'/>					
+		</sa:element>
+	</sa:list>
+	
+</sa:simpleAnswer>

@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<cd:code
+    xmlns:cd='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/computer/code'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/computer/code ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Computer/Code/.lClass/schema/Code.xsd'>
+
+	<cd:title/>
+	<cd:caption/>
+	<cd:description/>
+	<cd:code/>
+	
+</cd:code>

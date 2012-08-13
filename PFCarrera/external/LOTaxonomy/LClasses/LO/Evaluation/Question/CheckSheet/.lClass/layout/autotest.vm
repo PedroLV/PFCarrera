@@ -1,0 +1,197 @@
+<script language="javascript">
+	$(document).ready(function() {
+		$('#${rrId} #cs-form').jqTransform({imgPath:'../resource/images/jqtransform/'});
+		$('#${rrId} .cs-header-description').hide ();
+		$('#${rrId} .cs-header-options').hide ();
+		$('#${rrId} .cs-checked').hide ();
+		$('#${rrId} .cs-comment').hide ();
+		$('#${rrId} .cs-questions').tablePagination({}); 
+	});
+</script>
+
+<div id='${rrId}' class='cs-checksheet'>
+	<div class='cs-title'> 
+		<img src='${settings.getResource('icon').location}' />
+		${content.getText('cs:checkSheet/cs:title')} 
+	</div>
+	<div class='cs-description'> ${content.getText('cs:checkSheet/cs:description')}  </div>
+
+	#set ( $expand = ${settings.getResource('expand').location} )
+	#set ( $collapse = ${settings.getResource('collapse').location} )
+	#set ( $headerIds = ${content.getAllTexts('cs:checkSheet/cs:sheet/cs:header/cs:options//cs:option/@cs:id')} )
+	#set ( $headerLabels = ${content.getAllTexts('cs:checkSheet/cs:sheet/cs:header/cs:options//cs:option/cs:label')} )
+	#set ( $headerDescriptions = ${content.getAllTexts('cs:checkSheet/cs:sheet/cs:header/cs:options//cs:option/cs:description')} )
+	#set ( $index = 0 )
+	
+	<div id='cs-header-expand' class='cs-header-options-title'> 
+		Ver leyenda <img src='${expand}' /> 
+	</div>
+	
+	<div class='cs-header-options'>
+		<div id='cs-header-collapse' class='cs-header-options-inner-title'>
+			<img src='${collapse}' /> &emsp; Leyenda
+		</div>
+		#foreach ($id in $headerIds)
+			#set ( $headerLabel = ${headerLabels.get($index)} )
+			#set ( $headerDescription = ${headerDescriptions.get($index)} )
+			<div class='cs-header-option'>
+				<div class='cs-header-label'>
+					${id}. ${headerLabel}  
+					<span id='cs-header-description-expand-${id}'> <img src='${expand}' /> </span>
+				</div>
+				<div id='cs-header-description-${id}' class='cs-header-description'>
+					<span id='cs-header-description-collapse-${id}'> <img src='${collapse}' /> </span>
+					${headerDescription}
+				</div>
+			</div>
+		#end
+	</div>
+
+	#set ( $questionLabels = ${content.getAllTexts('cs:checkSheet/cs:sheet/cs:rows//cs:row/cs:question/cs:label')} )
+	#set ( $questionDescriptions = ${content.getAllTexts('cs:checkSheet/cs:sheet/cs:rows//cs:row/cs:question/cs:description')} )
+	<form id='cs-form'>
+		<table id='${rrId}-table' class='cs-questions'>
+			<thead>
+				<tr class='cs-options'>
+					<th class='cs-questions-title'>Pregunta</th>
+					#foreach ($id in $headerIds)
+						<th class='cs-option'>${id}</th>
+					#end
+				</tr>
+			</thead>
+			<tbody>
+				#set ( $index = 0 )
+				#foreach ($label in $questionLabels)
+					#set ( $description = ${questionDescriptions.get($index)} )
+					<tr>
+						<td class='cs-question'>
+							#set ( $nQuestion = $index + 1 )
+							<div class='cs-label'>${nQuestion}. ${label}</div class='cs-label'>
+							<div class='cs-description'>${description}</div>	
+						</td>
+						#foreach ($id in $headerIds)
+							<td class='cs-check'> 
+								<input id='cs-checkbox-${index}-${id}' type='checkbox' name='response-${index}' value='${id}'/>
+								<div id='cs-checked-${index}-${id}' class='cs-checked'></div>
+							</td>
+						#end							
+					</tr>
+					#set ( $index = $index + 1 )
+				#end
+			</tbody>
+		</table>
+		
+		#set ($comment = ${content.getText('cs:checkSheet/cs:comment')} )
+		#if ($comment.trim().length() > 0)
+			<div class='cs-comment'>${comment}</div>
+		#end
+		
+		<div class='cs-buttons'>
+			<span id='resolver' class='cs-button'> Resolver </span>
+			<span id='ayuda' class='cs-button'> Ayuda </span>				
+		</div>
+	</form>
+	
+	#set ( $imgCorrect = ${settings.getResource('correct').location} )
+	#set ( $imgIncorrect = ${settings.getResource('incorrect').location} )
+	#set ( $imgCommentCorrect = ${settings.getResource('commentCorrect').location} )
+	#set ( $imgCommentIncorrect = ${settings.getResource('commentIncorrect').location} )
+	#set ( $corrects = ${content.getAllTexts('cs:checkSheet/cs:sheet/cs:rows//cs:row/cs:options//cs:option/@cs:correct')} )
+	<script language='javascript'>
+	
+		var _${rrId}_makeCorrects = function () {
+			var isCorrect = new Array ();
+			#set ( $index = 0 )
+			#set ( $qIndex = 0 )
+			#foreach ($label in $questionLabels)
+				isCorrect [${qIndex}] = {}
+				#foreach ($id in $headerIds)			
+					isCorrect [${qIndex}]['${id}'] = ${corrects.get($index)};
+					#set ( $index = $index + 1 )
+				#end
+				#set ( $qIndex = $qIndex + 1 )
+			#end
+			return isCorrect;
+		}
+		
+		var _${rrId}_check = function (nQuestion, option) {
+			var value        = $('#${rrId} #cs-checkbox-' + nQuestion + '-' + option + ':checked').val();
+			var isCorrect    = _${rrId}_makeCorrects ();
+			var correctMsg   = "<img src='$imgCorrect' />";
+			var incorrectMsg = "<img src='$imgIncorrect' />";
+			var correct      = ((isCorrect[nQuestion][option] == true  && value != null) ||
+						        (isCorrect[nQuestion][option] == false && value == null));
+			var message;
+			(correct == true)? message = correctMsg : message = incorrectMsg;		
+			$('#${rrId} #cs-checked-' + nQuestion + '-' + option).prepend(message);
+			return correct;
+		}
+		
+		var _${rrId}_checkAll = function () {
+			var correctMsg   = "<div> <img src='$imgCommentCorrect' /> <strong> Correcto! </strong> </div>";
+			var incorrectMsg = "<div> <img src='$imgCommentIncorrect' /> <strong> Incorrecto! </strong> </div>";
+			var  message;
+			var allCorrect = true;
+			
+			#set ( $index = 0 )
+			#foreach ($label in $questionLabels)
+				#foreach ($id in $headerIds)
+					allCorrect &= _${rrId}_check(${index}, '${id}');
+				#end
+				#set ( $index = $index + 1 )
+			#end
+			(allCorrect == true)? message = correctMsg : message = incorrectMsg;
+			$('#${rrId} .cs-comment').prepend(message); 
+		}
+						
+	</script>
+		
+	<script language='javascript'>
+		$('#${rrId} .cs-button').hover(
+			function () {
+				$(this).css('font-weight', 'bold');
+			}, 
+			function () {
+				$(this).css('font-weight', 'normal');
+			}
+		);
+		
+		$('#${rrId} #cs-header-expand').click(function () {
+			$('#${rrId} .cs-header-options').show('slow');
+			$('#${rrId} #cs-header-expand').hide();
+			return true;
+		});
+		
+		$('#${rrId} #cs-header-collapse').click(function () {
+			$('#${rrId} .cs-header-options').hide('slow');
+			$('#${rrId} #cs-header-expand').show();
+			return true;
+		});
+		
+		#foreach ($id in $headerIds)
+			$('#${rrId} #cs-header-description-expand-${id}').click(function () {
+				$('#${rrId} #cs-header-description-${id}').show('slow');
+				$('#${rrId} #cs-header-description-expand-${id}').hide();
+				return true;
+			});
+			
+			$('#${rrId} #cs-header-description-collapse-${id}').click(function () {
+				$('#${rrId} #cs-header-description-${id}').hide('slow');
+				$('#${rrId} #cs-header-description-expand-${id}').show();
+				return true;
+			});
+		#end
+		
+		$('#${rrId} #resolver').click(function () {
+				_${rrId}_checkAll();
+				$('#${rrId} .cs-checked').show ('slow');
+				$('#${rrId} .cs-comment').show ('slow');
+				$('#${rrId} #resolver').hide ();
+				return true;
+			});
+			
+		$('#${rrId} #ayuda').click(function () {
+				return true;
+			});
+	</script>
+</div>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/computer/algorithm'
+   xmlns:al='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/computer/algorithm'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='algorithm'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='caption'
+           type='lo:TText'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='code'
+           type='lo:TText'/>
+        <xs:element
+           minOccurs='0'
+           name='format'
+           type='al:TFormat'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TFormat'>
+    <xs:sequence>
+      <xs:element
+         minOccurs='0'
+         name='reservedWords'
+         type='al:TReservedWords'/>
+      <xs:element
+         minOccurs='0'
+         name='comments'
+         type='al:TComments'/>
+      <xs:element
+         minOccurs='0'
+         name='strings'
+         type='al:TStrings'/>
+      <xs:element
+         minOccurs='0'
+         name='literals'
+         type='al:TLiterals'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReservedWords'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:element
+         name='reservedWord'
+         type='xs:NMTOKEN'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TComments'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:element
+         name='comment'
+         type='xs:NMTOKEN'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TStrings'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:element
+         name='string'
+         type='xs:NMTOKEN'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLiterals'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:element
+         name='literal'
+         type='xs:NMTOKEN'/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

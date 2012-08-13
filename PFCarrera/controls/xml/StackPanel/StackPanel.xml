@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDescriptor Name="StackPanel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
+	<Designer><![CDATA[<div class="grid8 _flowLayout"  style="background-color:#ccc;float:left"></div> ]]></Designer>
+	<Settings>
+		<AllowResize>all</AllowResize>
+		<ResizeContainer>true</ResizeContainer>
+		<ResizeContent>true</ResizeContent>
+		<IsContainer>true</IsContainer>
+		<PositionMode>FlowLayout</PositionMode>
+	</Settings>
+	<Properties>
+    <Property Name="Size" Category="Style" Behavior="Size">
+      <PropertyType typeName="Designer.PropertyTypes.Size">
+        <DefaultValue valueType="Designer.Size">150,100</DefaultValue>
+        <!-- width x height-->
+      </PropertyType>
+    </Property>
+		<Property Name="Position" Category="Style" Behavior="Position">
+			<PropertyType typeName="Designer.PropertyTypes.Position">
+				<DefaultValue valueType="Designer.Position"></DefaultValue>
+			</PropertyType>		
+		</Property>
+		<Property Name="Border" Category="Style">
+			<PropertyType typeName="Designer.PropertyTypes.Borders">
+				<DefaultValue valueType="Designer.Borders"></DefaultValue>
+			</PropertyType>
+		</Property>
+	</Properties>
+</GenericDescriptor>

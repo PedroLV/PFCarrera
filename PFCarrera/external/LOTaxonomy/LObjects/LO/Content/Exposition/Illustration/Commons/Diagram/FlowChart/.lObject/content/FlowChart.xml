@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+
+<fc:flowChart
+    xmlns:fc='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/flowchart'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/flowchart ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/FlowChart/.lClass/schema/FlowChart.xsd'>
+
+	<fc:start fc:id='start'>
+		<fc:label/>
+		<fc:caption/>
+		<fc:output>Process</fc:output>
+	</fc:start>
+	
+	<fc:process fc:id='Process'>
+		<fc:label/>
+		<fc:caption/>
+		<fc:input>start</fc:input>		
+		<fc:output>stop</fc:output>
+	</fc:process>
+	
+	<fc:stop fc:id='stop'>
+		<fc:label/>
+		<fc:caption/>
+		<fc:input>Process</fc:input>
+	</fc:stop>
+	
+</fc:flowChart>

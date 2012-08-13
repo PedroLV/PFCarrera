@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+
+<sf:surface
+    xmlns:sf='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/surface'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/surface ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Surface/.lClass/schema/Surface.xsd'>
+
+	<sf:axes>
+		<sf:XAxis>
+			<sf:title/>
+			<sf:description/>
+		</sf:XAxis>
+		<sf:YAxis>
+			<sf:title/>
+			<sf:description/>	
+		</sf:YAxis>
+		<sf:ZAxis>
+			<sf:title/>
+			<sf:description/>	
+		</sf:ZAxis>
+	</sf:axes>
+	
+	<sf:series>
+		<sf:serie>
+			<sf:legend>
+				<sf:title/>
+				<sf:description/>
+			</sf:legend>
+			<sf:data>
+				<sf:point sf:x='12' sf:y='12' sf:z='4'/>
+				<sf:point sf:x='23' sf:y='15' sf:z='12'/>
+				<sf:point sf:x='31' sf:y='17' sf:z='16'/>
+				<sf:point sf:x='44' sf:y='4'  sf:z='14'/>
+			</sf:data>
+		</sf:serie>
+		
+		<sf:serie>
+			<sf:legend>
+				<sf:title/>
+				<sf:description/>
+			</sf:legend>
+			<sf:data>
+				<sf:point sf:x='14' sf:y='12' sf:z='15'/>
+				<sf:point sf:x='28' sf:y='15' sf:z='22'/>
+				<sf:point sf:x='31' sf:y='17' sf:z='-4'/>
+				<sf:point sf:x='24' sf:y='4'  sf:z='16'/>
+				<sf:point sf:x='11' sf:y='10'  sf:z='18'/>
+			</sf:data>
+		</sf:serie>	
+	</sf:series>
+	
+</sf:surface>

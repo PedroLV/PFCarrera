@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+
+<ar:area
+    xmlns:ar='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/area'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/area ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Area/.lClass/schema/Area.xsd'>
+
+	<ar:axes>
+		<ar:horizontal>
+			<ar:title/>
+			<ar:description/>
+		</ar:horizontal>
+		<ar:vertical>
+			<ar:title/>
+			<ar:description/>	
+		</ar:vertical>
+	</ar:axes>
+	
+	<ar:series>
+		<ar:serie>
+			<ar:legend>
+				<ar:title/>
+				<ar:description/>
+			</ar:legend>
+			<ar:data>
+				<ar:point ar:x='1' ar:y='12'/>
+				<ar:point ar:x='2' ar:y='15'/>
+				<ar:point ar:x='3' ar:y='17'/>
+				<ar:point ar:x='4' ar:y='4'/>
+			</ar:data>
+		</ar:serie>
+		
+		<ar:serie>
+			<ar:legend>
+				<ar:title/>
+				<ar:description/>
+			</ar:legend>
+			<ar:data>
+				<ar:point ar:x='1' ar:y='12'/>
+				<ar:point ar:x='2' ar:y='15'/>
+				<ar:point ar:x='3' ar:y='17'/>
+				<ar:point ar:x='4' ar:y='4'/>
+			</ar:data>
+		</ar:serie>	
+	</ar:series>
+	
+</ar:area>

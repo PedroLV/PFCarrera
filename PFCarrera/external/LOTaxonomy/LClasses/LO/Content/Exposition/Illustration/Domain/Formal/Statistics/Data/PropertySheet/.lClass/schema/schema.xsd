@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/propertysheet'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:ps='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/propertysheet'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='propertySheet'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='caption'
+           type='lo:TText'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='properties'
+           type='ps:TProperties'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TProperties'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='property'
+         type='ps:TProperty'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TProperty'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='0'
+         name='item'
+         type='ps:TItem'/>
+    </xs:sequence>
+    <xs:attribute
+       name='name'
+       type='lo:TTitle'
+       use='required'/>
+    <xs:attribute
+       name='default'
+       type='xs:string'/>
+    <xs:attribute
+       name='type'
+       type='ps:TType'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TItem'>
+    <xs:attribute
+       name='value'
+       type='lo:TTitle'
+       use='required'/>
+    <xs:attribute
+       name='default'
+       type='xs:boolean'/>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TType'>
+    <xs:restriction
+       base='xs:token'>
+      <xs:enumeration
+         value='text'/>
+      <xs:enumeration
+         value='decimal'/>
+      <xs:enumeration
+         value='float'/>
+      <xs:enumeration
+         value='boolean'/>
+      <xs:enumeration
+         value='vocabulary'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

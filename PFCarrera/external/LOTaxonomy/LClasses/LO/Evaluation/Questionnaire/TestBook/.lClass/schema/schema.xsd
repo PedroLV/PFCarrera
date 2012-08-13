@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/questionnaire/testBook'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:tb='http://ltcs.uned.es/lo/evaluation/questionnaire/testBook'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='testBook'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           minOccurs='0'
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           minOccurs='0'
+           name='instructions'
+           type='tb:TReference'/>
+        <xs:element
+           name='tests'
+           type='tb:TTests'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TTests'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='test'
+         type='tb:TTest'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTest'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TReference'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

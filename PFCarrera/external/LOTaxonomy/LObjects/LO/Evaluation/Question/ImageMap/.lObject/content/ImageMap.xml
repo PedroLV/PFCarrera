@@ -1,0 +1,24 @@
+<im:imageMap
+    xmlns:im='http://ltcs.uned.es/lo/evaluation/question/imageMap'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/imageMap ./../../../../../../../LClasses/LO/Evaluation/Question/ImageMap/.lClass/schema/ImageMap.xsd'>
+    
+    <im:title/>
+    <im:question/>
+    <im:image im:ref='LO'/>
+    <im:options>
+    	<im:option im:weight='50'>
+    		<im:label/>
+    		<im:description/>
+    		<im:point im:x='175' im:y='412'/>
+    		<im:comment/>
+    	</im:option>
+    	<im:option im:weight='50'>
+    		<im:label/>
+    		<im:description/>
+    		<im:point im:x='15' im:y='42' im:threshold='25' im:mode='rectangle'/>
+    		<im:comment/>
+    	</im:option>
+    </im:options>    
+  
+</im:imageMap>

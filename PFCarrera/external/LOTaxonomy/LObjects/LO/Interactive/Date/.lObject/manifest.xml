@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Interactive.Date.manifest.xml'
+          version='1.0'>
+    <lObject id='LO.Interactive.Date'
+            version='1.0'>
+           <label>LO.Interactive.Date</label>
+           <description/>
+    </lObject>
+    <lClass id='LO.Interactive.Date'
+            version='1.0'/>
+    <views>
+        <view name='default'>
+            <scripts>
+                <script id=''/>
+                <script id=''/>
+            </scripts>
+            <resources>
+                <resource key='' id=''/>
+                <resource key='' id=''/>
+            </resources>
+        </view>
+    </views>
+</manifest>

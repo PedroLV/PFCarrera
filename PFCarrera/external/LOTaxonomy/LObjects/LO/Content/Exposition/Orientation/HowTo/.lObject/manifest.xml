@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Content.Exposition.Orientation.HowTo.manifest.xml'
+          version='1.0'>
+    <lObject id='LO.Content.Exposition.Orientation.HowTo'
+            version='1.0'>
+           <label>LO.Content.Exposition.Orientation.HowTo</label>
+           <description/>
+    </lObject>
+    <lClass id='LO.Content.Exposition.Orientation.HowTo'
+            version='1.0'/>
+    <views>
+        <view name='default'>
+            <scripts>
+                <script id=''/>
+                <script id=''/>
+            </scripts>
+            <resources>
+                <resource key='' id=''/>
+                <resource key='' id=''/>
+            </resources>
+        </view>
+    </views>
+</manifest>

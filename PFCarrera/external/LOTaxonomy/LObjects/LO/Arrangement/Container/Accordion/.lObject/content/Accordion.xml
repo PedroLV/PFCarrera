@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:accordion
+    xmlns:ns='http://ltcs.uned.es/lo/arrangement/container/accordion'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/arrangement/container/accordion ./../../../../../../../temp/LObjects/LO/Arrangement/Container/Accordion/.lClass/schema/Accordion.xsd'>
+
+</ns:accordion>

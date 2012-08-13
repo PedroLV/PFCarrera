@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/reference/favorites'
+   xmlns:fv='http://ltcs.uned.es/lo/content/exposition/reference/favorites'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='favorites'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='bookmarks'
+           type='fv:TBookmarks'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TBookmarks'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='1'
+         name='bookmark'
+         type='fv:TBookmark'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TBookmark'>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

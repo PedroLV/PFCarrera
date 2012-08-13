@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/orientation/faq'
+   xmlns:faq='http://ltcs.uned.es/lo/content/exposition/orientation/faq'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='faq'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='questions'
+           type='faq:TQuestions'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TQuestions'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='faq'
+         type='faq:TFaq'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TFaq'>
+    <xs:sequence>
+      <xs:element
+         name='question'
+         type='lo:TTitle'/>
+      <xs:element
+         name='answer'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

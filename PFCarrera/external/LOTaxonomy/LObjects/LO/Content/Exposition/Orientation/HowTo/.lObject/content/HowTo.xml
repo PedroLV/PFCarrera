@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ht:howTo
+	xmlns:ht='http://ltcs.uned.es/lo/content/exposition/orientation/howto'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/howto ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/HowTo/.lClass/schema/HowTo.xsd'>
+
+	<ht:title/>
+	<ht:description/>
+	<ht:instructions ht:ref='LO.Content.Exposition.Orientation.Instructions'/>
+	<ht:tips>
+		<ht:tip ht:ref='LO.Content.Exposition.Orientation.Message'/>
+		<ht:tip ht:ref='LO.Content.Exposition.Orientation.Message'/>
+		<ht:tip ht:ref='LO.Content.Exposition.Orientation.Message'/>
+	</ht:tips>
+	<ht:warnings>
+		<ht:warning ht:ref='LO.Content.Exposition.Orientation.Message'/>
+		<ht:warning ht:ref='LO.Content.Exposition.Orientation.Message'/>
+	</ht:warnings>
+	<ht:seeAlso ht:ref='LO.Content.Exposition.Reference.SeeAlso'/>
+	
+</ht:howTo>

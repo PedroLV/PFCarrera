@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/summary/synopsis'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:sy='http://ltcs.uned.es/lo/content/exposition/summary/synopsis'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='synopsis'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='concepts'
+           type='sy:TConcepts'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TConcepts'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='concept'
+         type='sy:TConcept'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TConcept'>
+    <xs:sequence>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

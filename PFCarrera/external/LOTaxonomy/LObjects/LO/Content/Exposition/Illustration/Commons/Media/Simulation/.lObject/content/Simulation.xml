@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<sm:simulation
+    xmlns:sm='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/simulation'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/simulation ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Media/Simulation/.lClass/schema/Simulation.xsd'>
+
+	<sm:title/>
+	<sm:caption/>
+	<sm:description/>
+	<sm:resource sm:type='flash'>
+		<sm:property sm:name='width' sm:value='100'/>
+		<sm:property sm:name='height' sm:value='100'/>
+		<sm:property sm:name='format' sm:value='jpg'/>
+	</sm:resource>
+	
+</sm:simulation>

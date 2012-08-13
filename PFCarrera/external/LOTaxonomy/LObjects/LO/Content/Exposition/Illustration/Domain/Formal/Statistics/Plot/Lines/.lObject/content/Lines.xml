@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+
+<ln:lines
+    xmlns:ln='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/lines'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/lines ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Lines/.lClass/schema/Lines.xsd'>
+
+	<ln:axes>
+		<ln:horizontal>
+			<ln:title/>
+			<ln:description/>
+		</ln:horizontal>
+		<ln:vertical>
+			<ln:title/>
+			<ln:description/>	
+		</ln:vertical>
+	</ln:axes>
+	
+	<ln:series>
+		<ln:serie>
+			<ln:legend>
+				<ln:title/>
+				<ln:description/>
+			</ln:legend>
+			<ln:data>
+				<ln:point ln:x='1' ln:y='12'/>
+				<ln:point ln:x='2' ln:y='15'/>
+				<ln:point ln:x='3' ln:y='17'/>
+				<ln:point ln:x='4' ln:y='4'/>
+			</ln:data>
+		</ln:serie>
+		
+		<ln:serie>
+			<ln:legend>
+				<ln:title/>
+				<ln:description/>
+			</ln:legend>
+			<ln:data>
+				<ln:point ln:x='1' ln:y='12'/>
+				<ln:point ln:x='2' ln:y='15'/>
+				<ln:point ln:x='3' ln:y='17'/>
+				<ln:point ln:x='4' ln:y='4'/>
+			</ln:data>
+		</ln:serie>	
+	</ln:series>
+	
+</ln:lines>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/poetry'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:po='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/poetry'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='poetry'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='poem'
+           type='po:TPoem'/>
+        <xs:element
+           name='author'
+           type='po:TAuthor'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TPoem'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='stanza'
+         type='po:TStanza'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TStanza'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='verse'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAuthor'>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

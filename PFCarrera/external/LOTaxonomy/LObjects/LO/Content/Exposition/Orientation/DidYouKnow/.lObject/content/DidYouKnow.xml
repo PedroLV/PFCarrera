@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dyk:didYouKnow
+    xmlns:dyk='http://ltcs.uned.es/lo/content/exposition/orientation/didyouknow'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/didyouknow ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/DidYouKnow/.lClass/schema/DidYouKnow.xsd'>
+
+	<dyk:title/>
+    <dyk:description/>
+    <dyk:seeAlso>
+        <dyk:reference dyk:ref='LO'/>
+        <dyk:reference dyk:ref='LO'/>
+    </dyk:seeAlso>
+    
+</dyk:didYouKnow>

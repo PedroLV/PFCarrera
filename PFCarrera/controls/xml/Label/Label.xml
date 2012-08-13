@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDescriptor Name="Label" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
+	<Designer><![CDATA[<div style="float:left"><div class="_img"></div><div class="_lbl" style="float:left">&nbsp&nbsp&nbsp</div></div> ]]></Designer>
+	<Settings>
+		<AllowResize>width</AllowResize>
+		<ResizeContainer>true</ResizeContainer>
+		<ResizeContent>false</ResizeContent>
+	</Settings>
+	<Properties>
+		<Property Name="Position" Category="Style" Behavior="Position">
+			<PropertyType typeName="Designer.PropertyTypes.Position">
+				<DefaultValue valueType="Designer.Position"></DefaultValue>
+			</PropertyType>		
+		</Property>
+		<Property Name="Border" Category="Style">
+			<PropertyType typeName="Designer.PropertyTypes.Borders">
+				<DefaultValue valueType="Designer.Borders"></DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property Name="Font" Category="Style">
+			<PropertyType typeName="Designer.PropertyTypes.Font">
+				<DefaultValue valueType="Designer.FontSetting"></DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property Name="Color" Category="Style">
+			<PropertyType cssStyle="color" typeName="Designer.PropertyTypes.ColorType">
+				<DefaultValue>#000000</DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property  Name="Text" Category="Editor">
+			<PropertyType HasHtmlContent="true" typeName="Designer.PropertyTypes.StringValue" RenderTarget="._lbl">
+				<DefaultValue>etiqueta</DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property  Name="DataSource" Category="Data">
+			<PropertyType HasHtmlContent="false" typeName="Designer.PropertyTypes.DataSourceType">
+				<DefaultValue>;;Text</DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property  Name="Imagen" Category="Editor">
+			<PropertyType typeName="Designer.PropertyTypes.UserType">
+				<DefaultValue></DefaultValue>
+				<Properties>
+					<Property  Name="URL" Category="Editor">
+						<PropertyType typeName="Designer.PropertyTypes.StringValue" HasHtmlContent="true" RenderTarget="._img">
+							<DefaultValue></DefaultValue>
+							<HtmlContent><![CDATA[<table border="0"><tr><td><img src="{0}" alt="{0}" style="float:left"/></td></tr><tr><td class="_Pie"></td></tr></table>]]></HtmlContent>
+						</PropertyType>
+					</Property>
+					<Property  Name="Pie" Category="Editor">
+						<PropertyType  typeName="Designer.PropertyTypes.StringValue" RenderTarget="._Pie" HasHtmlContent="true">
+							<DefaultValue></DefaultValue>
+						</PropertyType>
+					</Property>
+					<Property Name="Border" Category="Style">
+						<PropertyType typeName="Designer.PropertyTypes.Borders" RenderTarget="._img">
+							<DefaultValue valueType="Designer.Borders"></DefaultValue>
+						</PropertyType>
+					</Property>
+				</Properties>
+			</PropertyType>
+		</Property>
+	</Properties>
+	<TemplateInfo>
+		<Template>
+			<Name></Name>
+			<Template>
+				<![CDATA[
+	  <div>
+			  <div>
+				 <label id="${ID}" >${Text} </label>
+			  </div>
+		  </div>
+	  ]]>
+
+			</Template>
+			<Destination></Destination>
+		</Template>
+
+
+	</TemplateInfo>
+</GenericDescriptor>

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:menu
+    xmlns:ns='http://ltcs.uned.es/lo/arrangement/container/bar/menu'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/arrangement/container/bar/menu ./../../../../../../../temp/LObjects/LO/Arrangement/Container/Bar/Menu/.lClass/schema/Menu.xsd'>
+
+</ns:menu>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/questionnaire/test'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:ts='http://ltcs.uned.es/lo/evaluation/questionnaire/test'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='test'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           minOccurs='0'
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           minOccurs='0'
+           name='instructions'
+           type='ts:TReference'/>
+        <xs:element
+           name='questions'
+           type='ts:TQuestions'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TQuestions'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='question'
+         type='ts:TQuestion'/>
+    </xs:sequence>
+    <xs:attribute
+       name='time'
+       type='xs:duration'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TQuestion'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TReference'
+           use='required'/>
+        <xs:attribute
+           name='weight'
+           type='ts:TWeight'
+           use='required'/>
+        <xs:attribute
+           name='time'
+           type='xs:duration'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

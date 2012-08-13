@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+
+<mp:map
+    xmlns:mp='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/map'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/map ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Media/Map/.lClass/schema/Map.xsd'>
+
+	<mp:title/>
+	<mp:caption/>
+	<mp:description/>
+	<mp:resource>
+		<mp:property mp:name='q' mp:value='Monte De El Pardo'/>
+		<mp:property mp:name='height' mp:value='100'/>
+		<mp:property mp:name='width' mp:value='300'/>
+	</mp:resource>
+	
+</mp:map>
+

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/reference/resource'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:res='http://ltcs.uned.es/lo/content/exposition/reference/resource'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='resource'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='file'
+           type='res:TFile'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TFile'>
+    <xs:sequence>
+      <xs:element
+         name='properties'
+         type='res:TProperties'/>
+    </xs:sequence>
+    <xs:attribute
+       name='type'
+       type='xs:normalizedString'
+       use='required'/>
+    <xs:attribute
+       name='name'
+       type='lo:TTitle'/>
+    <xs:attribute
+       name='size'
+       type='xs:long'/>
+    <xs:attribute
+       name='date'
+       type='xs:dateTime'/>
+    <xs:attribute
+       name='path'
+       type='lo:TPath'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TProperties'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='property'
+         type='res:TProperty'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TProperty'>
+    <xs:attribute
+       name='name'
+       type='xs:normalizedString'/>
+    <xs:attribute
+       name='value'
+       type='xs:normalizedString'/>
+  </xs:complexType>
+
+</xs:schema>
+

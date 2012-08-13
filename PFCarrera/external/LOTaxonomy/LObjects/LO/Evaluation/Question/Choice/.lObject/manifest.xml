@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Evaluation.Question.Choice.manifest.xml'
+          version='1.0'>
+    <lObject id='LO.Evaluation.Question.Choice'
+            version='1.0'>
+           <label>LO.Evaluation.Question.Choice</label>
+           <description/>
+    </lObject>
+    <lClass id='LO.Evaluation.Question.Choice'
+            version='1.0'/>
+</manifest>

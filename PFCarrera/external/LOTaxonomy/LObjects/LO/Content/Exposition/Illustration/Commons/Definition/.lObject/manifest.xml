@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Content.Exposition.Illustration.Commons.Definition.manifest.xml'
+          version='1.0'>
+    <lObject id='LO.Content.Exposition.Illustration.Commons.Definition'
+            version='1.0'>
+           <label>LO.Content.Exposition.Illustration.Commons.Definition</label>
+           <description/>
+    </lObject>
+    <lClass id='LO.Content.Exposition.Illustration.Commons.Definition'
+            version='1.0'/>		
+</manifest>

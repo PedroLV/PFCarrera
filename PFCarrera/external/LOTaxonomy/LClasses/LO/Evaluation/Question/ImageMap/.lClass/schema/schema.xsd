@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/imageMap'
+   xmlns:im='http://ltcs.uned.es/lo/evaluation/question/imageMap'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='imageMap'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='question'
+           type='lo:TText'/>
+        <xs:element
+           name='image'
+           type='im:TReference'/>
+        <xs:element
+           name='options'
+           type='im:TOptions'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TOptions'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='option'
+         type='im:TOption'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TOption'>
+    <xs:sequence>
+      <xs:element
+         minOccurs='0'
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         name='point'
+         type='im:TPoint'/>
+      <xs:element
+         minOccurs='0'
+         name='comment'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='weight'
+       type='im:TWeight'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TPoint'>
+    <xs:attribute
+       name='x'
+       type='xs:positiveInteger'
+       use='required'/>
+    <xs:attribute
+       name='y'
+       type='xs:positiveInteger'
+       use='required'/>
+    <xs:attribute
+       default='10'
+       name='threshold'
+       type='xs:positiveInteger'
+       use='optional'/>
+    <xs:attribute
+       default='circle'
+       name='mode'
+       type='im:TMode'
+       use='optional'/>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TMode'>
+    <xs:restriction
+       base='xs:token'>
+      <xs:enumeration
+         value='circle'/>
+      <xs:enumeration
+         value='rectangle'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+        <xs:attribute
+           name='uri'
+           type='lo:TExternalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

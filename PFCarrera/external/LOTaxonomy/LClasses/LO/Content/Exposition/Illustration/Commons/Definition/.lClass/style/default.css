@@ -1,0 +1,35 @@
+.def-definition {
+	background-color: #F4F4F4;
+	margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+	border: 1px; 
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	border-left-color: #036;
+	border-left-width: 6px;	
+}
+
+.def-definition .def-term {
+	color:#036;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.def-definition .def-term img {
+	vertical-align: middle;
+}
+
+.def-definition .def-description {
+	color: #555555;
+	margin-left: 12px;
+	margin-top: 12px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	text-align: justify;
+}

@@ -1,0 +1,21 @@
+<fr:free
+    xmlns:fr='http://ltcs.uned.es/lo/evaluation/question/free'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/free ./../../../../../../../LClasses/LO/Evaluation/Question/Free/.lClass/schema/Free.xsd'>
+    
+    <fr:title/>
+    <fr:question/>	    
+    <fr:response 
+    		  fr:weight='5' 
+    		  fr:correct='reg-exp'
+    		  fr:type='vocabulary'>
+    	<fr:vocabulary>
+    		<fr:term fr:value='a'/>
+    		<fr:term fr:value='b'/>
+    		<fr:term fr:value='c'/>
+    		<fr:term fr:value='d'/>
+    	</fr:vocabulary>
+    </fr:response>
+	<fr:comment/>
+	
+</fr:free>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bib:bibReference 
+	xmlns:bib='http://ltcs.uned.es/lo/content/exposition/reference/bibReference'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/bibReference ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/BibReference/.lClass/schema/BibReference.xsd'
+	bib:type='paper'>
+	
+	<bib:title> Conflictos armados durante la II guerra mundial </bib:title>
+	<bib:subtitle> Conflictos armados </bib:subtitle>
+	<bib:description> Este articulo repasa el contexto historico de la II guerra</bib:description>
+	
+	<bib:authors>
+		<bib:author bib:ref='LO.Social.User'> J. Alvarez de Olmedo </bib:author>		
+		<bib:author bib:ref='LO.Social.User'> A. Gomez Pacheco </bib:author>	
+	</bib:authors>	
+	<bib:publisher> Willey and sons </bib:publisher>
+	<bib:editors>
+		<bib:editor bib:ref='LO.Social.User'> Willey and sons. </bib:editor>	
+		<bib:editor bib:ref='LO.Social.User'> Jhonson Arroyo Eds.</bib:editor>	
+	</bib:editors>
+	<bib:volume> 12</bib:volume>
+	<bib:number> 23 </bib:number>
+	<bib:month> --03-- </bib:month>
+	<bib:year> 1995 </bib:year>
+	<bib:pages>123-234</bib:pages>
+	<bib:isbn>1234-54-4567</bib:isbn>
+	<bib:uri> http://www.foo.com/bar </bib:uri>
+</bib:bibReference>

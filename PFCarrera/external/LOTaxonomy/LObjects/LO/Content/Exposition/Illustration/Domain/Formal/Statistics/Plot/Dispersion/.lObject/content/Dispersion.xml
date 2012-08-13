@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+
+<ds:dispersion
+    xmlns:ds='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/dispersion'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/dispersion ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Dispersion/.lClass/schema/Dispersion.xsd'>
+
+	<ds:axes>
+		<ds:horizontal>
+			<ds:title/>
+			<ds:description/>
+		</ds:horizontal>
+		<ds:vertical>
+			<ds:title/>
+			<ds:description/>	
+		</ds:vertical>
+	</ds:axes>
+	
+	<ds:series>
+		<ds:serie ds:regression='true'>
+			<ds:legend>
+				<ds:title/>
+				<ds:description/>
+			</ds:legend>
+			<ds:data>
+				<ds:point ds:x='1' ds:y='12'/>
+				<ds:point ds:x='2' ds:y='15'/>
+				<ds:point ds:x='3' ds:y='17'/>
+				<ds:point ds:x='4' ds:y='4'/>
+			</ds:data>
+		</ds:serie>
+		
+		<ds:serie>
+			<ds:legend>
+				<ds:title/>
+				<ds:description/>
+			</ds:legend>
+			<ds:data>
+				<ds:point ds:x='1' ds:y='12'/>
+				<ds:point ds:x='2' ds:y='15'/>
+				<ds:point ds:x='3' ds:y='17'/>
+				<ds:point ds:x='4' ds:y='4'/>
+			</ds:data>
+		</ds:serie>	
+	</ds:series>
+	
+</ds:dispersion>

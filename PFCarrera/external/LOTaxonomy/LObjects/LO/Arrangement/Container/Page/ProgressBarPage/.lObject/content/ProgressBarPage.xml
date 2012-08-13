@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:progressbarpage
+    xmlns:ns='http://ltcs.uned.es/lo/arrangement/container/page/progressbarpage'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/arrangement/container/page/progressbarpage ./../../../../../../../temp/LObjects/LO/Arrangement/Container/Page/ProgressBarPage/.lClass/schema/ProgressBarPage.xsd'>
+
+</ns:progressbarpage>

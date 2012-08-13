@@ -1,0 +1,12 @@
+<sa:seeAlso
+	xmlns:sa='http://ltcs.uned.es/lo/content/exposition/reference/seeAlso'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/seeAlso ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/SeeAlso/.lClass/schema/SeeAlso.xsd'>
+	<sa:title/>
+	<sa:description/>
+	<sa:references>
+		<sa:reference sa:ref='LO.Content.Exposition.Reference'/>
+		<sa:reference sa:ref='LO.Content.Exposition.Reference'/>
+		<sa:reference sa:ref='LO.Content.Exposition.Reference'/>
+	</sa:references>
+</sa:seeAlso>

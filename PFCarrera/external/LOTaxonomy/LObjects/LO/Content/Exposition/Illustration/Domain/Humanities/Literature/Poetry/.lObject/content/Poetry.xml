@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+
+<po:poetry
+    xmlns:po='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/poetry'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/poetry ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Humanities/Literature/Poetry/.lClass/schema/Poetry.xsd'>
+
+	<po:title/>
+	<po:poem>
+		<po:stanza>
+			<po:verse/>
+			<po:verse/>
+			<po:verse/>
+		</po:stanza>
+		<po:stanza>
+			<po:verse/>
+			<po:verse/>
+			<po:verse/>
+		</po:stanza>
+		<po:stanza>
+			<po:verse/>
+			<po:verse/>
+			<po:verse/>
+		</po:stanza>
+	</po:poem>
+	<po:author po:ref='user'/>
+</po:poetry>

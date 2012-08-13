@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tc:tagCloud
+    xmlns:tc='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/tagcloud'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/tagcloud ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/TagCloud/.lClass/schema/TagCloud.xsd'>
+    
+	<tc:title/>
+	<tc:description/>
+	<tc:cloud>
+		<tc:tag tc:weight='15' tc:ref=''> XML </tc:tag>
+		<tc:tag tc:weight='10'> XML Schema </tc:tag>
+		<tc:tag tc:weight='3'> XML Pointer </tc:tag>
+		<tc:tag tc:weight='7'> DTD </tc:tag>
+		<tc:tag tc:weight='17'> XML Path </tc:tag>
+	</tc:cloud>
+    
+</tc:tagCloud>

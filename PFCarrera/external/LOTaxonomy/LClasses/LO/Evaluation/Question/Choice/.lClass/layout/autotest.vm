@@ -1,0 +1,138 @@
+
+<script language='javascript'>
+	$(document).ready(function() {
+		$('#${rrId} #cho-form').jqTransform({imgPath:'../resource/images/jqtransform/'});
+		$('#${rrId} .cho-comment').hide();
+	});
+</script>
+
+<div id='${rrId}' class='cho-choice'>
+	<div class='cho-title'> 
+		<img src='${settings.getResource('icon').location}' />
+		${content.getText('ch:choice/ch:title')} 
+	</div>
+	<div class='cho-question'> ${content.getText('ch:choice/ch:question')}  </div>
+	
+	<div class='cho-options'>		
+		#set ( $ids = ${content.getAllTexts('ch:choice/ch:options//ch:option/@ch:id')} )
+		#set ( $labels = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:label')} )
+		#set ( $descriptions = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:description')} )
+		#set ( $comments = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:comment')} )
+		#set ( $index = 0 )
+		<form id='cho-form'>
+			#foreach ($id in $ids)
+				<input id='cho-${id}' type='radio' name='response' value='$id'>
+					<div class='cho-option'>
+						#set ( $label = ${labels.get($index)} )
+						#set ( $description = ${descriptions.get($index)} )
+						#set ( $comment = ${comments.get($index)} )
+						<div class='cho-label'>${label}</div>
+						<div class='cho-description'>${description}</div>
+						<div id='cho-comment-${id}' class='cho-comment'>
+							<div class='cho-checked'></div>
+							${comment}
+						</div>
+					</div>
+				</input>			
+				#set ( $index = $index + 1 )
+			#end
+			<div class='cho-buttons'>
+				<span id='resolver' class='cho-button'> Resolver </span>
+				<span id='pista' class='cho-button'> Dame una pista </span>
+				<span id='ayuda' class='cho-button'> Ayuda </span>
+			</div>
+		</form>
+		
+		<!-- Helper functions -->
+		#set ( $imgCorrect = ${settings.getResource('correct').location} )
+		#set ( $imgIncorrect = ${settings.getResource('incorrect').location} )
+		#set ( $options  = ${content.getAllTexts('ch:choice/ch:options//ch:option/@ch:id')} )
+		#set ( $correct = ${content.getText('ch:choice/ch:options//ch:option[@ch:correct="true"]/@ch:id')} )
+		<script language='javascript'>
+			var _${rrId}_check = function (option) {
+				var correct = '${correct}';
+				var responseMsg  = "<img src='$imgCorrect'>   <strong> Lo correcto era esto! </strong> </img>";
+				var correctMsg   = "<img src='$imgCorrect'>   <strong> Correcto!   </strong> </img>";
+				var incorrectMsg = "<img src='$imgIncorrect'> <strong> Incorrecto! </strong> </img>";
+				var value        =  $('#${rrId} #cho-' + option + ':checked').val();
+				var message;
+				if (value==correct) message = correctMsg;
+				else if (option==correct) message = responseMsg;
+				else  message = incorrectMsg;
+				$('#${rrId} #cho-comment-' + option + ' .cho-checked').prepend(message);
+				return value
+			};
+			
+			var _${rrId}_checkAny = function (options) {
+				var correct = '${correct}';
+				var n       = options.length;			
+				var nOption = Math.floor(Math.random() * n);
+				var option  = options[nOption];
+				var checked = _${rrId}_isChecked (option);
+				if (!checked && option != correct) {
+					_${rrId}_check(option);
+					return option;
+				}
+				else {
+					options.splice(nOption, 1);
+					if (options.length > 0) 
+						_${rrId}_checkAny(options);
+					return;
+				}
+			}
+						
+			var _${rrId}_isChecked = function (option) {
+				return $('#${rrId} #cho-comment-' + option + ' .cho-checked').html() != '';
+			}
+			
+			var _${rrId}_reset = function (option) {
+				 $('#${rrId} #cho-comment-' + option + ' .cho-checked').empty();
+			}
+			
+			var _${rrId}_resetAll = function () {
+				#foreach ($option in $options)
+					_${rrId}_reset('${option}');
+				#end
+			}
+		</script>
+		
+		<!-- Button Handlers -->
+		<script language='javascript'>
+			$('#${rrId} .cho-button').hover(
+				function() {
+					$(this).css('font-weight', 'bold');
+				}, 
+				function() {
+					$(this).css('font-weight', 'normal');
+				}
+			);
+			
+			$('#${rrId} #resolver').click (function() {
+				var correct = '${correct}';
+				var value   = $('#${rrId} input:radio:checked').val();
+				_${rrId}_reset(correct);
+				_${rrId}_reset(value);
+				_${rrId}_check (value);
+				if (value != correct) _${rrId}_check (correct);
+				$('#${rrId} #cho-comment-' + value).show('slow');
+				$('#${rrId} #cho-comment-' + correct).show('slow');
+				$('#${rrId} #resolver').css('visibility', 'hidden');
+				return true;
+			});
+						
+			$('#${rrId} #pista').click (function() {
+				var options = [];
+				#foreach ($option in $options)
+					options.push ('${option}');
+				#end
+				var option = _${rrId}_checkAny(options);
+				if (option) $('#${rrId} #cho-comment-' + option).show('slow');
+				return true;
+			});
+			
+			$('#${rrId} #ayuda').click (function() {
+				return true;
+			});
+		</script>
+	</div>
+</div>

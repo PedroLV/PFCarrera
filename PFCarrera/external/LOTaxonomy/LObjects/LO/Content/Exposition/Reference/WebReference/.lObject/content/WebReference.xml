@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wr:webReference
+	xmlns:wr='http://ltcs.uned.es/lo/content/exposition/reference/webReference'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/webReference ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/WebReference/.lClass/schema/WebReference.xsd'>
+	<wr:title/>
+	<wr:description/>
+	<wr:reference wr:ref='LO.Content.Exposition.Reference'/>
+</wr:webReference>

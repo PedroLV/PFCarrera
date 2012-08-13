@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/legal'
+   xmlns:lg='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/legal'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='legal'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='text'
+           type='lg:TText'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TText'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:choice>
+        <xs:element
+           name='title'
+           type='lg:TTitle'/>
+        <xs:element
+           name='article'
+           type='lg:TArticle'/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTitle'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:choice>
+        <xs:element
+           name='chapter'
+           type='lg:TChapter'/>
+        <xs:element
+           name='article'
+           type='lg:TArticle'/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TChapter'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:choice>
+        <xs:element
+           name='section'
+           type='lg:TSection'/>
+        <xs:element
+           name='article'
+           type='lg:TArticle'/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSection'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:element
+         name='article'
+         type='lg:TArticle'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TArticle'>
+    <xs:sequence
+       maxOccurs='unbounded'>
+      <xs:element
+         name='item'
+         type='lo:TText'/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

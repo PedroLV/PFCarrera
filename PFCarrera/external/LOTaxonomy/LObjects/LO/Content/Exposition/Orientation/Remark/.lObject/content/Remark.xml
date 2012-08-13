@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?><ms:message
+    xmlns:ms='http://ltcs.uned.es/lo/content/exposition/orientation/remark'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/remark ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/Remark/.lClass/schema/Remark.xsd'
+    ms:type='note'>
+    
+	<ms:title/>
+	<ms:description/>
+
+</ms:message>

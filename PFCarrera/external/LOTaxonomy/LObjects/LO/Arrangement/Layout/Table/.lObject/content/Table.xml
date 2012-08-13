@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:table
+    xmlns:ns='http://ltcs.uned.es/lo/arrangement/layout/table'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/arrangement/layout/table ./../../../../../../../temp/LObjects/LO/Arrangement/Layout/Table/.lClass/schema/Table.xsd'>
+
+</ns:table>

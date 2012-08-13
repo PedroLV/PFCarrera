@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+
+<ps:propertySheet
+    xmlns:ps='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/propertysheet'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/propertysheet ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Data/PropertySheet/.lClass/schema/PropertySheet.xsd'>
+
+	<ps:title/>
+	<ps:caption/>
+	<ps:description/>	
+	<ps:properties>
+		<ps:property ps:name='a' ps:default='Hello!' ps:type='text'/>
+		<ps:property ps:name='b' ps:default='-5'     ps:type='decimal'/>
+		<ps:property ps:name='c' ps:default='3.2'  ps:type='float'/>
+		<ps:property ps:name='d' ps:default='true' ps:type='boolean'/>
+		<ps:property ps:name='e' ps:type='vocabulary'>
+			<ps:item ps:value='red' ps:default='true'/>
+			<ps:item ps:value='green'/>
+			<ps:item ps:value='blue'/>
+		</ps:property>
+	</ps:properties>
+	
+</ps:propertySheet>

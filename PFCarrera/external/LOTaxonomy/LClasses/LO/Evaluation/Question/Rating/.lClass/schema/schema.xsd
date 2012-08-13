@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/rating'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:rt='http://ltcs.uned.es/lo/evaluation/question/rating'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='rating'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='question'
+           type='lo:TText'/>
+        <xs:element
+           name='assets'
+           type='rt:TAssets'/>
+        <xs:element
+           minOccurs='0'
+           name='comment'
+           type='lo:TText'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TAssets'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='asset'
+         type='rt:TAsset'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TAsset'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='reference'
+         type='rt:TReference'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

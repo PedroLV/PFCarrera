@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/free'
+   xmlns:fr='http://ltcs.uned.es/lo/evaluation/question/free'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='free'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='question'
+           type='lo:TText'/>
+        <xs:element
+           name='response'
+           type='fr:TResponse'/>
+        <xs:element
+           name='comment'
+           type='lo:TText'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TResponse'>
+    <xs:sequence>
+      <xs:element
+         minOccurs='0'
+         name='vocabulary'
+         type='fr:TVocabulary'/>
+    </xs:sequence>
+    <xs:attribute
+       name='correct'
+       type='xs:string'
+       use='required'/>
+    <xs:attribute
+       name='weight'
+       type='fr:TWeight'
+       use='required'/>
+    <xs:attribute
+       name='type'
+       type='fr:TType'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TVocabulary'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='term'
+         type='fr:TTerm'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTerm'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='value'
+           type='lo:TTitle'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TType'>
+    <xs:restriction
+       base='xs:token'>
+      <xs:enumeration
+         value='text'/>
+      <xs:enumeration
+         value='number'/>
+      <xs:enumeration
+         value='date'/>
+      <xs:enumeration
+         value='vocabulary'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

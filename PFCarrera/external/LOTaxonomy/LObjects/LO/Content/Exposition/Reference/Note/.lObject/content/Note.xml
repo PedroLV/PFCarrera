@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nt:note 
+	xmlns:nt='http://ltcs.uned.es/lo/content/exposition/reference/note'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/note ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Note/.lClass/schema/Note.xsd'
+	nt:type='foot'>
+
+	<nt:title>Comunidad virtual de aprendizaje</nt:title>
+	<nt:description>
+		En ocasiones se utiliza este término para referirnos a la infraestructura
+	    tecnológica que da soporte a una comunidad de usuarios. En otras el término
+	    se refiere a la comunidad real que subyace. Nosotros nos referiremos en lo venidero
+	    a la primera de las acepcionmes.
+	</nt:description>
+</nt:note>

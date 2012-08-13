@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+
+<lg:legal
+    xmlns:lg='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/legal'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/humanities/literature/legal ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Humanities/Literature/Legal/.lClass/schema/Legal.xsd'>
+
+	<lg:title/>
+	<lg:description/>
+	<lg:text>
+		<lg:title>
+			<lg:chapter>
+				<lg:section>
+					<lg:article>
+						<lg:item/>
+						<lg:item/>
+					</lg:article>
+					<lg:article>
+						<lg:item/>
+						<lg:item/>
+					</lg:article>						
+				</lg:section>				
+				<lg:article>
+					<lg:item/>
+					<lg:item/>
+				</lg:article>
+				<lg:article>
+					<lg:item/>
+					<lg:item/>
+				</lg:article>				
+			</lg:chapter>
+			<lg:article>
+				<lg:item/>
+				<lg:item/>
+			</lg:article>
+			<lg:article>
+				<lg:item/>
+				<lg:item/>
+			</lg:article>
+		</lg:title>
+		<lg:article>
+			<lg:item/>
+			<lg:item/>
+		</lg:article>
+	</lg:text>
+</lg:legal>

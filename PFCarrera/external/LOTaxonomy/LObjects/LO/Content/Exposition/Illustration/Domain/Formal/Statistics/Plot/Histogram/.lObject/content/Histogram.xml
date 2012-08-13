@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+
+<hs:histogram
+    xmlns:hs='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/histogram'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/histogram ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Histogram/.lClass/schema/Histogram.xsd'>
+
+	<hs:axes>
+		<hs:horizontal>
+			<hs:title/>
+			<hs:description/>
+		</hs:horizontal>
+		<hs:vertical>
+			<hs:title/>
+			<hs:description/>	
+		</hs:vertical>
+	</hs:axes>
+	
+	<hs:series>
+		<hs:serie>
+			<hs:legend>
+				<hs:title/>
+				<hs:description/>
+			</hs:legend>
+			<hs:data>
+				<hs:range hs:class='1' hs:height='12'/>
+				<hs:range hs:class='2' hs:height='15'/>
+				<hs:range hs:class='3' hs:height='17'/>
+				<hs:range hs:class='4' hs:height='4'/>
+			</hs:data>
+		</hs:serie>
+		
+		<hs:serie>
+			<hs:legend>
+				<hs:title/>
+				<hs:description/>
+			</hs:legend>
+			<hs:data>
+				<hs:range hs:class='1' hs:height='12'/>
+				<hs:range hs:class='2' hs:height='15'/>
+				<hs:range hs:class='3' hs:height='17'/>
+				<hs:range hs:class='4' hs:height='4'/>
+			</hs:data>
+		</hs:serie>		
+	</hs:series>
+
+</hs:histogram>

@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<au:audio
+    xmlns:au='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/audio'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/audio ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Media/Audio/.lClass/schema/Audio.xsd'>
+
+	<au:title/>
+	<au:caption/>
+	<au:description/>
+	<au:resource au:uri=''>
+		<au:property au:name='rate' au:value='128'/>
+		<au:property au:name='start' au:value='1M14S'/>
+		<au:property au:name='format' au:value='mp3'/>
+	</au:resource>
+	
+</au:audio>

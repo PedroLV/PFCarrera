@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rm:remember
+    xmlns:rm='http://ltcs.uned.es/lo/content/exposition/orientation/remember'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/remember ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/Remember/.lClass/schema/Remember.xsd'>
+    
+	<rm:title/>
+	<rm:description/>
+    
+</rm:remember>

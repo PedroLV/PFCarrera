@@ -1,0 +1,16 @@
+<tb:testBook
+    xmlns:tb='http://ltcs.uned.es/lo/evaluation/questionnaire/testBook'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/questionnaire/testBook ./../../../../../../../LClasses/LO/Evaluation/Questionnaire/TestBook/.lClass/schema/TestBook.xsd'>
+    
+    <tb:title/>
+    <tb:description/>
+    <tb:instructions tb:ref='LO'/>
+    <tb:tests>
+    	<tb:test tb:ref='LO'/>
+    	<tb:test tb:ref='LO'/>
+    	<tb:test tb:ref='LO'/>
+    	<tb:test tb:ref='LO'/>
+    </tb:tests>	    
+
+</tb:testBook>

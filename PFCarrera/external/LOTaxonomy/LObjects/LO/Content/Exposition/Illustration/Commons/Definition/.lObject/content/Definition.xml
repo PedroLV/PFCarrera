@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<def:definition 
+	xmlns:def='http://ltcs.uned.es/lo/content/exposition/illustration/commons/definition'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/definition ./../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Definition/.lClass/schema/Definition.xsd'>
+	
+	<def:term> Term </def:term>
+	<def:description>
+		Lorem ipsum dolor sit amet, nec nisl pulvinar pulvinar. Arcu vestibulum nec fusce, tempor blandit,
+	    turpis sed enim arcu convallis, proin pellentesque donec, nibh quam velit morbi in vestibulum. 
+	    Morbi phasellus sapien ornare dapibus. Gravida dolor erat, cursus a, nibh imperdiet sociis sit interdum
+	    cursus, dolor magna  tincidunt auctor.	  
+	</def:description>
+	<def:reference def:ref='LO.Content.Exposition.Reference'>Autor</def:reference>
+	<def:seeAlso def:ref='LO.Content.Exposition.Reference.SeeAlso'/>
+	
+</def:definition>

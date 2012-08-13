@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+
+<sa:simpleAnswer
+    xmlns:sa='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer ./../../../../../../../LClasses/LO/Evaluation/Answer/SimpleAnswer/.lClass/schema/SimpleAnswer.xsd'>
+
+	<sa:question sa:ref='LO.12345'
+				 sa:class='LO.Evaluation.Question.LikertSheet'/>
+	
+	<sa:list>
+		<sa:id sa:value='M'/>
+		<sa:id sa:value='MM'/>
+		<sa:id sa:value='R'/>
+		<sa:id sa:value='M'/>
+		<sa:id sa:value='B'/>
+		<sa:id sa:value='MB'/>
+	</sa:list>			 
+	
+</sa:simpleAnswer>

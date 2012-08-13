@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+
+<rd:radial
+    xmlns:rd='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/radial'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/radial ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Radial/.lClass/schema/Radial.xsd'>
+
+	<rd:axes>
+		<rd:axis>
+			<rd:title/>
+			<rd:label/>
+			<rd:description/>
+		</rd:axis>
+		<rd:axis>
+			<rd:title/>
+			<rd:label/>
+			<rd:description/>
+		</rd:axis>
+		<rd:axis>
+			<rd:title/>
+			<rd:label/>
+			<rd:description/>
+		</rd:axis>
+		<rd:axis>
+			<rd:title/>
+			<rd:label/>
+			<rd:description/>
+		</rd:axis>
+	</rd:axes>
+	<rd:series>
+		<rd:serie>
+			<rd:legend>
+				<rd:title/>
+				<rd:description/>
+			</rd:legend>
+			<rd:data>
+				<rd:axis rd:value='12'/>
+				<rd:axis rd:value='2'/>
+				<rd:axis rd:value='3'/>
+				<rd:axis rd:value='4'/>
+			</rd:data>
+		</rd:serie>
+		
+		<rd:serie>
+			<rd:legend>
+				<rd:title/>
+				<rd:description/>
+			</rd:legend>
+			<rd:data>
+				<rd:axis rd:value='12'/>
+				<rd:axis rd:value='2'/>
+				<rd:axis rd:value='3'/>
+				<rd:axis rd:value='4'/>
+			</rd:data>
+		</rd:serie>	
+	</rd:series>
+	
+</rd:radial>

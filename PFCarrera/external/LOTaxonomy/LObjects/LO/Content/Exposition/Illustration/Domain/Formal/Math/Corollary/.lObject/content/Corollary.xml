@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+
+<cr:corollary
+    xmlns:cr='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/math/corollary'
+    xmlns:mt='http://www.w3.org/1998/Math/MathML'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/math/corollary ./../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Math/Corollary/.lClass/schema/Corollary.xsd'>
+
+	<cr:title/>
+	<cr:caption/>
+	<cr:label/>
+	<cr:description/>
+	<cr:statement>
+	    <mt:mrow>
+	      <mt:mi>a</mt:mi>
+	      <mt:mo>&#x2062;</mt:mo>
+	      <mt:msup>
+	        <mt:mi>x</mt:mi>
+	        <mt:mn>2</mt:mn>
+	      </mt:msup>
+	      <mt:mo>+</mt:mo>
+	      <mt:mi>b</mt:mi>
+	      <mt:mo>&#x2062;</mt:mo>
+	      <mt:mi>x</mt:mi>
+	      <mt:mo>+</mt:mo>
+	      <mt:mi>c</mt:mi>
+	    </mt:mrow>
+	</cr:statement>
+	
+</cr:corollary>

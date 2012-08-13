@@ -1,0 +1,13 @@
+<bib:bibliography
+    xmlns:bib='http://ltcs.uned.es/lo/content/exposition/reference/bibliography'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/bibliography ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Bibliography/.lClass/schema/Bibliography.xsd'>
+	<bib:title/>
+	<bib:description/>
+	<bib:references>
+		<bib:reference bib:ref='LO.Content.Exposition.Reference'/>
+		<bib:reference bib:ref='LO.Content.Exposition.Reference'/>
+		<bib:reference bib:ref='LO.Content.Exposition.Reference'/>
+	</bib:references>
+	
+</bib:bibliography>

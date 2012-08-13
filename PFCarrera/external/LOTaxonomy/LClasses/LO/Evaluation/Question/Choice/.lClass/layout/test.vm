@@ -1,0 +1,57 @@
+
+<script language='javascript'>
+	$(document).ready(function() {
+		$('#${rrId} #cho-form').jqTransform({imgPath:'../resource/images/jqtransform/'});
+	});
+</script>
+
+<div id='${rrId}' class='cho-choice'>
+	<div class='cho-title'> 
+		<img src='${settings.getResource('icon').location}' />
+		${content.getText('ch:choice/ch:title')} 
+	</div>
+	<div class='cho-question'> ${content.getText('ch:choice/ch:question')}  </div>
+	
+	<div class='cho-options'>
+		#set ( $ids = ${content.getAllTexts('ch:choice/ch:options//ch:option/@ch:id')} )
+		#set ( $labels = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:label')} )
+		#set ( $descriptions = ${content.getAllTexts('ch:choice/ch:options//ch:option/ch:description')} )
+		#set ( $index = 0 )
+		<form id='cho-form'>
+			#foreach ($id in $ids)
+				<input type='radio' name='response' value='$id'>
+					<div class='cho-option'>
+						#set ( $label = ${labels.get($index)} )
+						#set ( $description = ${descriptions.get($index)} )
+						<div class='cho-label'>${label}</div>
+						<div class='cho-description'>${description}</div>
+					</div>
+				</input>			
+				#set ( $index = $index + 1 )
+			#end
+			<div class='cho-buttons'>
+				<span id='responder' class='cho-button'> Responder </span>
+				<span id='ayuda' class='cho-button'> Ayuda </span>
+			</div>
+		</form>
+		
+		<script language='javascript'>
+			$('#${rrId} .cho-button').hover(
+				function () {
+					$(this).css('font-weight', 'bold');
+				}, 
+				function () {
+					$(this).css('font-weight', 'normal');
+				}
+			);
+			
+			$('#${rrId} #responder').click(function () {
+					return true;
+				});
+				
+			$('#${rrId} #ayuda').click(function () {
+					return true;
+				});
+		</script>
+	</div>
+</div>

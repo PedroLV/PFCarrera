@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+
+<ns:perspective
+    xmlns:ns='http://ltcs.uned.es/lo/arrangement/perspective'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/arrangement/perspective ./../../../../../../../temp/LObjects/LO/Arrangement/Perspective/.lClass/schema/Perspective.xsd'>
+
+</ns:perspective>

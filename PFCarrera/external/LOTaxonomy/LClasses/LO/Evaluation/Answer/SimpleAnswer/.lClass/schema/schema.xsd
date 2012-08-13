@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:sa='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='simpleAnswer'
+     type='sa:TSimpleAnswer'/>
+
+  <xs:element
+     name='empty'
+     type='sa:TEmpty'/>
+
+  <xs:element
+     name='id'
+     type='sa:TId'/>
+
+  <xs:element
+     name='option'
+     type='sa:TOption'/>
+
+  <xs:element
+     name='element'
+     type='sa:TElement'/>
+
+  <xs:element
+     name='text'
+     type='xs:string'/>
+
+  <xs:element
+     name='number'
+     type='sa:TNumber'/>
+
+  <xs:element
+     name='pair'
+     type='sa:TPair'/>
+
+  <xs:element
+     name='set'
+     type='sa:TSet'/>
+
+  <xs:element
+     name='list'
+     type='sa:TList'/>
+
+  <xs:complexType
+     name='TSimpleAnswer'>
+    <xs:sequence>
+      <xs:element
+         name='question'
+         type='sa:TQuestion'/>
+      <xs:choice>
+        <xs:element
+           ref='sa:empty'/>
+        <xs:element
+           ref='sa:id'/>
+        <xs:element
+           ref='sa:option'/>
+        <xs:element
+           ref='sa:element'/>
+        <xs:element
+           ref='sa:text'/>
+        <xs:element
+           ref='sa:number'/>
+        <xs:element
+           ref='sa:pair'/>
+        <xs:element
+           ref='sa:set'/>
+        <xs:element
+           ref='sa:list'/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TQuestion'>
+    <xs:attribute
+       name='ref'
+       type='lo:TExternalReference'
+       use='required'/>
+    <xs:attribute
+       name='class'
+       type='lo:TExternalReference'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TEmpty'/>
+
+  <xs:complexType
+     name='TId'>
+    <xs:attribute
+       name='value'
+       type='xs:NMTOKEN'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TOption'>
+    <xs:attribute
+       name='value'
+       type='xs:NMTOKEN'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElement'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='0'
+         name='property'>
+        <xs:complexType>
+          <xs:attribute
+             name='name'
+             type='xs:Name'
+             use='required'/>
+          <xs:attribute
+             name='value'
+             type='xs:string'
+             use='required'/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute
+       name='type'
+       type='xs:NMTOKEN'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TNumber'>
+    <xs:attribute
+       default='integer'
+       name='type'
+       type='xs:NMTOKEN'/>
+    <xs:attribute
+       name='value'
+       type='xs:string'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TPair'>
+    <xs:sequence
+       maxOccurs='2'>
+      <xs:group
+         ref='sa:GTypes'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     mixed='true'
+     name='TSet'>
+    <xs:sequence
+       maxOccurs='unbounded'
+       minOccurs='0'>
+      <xs:group
+         ref='sa:GTypes'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     mixed='true'
+     name='TList'>
+    <xs:sequence
+       maxOccurs='unbounded'
+       minOccurs='0'>
+      <xs:group
+         ref='sa:GTypes'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group
+     name='GTypes'>
+    <xs:choice>
+      <xs:element
+         ref='sa:empty'/>
+      <xs:element
+         ref='sa:id'/>
+      <xs:element
+         ref='sa:option'/>
+      <xs:element
+         ref='sa:element'/>
+      <xs:element
+         ref='sa:text'/>
+      <xs:element
+         ref='sa:number'/>
+      <xs:element
+         ref='sa:pair'/>
+      <xs:element
+         ref='sa:set'/>
+      <xs:element
+         ref='sa:list'/>
+    </xs:choice>
+  </xs:group>
+
+</xs:schema>
+

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+
+<br:bracket
+    xmlns:br='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/bracket'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/bracket ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/Bracket/.lClass/schema/Bracket.xsd'>
+
+	<br:element br:icon='ico.jpg'
+				br:ref='LO'>
+		<br:label/>
+		<br:caption/>
+		<br:branches>
+			<br:element br:icon='ico.jpg'
+						br:ref='LO'>
+				<br:label/>
+				<br:caption/>
+			</br:element>
+			<br:element br:icon='ico.jpg'
+						br:ref='LO'>
+				<br:label/>
+				<br:caption/>
+			</br:element>
+			<br:element br:icon='ico.jpg'
+						br:ref='LO'>
+				<br:label/>
+				<br:caption/>
+			</br:element>
+		</br:branches>
+	</br:element>
+		
+</br:bracket>

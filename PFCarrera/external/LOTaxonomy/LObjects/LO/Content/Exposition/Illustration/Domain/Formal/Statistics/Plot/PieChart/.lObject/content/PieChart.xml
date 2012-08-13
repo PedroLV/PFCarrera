@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+
+<pc:pieChart
+    xmlns:pc='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/piechart'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/piechart ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/PieChart/.lClass/schema/PieChart.xsd'>
+
+	<pc:piece pc:value='25' pc:label='A'>
+		<pc:title/>
+		<pc:description/>
+	</pc:piece>
+	<pc:piece pc:value='25' pc:label='B'>
+		<pc:title/>
+		<pc:description/>
+	</pc:piece>
+	<pc:piece pc:value='25' pc:label='C'>
+		<pc:title/>
+		<pc:description/>
+	</pc:piece>
+	<pc:piece pc:value='25' pc:label='D'>
+		<pc:title/>
+		<pc:description/>
+	</pc:piece>
+	
+</pc:pieChart>

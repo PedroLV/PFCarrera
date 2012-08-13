@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+
+<fr:form
+    xmlns:fr='http://ltcs.uned.es/lo/interactive/form'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/form ./../../../../../../LClasses/LO/Interactive/Form/.lClass/schema/Form.xsd'>
+
+	<fr:title/>
+	<fr:description/>
+	<fr:form>
+		<fr:box fr:label='User'>
+			<fr:field fr:name='name'  fr:label='Name'     fr:type='text'/>
+			<fr:field fr:name='last'  fr:label='Lasname'  fr:type='text'/>
+			<fr:field fr:name='age'   fr:label='Age'      fr:type='number'/>
+			<fr:field fr:name='birth' fr:label='birthday' fr:type='date'/>
+		</fr:box>
+		<fr:box fr:label='Address'>
+			<fr:field fr:name='street'  fr:label='Name'     fr:type='text'/>
+			<fr:field fr:name='number'  fr:label='Number'   fr:type='number'/>
+			<fr:field fr:name='country' fr:label='Country'  fr:type='vocabulary'>
+				<fr:term fr:id='es'>Spain</fr:term>
+				<fr:term fr:id='fr'>France</fr:term>
+			</fr:field>
+		</fr:box>				
+	</fr:form>
+	
+</fr:form>

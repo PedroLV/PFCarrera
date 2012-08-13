@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/interactive/vocabulary'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:vc='http://ltcs.uned.es/lo/interactive/vocabulary'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='vocabulary'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='vocabulary'
+           type='vc:TVocabulary'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TVocabulary'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='term'
+         type='vc:TTerm'/>
+    </xs:sequence>
+    <xs:attribute
+       name='name'
+       type='xs:token'
+       use='required'/>
+    <xs:attribute
+       name='value'
+       type='xs:IDREF'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTerm'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:string'>
+        <xs:attribute
+           name='id'
+           type='xs:ID'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

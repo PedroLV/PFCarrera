@@ -1,0 +1,26 @@
+<rt:rating
+    xmlns:rt='http://ltcs.uned.es/lo/evaluation/question/rating'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/rating ./../../../../../../../LClasses/LO/Evaluation/Question/Rating/.lClass/schema/Rating.xsd'>
+    
+    <rt:title/>
+    <rt:question/>
+    <rt:assets>
+  	    <rt:asset rt:id='a'>
+  	    	<rt:label/>
+	    	<rt:description/>
+	    	<rt:reference rt:ref='LO'/>
+  	    </rt:asset>
+    	<rt:asset rt:id='b'>
+  	    	<rt:label/>
+	    	<rt:description/>
+	    	<rt:reference rt:ref='LO'/>
+  	    </rt:asset>
+  	    <rt:asset rt:id='c'>
+  	    	<rt:label/>
+	    	<rt:description/>
+	    	<rt:reference rt:ref='LO'/>
+  	    </rt:asset>
+  	</rt:assets>
+    <rt:comment/>
+</rt:rating>

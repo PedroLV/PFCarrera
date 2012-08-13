@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/document'
+   xmlns:dc='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/document'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='document'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='caption'
+           type='lo:TText'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='resource'
+           type='dc:TResource'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TResource'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='0'
+         name='property'
+         type='dc:TProperty'/>
+    </xs:sequence>
+    <xs:attribute
+       name='uri'
+       type='lo:TLocalReference'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TProperty'>
+    <xs:attribute
+       name='name'
+       type='xs:Name'
+       use='required'/>
+    <xs:attribute
+       name='value'
+       type='xs:string'
+       use='required'/>
+  </xs:complexType>
+
+</xs:schema>
+

@@ -1,0 +1,138 @@
+<script language="javascript">
+	$(document).ready(function() {
+		$('#${rrId} .cos-header-description').hide ();
+		$('#${rrId} .cos-header-options').hide ();
+		$('#${rrId} .cos-questions').tablePagination({});
+	});
+</script>
+
+<div id='${rrId}' class='cos-choicesheet'>
+	<div class='cos-title'> 
+		<img src='${settings.getResource('icon').location}' />
+		${content.getText('cs:choiceSheet/cs:title')} 
+	</div>
+	<div class='cos-description'> ${content.getText('cs:choiceSheet/cs:description')}  </div>
+
+	#set ( $expand = ${settings.getResource('expand').location} )
+	#set ( $collapse = ${settings.getResource('collapse').location} )
+	#set ( $headerIds = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:header/cs:options//cs:option/@cs:id')} )
+	#set ( $headerLabels = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:header/cs:options//cs:option/cs:label')} )
+	#set ( $headerDescriptions = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:header/cs:options//cs:option/cs:description')} )
+	#set ( $index = 0 )
+	
+	<div id='cos-header-expand' class='cos-header-options-title'> 
+		Ver leyenda <img src='${expand}' /> 
+	</div>
+	
+	<div class='cos-header-options'>
+		<div id='cos-header-collapse' class='cos-header-options-inner-title'>
+			<img src='${collapse}' /> &emsp; Leyenda
+		</div>
+		#foreach ($id in $headerIds)
+			#set ( $headerLabel = ${headerLabels.get($index)} )
+			#set ( $headerDescription = ${headerDescriptions.get($index)} )
+			<div class='cos-header-option'>
+				<div class='cos-header-label'>
+					${id}. ${headerLabel}  
+					<span id='cos-header-description-expand-${id}'> <img src='${expand}' /> </span>
+				</div>
+				<div id='cos-header-description-${id}' class='cos-header-description'>
+					<span id='cos-header-description-collapse-${id}'> <img src='${collapse}' /> </span>
+					${headerDescription}
+				</div>
+			</div>
+		#end
+	</div>
+
+	#set ( $correctImg = ${settings.getResource('correct').location} )
+	#set ( $incorrectImg = ${settings.getResource('incorrect').location} )	
+	#set ( $questionLabels = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:rows//cs:row/cs:question/cs:label')} )
+	#set ( $questionDescriptions = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:rows//cs:row/cs:question/cs:description')} )
+	#set ( $corrects = ${content.getAllTexts('cs:choiceSheet/cs:sheet/cs:rows//cs:row/@cs:correct')} )
+	<form id='cos-form'>
+		<table id='${rrId}-table' class='cos-questions'>
+			<thead>
+				<tr class='cos-options'>
+					<th class='cos-questions-title'>Pregunta</th>
+					#foreach ($id in $headerIds)
+						<th class='cos-option'>${id}</th>
+					#end
+				</tr>
+			</thead>
+			<tbody>
+				#set ( $index = 0 )
+				#foreach ($label in $questionLabels)
+					#set ( $description = ${questionDescriptions.get($index)} )
+					#set ( $correct = ${corrects.get(${index})} )
+					<tr>
+						<td class='cos-question'>
+							#set ( $nQuestion = $index + 1 )
+							<div class='cos-label'>${nQuestion}. ${label}</div class='cos-label'>
+							<div class='cos-description'>${description}</div>	
+						</td>
+						#foreach ($id in $headerIds)
+							<td class='cos-check'> 
+								#if ($id == $correct) 
+									<img src='$correctImg' />
+								#else
+									<img src='$incorrectImg' />
+								#end
+							</td>
+						#end							
+					</tr>
+					#set ( $index = $index + 1 )
+				#end
+			</tbody>
+		</table>
+		
+		#set ($comment = ${content.getText('cs:choiceSheet/cs:comment')} )
+		#if (${comment.trim().length()} > 0)
+			<div class='cos-comment'>${comment}</div>
+		#end
+		
+		<div class='cos-buttons'>
+			<span id='ayuda' class='cos-button'> Ayuda </span>				
+		</div>
+	</form>
+		
+	<script language='javascript'>
+		$('#${rrId} .cos-button').hover(
+			function () {
+				$(this).css('font-weight', 'bold');
+			}, 
+			function () {
+				$(this).css('font-weight', 'normal');
+			}
+		);
+		
+		$('#${rrId} #cos-header-expand').click(function () {
+			$('#${rrId} .cos-header-options').show('slow');
+			$('#${rrId} #cos-header-expand').hide();
+			return true;
+		});
+		
+		$('#${rrId} #cos-header-collapse').click(function () {
+			$('#${rrId} .cos-header-options').hide('slow');
+			$('#${rrId} #cos-header-expand').show();
+			return true;
+		});
+		
+		#foreach ($id in $headerIds)
+			$('#${rrId} #cos-header-description-expand-${id}').click(function () {
+				$('#${rrId} #cos-header-description-${id}').show('slow');
+				$('#${rrId} #cos-header-description-expand-${id}').hide();
+				return true;
+			});
+			
+			$('#${rrId} #cos-header-description-collapse-${id}').click(function () {
+				$('#${rrId} #cos-header-description-${id}').hide('slow');
+				$('#${rrId} #cos-header-description-expand-${id}').show();
+				return true;
+			});
+		#end
+		
+		$('#${rrId} #ayuda').click(function () {
+				return true;
+			});
+	</script>
+</div>

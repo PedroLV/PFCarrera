@@ -1,0 +1,189 @@
+.cs-checksheet {
+	margin: 12px;
+    padding: 12px;
+}
+.cs-checksheet  input {
+	float: left;
+}
+.cs-checksheet .cs-title {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #036;
+	color:#036;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+.cs-checksheet .cs-description {
+	margin-left: 12px;
+	margin-top: 12px;
+	color: #555555;
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	text-align: justify;
+}
+
+.cs-checksheet  .cs-header-options {
+	background-color: #F4F4F4;
+	margin: 12px 12px 12px 40px;
+    padding: 12px 12px 12px 12px;
+	width: 600px;
+	border: 1px; 
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	border-left-color: #036;
+	border-left-width: 6px;	
+}
+.cs-checksheet  .cs-header-options-title {
+	color:#036;
+	margin: 20px 12px 12px 40px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+.cs-checksheet  .cs-header-options-inner-title {
+	color:#036;
+	margin: 5px 5px 10px 5px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+.cs-checksheet  .cs-header-option { 
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+.cs-checksheet  .cs-header-option .cs-header-label {
+	margin-left: 20px;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cs-checksheet  .cs-header-option .cs-header-description {
+	margin-top: 6px;
+	margin-left: 60px;
+	color:#555555;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	text-align: justify;
+}
+
+.cs-checksheet .cs-options {
+	color: #FFFFFF;
+	background-color: #036;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+.cs-checksheet .cs-option {
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+}
+
+.cs-checksheet .cs-questions {
+	margin: 20px 40px 20px 40px;
+}
+.cs-checksheet .cs-questions-title {
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-width:80%;
+}
+.cs-checksheet .cs-question {
+	padding-top: 10px;
+	padding-right: 20px;
+	background-color:#F5F5F5;
+}
+.cs-checksheet .cs-question .cs-label {
+	margin-left: 20px;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cs-checksheet .cs-question .cs-description {
+	margin-top: 6px;
+	margin-bottom: 10px;
+	margin-left: 35px;
+	color:#555555;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	text-align: justify;
+}
+.cs-checksheet .cs-check {
+	padding-top: 10px;
+	vertical-align: top;
+	text-align: center;
+	background-color:#F7F7F7;
+}
+.cs-checksheet .cs-buttons {	
+	margin-top: 40px;
+	padding: 5px;
+	padding-right: 10px;
+	width:100%;
+	text-align: right;
+}
+.cs-checksheet .cs-buttons .cs-button {	
+	margin: 5px;
+	padding: 10px;
+	border-style: solid;
+	border-color: #E0E0E0;
+	border-width: 1px;
+	border-bottom-color: #B0B0B0;
+	border-bottom-width: 1px;
+	border-right-color: #B0B0B0;
+	border-right-width: 1px;
+	color: #036;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+.cs-checksheet.cs-buttons .cs-button a:link {
+	color:#036;
+	font-weight: bold;
+	text-decoration:none;
+}
+.cs-checksheet.cs-buttons .cs-button  a:visited {
+	color:#036;
+	font-weight: bold;
+	text-decoration:none;
+}
+.cs-checksheet.cs-buttons .cs-button  a:hover {
+	color:#03F;
+	font-weight: bold;
+	text-decoration:none;
+}
+.cs-checksheet.cs-buttons .cs-button a:active {
+	color:#03F;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+.cs-checksheet .cs-comment {
+	margin-top: 40px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 6px;
+	clear: both;
+	background-color:#FFC;
+	border-color:#Fc6;
+	border-width: 1px;
+	border-style: solid;
+	color:#555555;
+	font-family:  Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	line-height:20px;
+	text-align: justify;
+}

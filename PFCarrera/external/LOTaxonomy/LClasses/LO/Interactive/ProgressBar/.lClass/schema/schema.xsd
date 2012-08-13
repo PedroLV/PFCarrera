@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/interactive/progressbar'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:pb='http://ltcs.uned.es/lo/interactive/progressbar'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='progressBar'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='bar'
+           type='pb:TBar'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TBar'>
+    <xs:simpleContent>
+      <xs:extension
+         base='xs:decimal'>
+        <xs:attribute
+           name='name'
+           type='xs:ID'
+           use='required'/>
+        <xs:attribute
+           name='url'
+           type='lo:TReference'
+           use='required'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

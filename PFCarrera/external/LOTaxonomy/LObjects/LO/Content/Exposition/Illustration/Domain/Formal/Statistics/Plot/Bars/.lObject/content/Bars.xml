@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+
+<br:bars
+    xmlns:br='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/bars'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/plot/statistics/bars ./../../../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Domain/Formal/Statistics/Plot/Bars/.lClass/schema/Bars.xsd'>
+
+	<br:axes>
+		<br:horizontal>
+			<br:title/>
+			<br:description/>	
+		</br:horizontal>
+		<br:vertical>
+			<br:title/>
+			<br:description/>
+		</br:vertical>
+	</br:axes>
+	<br:series>
+		<br:serie>
+			<br:legend>
+				<br:title/>
+				<br:description/>
+			</br:legend>
+			<br:data>
+				<br:element br:label='sony'    br:value='12'/>
+				<br:element br:label='pioner'  br:value='15'/>
+				<br:element br:label='philips' br:value='17'/>
+				<br:element br:label='sanyo'   br:value='4'/>
+			</br:data>
+		</br:serie>
+		
+		<br:serie>
+			<br:legend>
+				<br:title/>
+				<br:description/>
+			</br:legend>
+			<br:data>
+				<br:element br:label='sony'    br:value='12'/>
+				<br:element br:label='pioner'  br:value='15'/>
+				<br:element br:label='philips' br:value='17'/>
+				<br:element br:label='sanyo'   br:value='4'/>
+			</br:data>
+		</br:serie>		
+	</br:series>
+
+</br:bars>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/list'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:lt='http://ltcs.uned.es/lo/content/exposition/illustration/domain/formal/statistics/data/list'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='list'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='caption'
+           type='lo:TText'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='header'
+           type='lt:THeader'/>
+        <xs:element
+           name='data'
+           type='lt:TData'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='THeader'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='column'
+         type='lt:TColumn'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TColumn'>
+    <xs:attribute
+       name='name'
+       type='lo:TTitle'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TData'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='record'
+         type='lt:TRecord'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TRecord'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='item'
+         type='lo:TTitle'/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

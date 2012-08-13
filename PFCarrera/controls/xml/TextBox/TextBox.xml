@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDescriptor Name="TextBox" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
+	<!--<URL>controls/xml/</URL>
+	<Tab>Forms</Tab>
+	<ToolboxBitmap>TexBox.png</ToolboxBitmap>-->
+	<Designer><![CDATA[<div style="border: 1px solid #bfbfbf;background-color:white;height:18px">&nbsp</div> ]]></Designer>
+	<Settings>
+		<AllowResize>width</AllowResize>
+		<ResizeContainer>true</ResizeContainer>
+		<ResizeContent>true</ResizeContent>
+	</Settings>
+	<Properties>
+		<Property Name="Size" Category="Style" Behavior="Size">
+			<PropertyType typeName="Designer.PropertyTypes.Size">
+				<DefaultValue valueType="Designer.Size">150,20</DefaultValue><!-- width x height-->
+			</PropertyType>
+		</Property>
+		<Property Name="Position" Category="Style" Behavior="Position">
+			<PropertyType typeName="Designer.PropertyTypes.Position">
+				<DefaultValue valueType="Designer.Position"></DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property Name="Border" Category="Style">
+			<PropertyType typeName="Designer.PropertyTypes.Borders">
+				<DefaultValue valueType="Designer.Borders"></DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property Name="Font" Category="Style">
+			<PropertyType typeName="Designer.PropertyTypes.Font">
+				<DefaultValue valueType="Designer.FontSetting"></DefaultValue>
+			</PropertyType>
+
+		</Property>
+		<Property Name="Color" Category="Style">
+			<PropertyType cssStyle="color" typeName="Designer.PropertyTypes.ColorType">
+				<DefaultValue>#000000</DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property  Name="Text" Category="Editor">
+			<PropertyType HasHtmlContent="true" typeName="Designer.PropertyTypes.StringValue">
+				<DefaultValue></DefaultValue>
+			</PropertyType>
+		</Property>
+		<Property  Name="Maxlength" Category="Settings">
+			<PropertyType typeName="Designer.PropertyTypes.NumericValue">
+				<DefaultValue>0</DefaultValue>
+			</PropertyType>
+			
+		</Property>
+		<Property  Name="ReadOnly" Category="Settings">
+			<PropertyType typeName="Designer.PropertyTypes.BoolValue">
+				<DefaultValue>false</DefaultValue>
+			</PropertyType>
+			
+		</Property>
+	</Properties>
+</GenericDescriptor>

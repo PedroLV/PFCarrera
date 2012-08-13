@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<sd:slides
+    xmlns:sd='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/slides'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/slides ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Resource/Slides/.lClass/schema/Slides.xsd'>
+
+	<sd:title/>
+	<sd:caption/>
+	<sd:description/>
+	<sd:resource sd:uri=''>
+		<sd:property sd:name='propA' sd:value='a'/>
+		<sd:property sd:name='propB' sd:value='b'/>
+		<sd:property sd:name='propC' sd:value='c'/>
+	</sd:resource>
+
+</sd:slides>

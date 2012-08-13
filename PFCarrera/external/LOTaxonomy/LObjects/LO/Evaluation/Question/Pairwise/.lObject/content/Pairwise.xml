@@ -1,0 +1,49 @@
+<pw:pairwise
+    xmlns:pw='http://ltcs.uned.es/lo/evaluation/question/pairwise'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/pairwise ./../../../../../../../LClasses/LO/Evaluation/Question/Pairwise/.lClass/schema/Pairwise.xsd'>
+    
+    <pw:title/>
+    <pw:question/>
+  	<pw:pairs>
+  		<pw:pair pw:weight='33'>
+	  		<pw:element pw:id='a'>
+	  			<pw:label/>
+	  			<pw:description/>
+	  			<pw:reference pw:ref='LO'/>
+	  		</pw:element>
+	  		<pw:element pw:id='x'>
+	  			<pw:label/>
+	  			<pw:description/>
+	  			<pw:reference pw:ref='LO'/>  			
+	  		</pw:element>
+	  		<pw:comment/>
+  		</pw:pair>
+  		<pw:pair pw:weight='33'>
+	  		<pw:element pw:id='b'>
+	  			<pw:label/>
+	  			<pw:description/>
+	  			<pw:reference pw:ref='LO'/>
+	  		</pw:element>
+	  		<pw:element pw:id='y'>
+	  			<pw:label/>
+	  			<pw:description/>
+	  			<pw:reference pw:ref='LO'/>  			
+	  		</pw:element>
+	  		<pw:comment/>
+  		</pw:pair>
+  		<pw:pair pw:weight='33'>
+	  		<pw:element pw:id='c'>
+	  			<pw:label/>
+	  			<pw:description/>
+	  			<pw:reference pw:ref='LO'/>
+	  		</pw:element>
+	  		<pw:element pw:id='z'>
+	  			<pw:label/>
+	  			<pw:description/>
+	  			<pw:reference pw:ref='LO'/>  			
+	  		</pw:element>
+	  		<pw:comment/>
+  		</pw:pair> 		
+  	</pw:pairs>	
+</pw:pairwise>

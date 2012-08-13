@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/structure/lesson'
+   xmlns:le='http://ltcs.uned.es/lo/content/structure/lesson'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='lesson'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           maxOccurs='unbounded'
+           name='objectives'
+           type='le:TObjectives'/>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           minOccurs='0'
+           name='icon'
+           type='le:TPath'/>
+        <xs:element
+           minOccurs='0'
+           name='image'
+           type='le:TPath'/>
+        <xs:element
+           minOccurs='0'
+           name='quote'
+           type='le:TReference'/>
+        <xs:element
+           name='contents'
+           type='le:TContents'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TObjectives'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='objective'
+         type='le:TObjective'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TObjective'>
+    <xs:sequence>
+      <xs:element
+         minOccurs='0'
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         name='expression'
+         type='xs:string'>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TContents'>
+    <xs:sequence>
+      <xs:element
+         name='abstract'
+         type='le:TReference'/>
+      <xs:element
+         minOccurs='0'
+         name='outline'
+         type='le:TReference'/>
+      <xs:element
+         maxOccurs='unbounded'
+         name='topic'
+         type='le:TReference'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TPath'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TTitle'>
+        <xs:attribute
+           name='path'
+           type='lo:TPath'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

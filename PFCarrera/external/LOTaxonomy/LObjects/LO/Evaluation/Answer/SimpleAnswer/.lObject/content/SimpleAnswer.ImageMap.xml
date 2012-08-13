@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+
+<sa:simpleAnswer
+    xmlns:sa='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/answer/simpleanswer ./../../../../../../../LClasses/LO/Evaluation/Answer/SimpleAnswer/.lClass/schema/SimpleAnswer.xsd'>
+
+	<sa:question sa:ref='LO.12345'
+				 sa:class='LO.Evaluation.Question.ImageMap'/>
+	<sa:list>
+		<sa:pair>
+			<sa:number sa:value='113'/>
+			<sa:number sa:value='224'/>
+		</sa:pair>
+		<sa:pair>
+			<sa:number sa:value='45'/>
+			<sa:number sa:value='345'/>
+		</sa:pair>
+		<sa:pair>
+			<sa:number sa:value='76'/>
+			<sa:number sa:value='12'/>
+		</sa:pair>
+	</sa:list>	
+	
+</sa:simpleAnswer>

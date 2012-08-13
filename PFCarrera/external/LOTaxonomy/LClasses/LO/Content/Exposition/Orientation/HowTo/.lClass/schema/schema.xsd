@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/orientation/howto'
+   xmlns:ht='http://ltcs.uned.es/lo/content/exposition/orientation/howto'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='howTo'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='instructions'
+           type='ht:TInstructions'/>
+        <xs:element
+           minOccurs='0'
+           name='tips'
+           type='ht:TTips'/>
+        <xs:element
+           minOccurs='0'
+           name='warnings'
+           type='ht:TWarnings'/>
+        <xs:element
+           minOccurs='0'
+           name='seeAlso'
+           type='ht:TSeeAlso'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TInstructions'>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTips'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='tip'
+         type='ht:TTip'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTip'>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TWarnings'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='warning'
+         type='ht:TWarning'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TWarning'>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSeeAlso'>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

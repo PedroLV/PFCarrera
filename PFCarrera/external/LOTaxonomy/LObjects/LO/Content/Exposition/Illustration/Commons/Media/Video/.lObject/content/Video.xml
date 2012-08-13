@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<vd:video
+    xmlns:vd='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/video'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/video ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Media/Video/.lClass/schema/Video.xsd'>
+
+	<vd:title/>
+	<vd:caption/>
+	<vd:description/>
+	<vd:resource>
+		<vd:property vd:name='width'  vd:value='100'/>
+		<vd:property vd:name='height' vd:value='100'/>
+		<vd:property vd:name='format' vd:value='jpg'/>
+	</vd:resource>
+	
+</vd:video>

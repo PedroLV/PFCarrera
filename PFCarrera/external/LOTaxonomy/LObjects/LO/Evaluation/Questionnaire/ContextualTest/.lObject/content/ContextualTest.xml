@@ -1,0 +1,15 @@
+<ct:ContextualTest
+    xmlns:ct='http://ltcs.uned.es/lo/evaluation/questionnaire/contextualtest'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/questionnaire/contextualtest ./../../../../../../../LClasses/LO/Evaluation/Questionnaire/ContextualTest/.lClass/schema/ContextualTest.xsd'>
+    
+    <ct:title/>
+    <ct:description/>
+    <ct:questions>
+    	<ct:question ct:weight='25' ct:ref='LO'/>
+    	<ct:question ct:weight='25' ct:ref='LO'/>
+    	<ct:question ct:weight='25' ct:ref='LO'/>
+    	<ct:question ct:weight='25' ct:ref='LO'/>
+    </ct:questions>	    
+
+</ct:ContextualTest>

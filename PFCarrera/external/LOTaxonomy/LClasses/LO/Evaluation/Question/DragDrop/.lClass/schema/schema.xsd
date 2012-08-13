@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/evaluation/question/dragDrop'
+   xmlns:dd='http://ltcs.uned.es/lo/evaluation/question/dragDrop'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='dragDrop'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           minOccurs='0'
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='question'
+           type='lo:TText'/>
+        <xs:element
+           name='sourceSet'
+           type='dd:TSourceSet'/>
+        <xs:element
+           name='targetSets'
+           type='dd:TTargetSets'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TSourceSet'>
+    <xs:sequence>
+      <xs:element
+         minOccurs='0'
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='0'
+         name='element'
+         type='dd:TSourceElement'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TSourceElement'>
+    <xs:sequence>
+      <xs:element
+         name='name'
+         type='lo:TTitle'/>
+      <xs:element
+         name='description'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='reference'
+         type='dd:TReference'/>
+      <xs:element
+         minOccurs='0'
+         name='comment'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       name='ref'
+       type='xs:IDREF'
+       use='required'/>
+    <xs:attribute
+       name='weight'
+       type='dd:TWeight'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTargetSets'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         minOccurs='2'
+         name='targetSet'
+         type='dd:TTargetSet'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TTargetSet'>
+    <xs:sequence>
+      <xs:element
+         minOccurs='0'
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:simpleContent>
+      <xs:extension
+         base='lo:TText'>
+        <xs:attribute
+           name='ref'
+           type='lo:TLocalReference'
+           use='optional'/>
+        <xs:attribute
+           name='uri'
+           type='lo:TExternalReference'
+           use='optional'/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType
+     name='TWeight'>
+    <xs:restriction
+       base='xs:byte'>
+      <xs:minInclusive
+         value='0'/>
+      <xs:maxInclusive
+         value='100'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

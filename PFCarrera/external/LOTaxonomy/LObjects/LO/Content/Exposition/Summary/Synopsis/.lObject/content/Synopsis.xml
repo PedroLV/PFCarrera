@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sy:synopsis
+    xmlns:sy='http://ltcs.uned.es/lo/content/exposition/summary/synopsis'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/summary/synopsis ./../../../../../../../../LClasses/LO/Content/Exposition/Summary/Synopsis/.lClass/schema/Synopsis.xsd'>
+    
+	<sy:title/>
+	<sy:description/>
+    <sy:concepts>
+        <sy:concept>
+        	<sy:title/>
+        	<sy:description/>
+        </sy:concept>
+         <sy:concept>
+        	<sy:title/>
+        	<sy:description/>
+        </sy:concept>
+    </sy:concepts>
+    
+</sy:synopsis>

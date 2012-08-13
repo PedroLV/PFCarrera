@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+
+<ex:example
+    xmlns:ex='http://ltcs.uned.es/lo/content/exposition/illustration/commons/example'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/example ./../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Example/.lClass/schema/Example.xsd'>
+
+	<ex:title/>
+	<ex:caption/>
+	<ex:description/>
+	<ex:seeAlso ex:ref='LO'/>
+	
+</ex:example>

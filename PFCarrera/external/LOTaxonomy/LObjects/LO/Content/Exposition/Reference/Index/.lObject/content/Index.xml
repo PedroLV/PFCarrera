@@ -1,0 +1,35 @@
+<in:index
+    xmlns:in='http://ltcs.uned.es/lo/content/exposition/reference/index'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/index ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Index/.lClass/schema/Index.xsd'>
+                                                                    
+	<in:title/>
+	<in:description/>
+	<in:entries>
+		<in:entry>
+			<in:term/>
+			<in:references>
+				<in:reference in:ref='LO'/>
+				<in:reference in:ref='LO'/>
+				<in:reference in:ref='LO'/>
+			</in:references>
+		</in:entry>
+		<in:entry>
+			<in:term/>
+			<in:references>
+				<in:reference in:ref='LO'/>
+				<in:reference in:ref='LO'/>
+				<in:reference in:ref='LO'/>
+			</in:references>
+		</in:entry>
+		<in:entry>
+			<in:term/>
+			<in:references>
+				<in:reference in:ref='LO'/>
+				<in:reference in:ref='LO'/>
+				<in:reference in:ref='LO'/>
+			</in:references>
+		</in:entry>
+	</in:entries>
+	
+</in:index>

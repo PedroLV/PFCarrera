@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/graph'
+   xmlns:gr='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/graph'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='graph'>
+    <xs:complexType>
+      <xs:sequence
+         maxOccurs='unbounded'>
+        <xs:element
+           name='node'
+           type='gr:TNode'/>
+      </xs:sequence>
+      <xs:attribute
+         default='false'
+         name='directed'
+         type='xs:boolean'/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TNode'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='caption'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='links'
+         type='gr:TLinks'/>
+    </xs:sequence>
+    <xs:attribute
+       name='id'
+       type='xs:ID'
+       use='required'/>
+    <xs:attribute
+       name='icon'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLinks'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='link'
+         type='gr:TLink'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TLink'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='caption'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='icon'
+       type='lo:TLocalReference'/>
+    <xs:attribute
+       name='target'
+       type='xs:IDREF'
+       use='required'/>
+    <xs:attribute
+       name='weight'
+       type='xs:decimal'/>
+  </xs:complexType>
+
+</xs:schema>
+

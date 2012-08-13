@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ins:instructions
+	xmlns:ins='http://ltcs.uned.es/lo/content/exposition/orientation/instructions'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/instructions ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/Instructions/.lClass/schema/Instructions.xsd'>
+	
+	<ins:title/>
+	<ins:description/>
+	<ins:instructions ins:style='arabic'>
+		<ins:step> Sacar el huevo</ins:step>
+		<ins:step> Cascal el huevo</ins:step>
+		<ins:step> 
+			<ins:title> Freir el huevo </ins:title> 
+			<ins:description> Este es un paso complejo y peligroso</ins:description>
+			<ins:instructions ins:style='alpha'>
+				<ins:step> encender el fuego </ins:step>
+				<ins:step> echar aceite </ins:step>
+				<ins:step> esperar a que se caliente </ins:step>
+				<ins:step> vertir el huevo </ins:step>
+				<ins:step> sacar de la sarten </ins:step>
+				<ins:step> apagar el fuego </ins:step>
+			</ins:instructions>
+		</ins:step>
+		<ins:step> echar vinagre sobre el huevo </ins:step>
+		<ins:step> toma pan y moja </ins:step>
+	</ins:instructions>
+	<ins:conclusion/>
+</ins:instructions>

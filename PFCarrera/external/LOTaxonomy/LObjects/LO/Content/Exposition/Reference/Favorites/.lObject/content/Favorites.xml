@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fv:favorites
+	xmlns:fv='http://ltcs.uned.es/lo/content/exposition/reference/favorites'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/reference/favorites ./../../../../../../../../LClasses/LO/Content/Exposition/Reference/Favorites/.lClass/schema/Favorites.xsd'>
+
+	<fv:title>Mi lista de favoritos</fv:title>
+	<fv:description> Mira como mola </fv:description>
+	<fv:bookmarks>
+		<fv:bookmark fv:ref='LO'/>		
+		<fv:bookmark fv:ref='LO'/>
+		<fv:bookmark fv:ref='LO'/>
+	</fv:bookmarks>
+</fv:favorites>

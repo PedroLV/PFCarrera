@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+
+<gr:graph
+    xmlns:gr='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/graph'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/graph ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Diagram/Graph/.lClass/schema/Graph.xsd'>
+
+	<gr:node gr:id='A'>
+		<gr:label/>
+		<gr:caption/>
+		<gr:links>
+			<gr:link gr:target='A'
+					 gr:weight='0.3'>
+				<gr:label/>
+				<gr:caption/>
+			</gr:link>
+			<gr:link gr:target='B'
+					 gr:weight='0.3'>
+				<gr:label/>
+				<gr:caption/>
+			</gr:link>
+		</gr:links>
+	</gr:node>
+	
+	<gr:node gr:id='B'>
+		<gr:label/>
+		<gr:caption/>
+		<gr:links>
+			<gr:link gr:target='A'
+					 gr:weight='0.5'>
+				<gr:label/>
+				<gr:caption/>
+			</gr:link>
+			<gr:link gr:target='B'
+					 gr:weight='0.5'>
+				<gr:label/>
+				<gr:caption/>
+			</gr:link>
+		</gr:links>
+	</gr:node>
+	
+</gr:graph>

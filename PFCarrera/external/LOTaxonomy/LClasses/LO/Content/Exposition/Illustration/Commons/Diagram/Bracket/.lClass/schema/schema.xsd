@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/bracket'
+   xmlns:br='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/bracket'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='bracket'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='element'
+           type='br:TElement'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TElement'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         name='caption'
+         type='lo:TText'/>
+      <xs:element
+         minOccurs='0'
+         name='branches'
+         type='br:TBranch'/>
+    </xs:sequence>
+    <xs:attribute
+       name='icon'
+       type='lo:TLocalReference'/>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TBranch'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='element'
+         type='br:TElement'/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+

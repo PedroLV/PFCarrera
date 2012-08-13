@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<manifest id='LO.Evaluation.Questionnaire.Test.manifest.xml'
+          version='1.0'>
+    <lClass id='LO.Evaluation.Questionnaire.Test'
+            version='1.0'>
+           <label>LO.Evaluation.Questionnaire.Test</label>
+           <description/>
+    </lClass>
+    <views>
+        <view name='test'>
+            <settings>
+                <layout id='LO.Evaluation.Questionnaire.Test.layout.test.vm'/>
+                <styles>
+                    <style id='LO.Evaluation.Questionnaire.Test.style.test.css'/>
+                </styles><!--
+                <resources>
+                    <resource key='' id=''/>
+                    <resource key='' id=''/>
+                </resources>-->
+            </settings>
+        </view>
+    </views>
+</manifest>

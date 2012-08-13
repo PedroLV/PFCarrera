@@ -1,0 +1,136 @@
+Text & Fonts
+  - Typeface. http://typeface.neocracy.org/
+  - sIFR. http://wiki.novemberborn.net/sifr/
+  - TypeChart. http://www.typechart.com/
+
+Image
+  - Photo slider. http://www.queness.com/post/152/simple-jquery-image-slide-show-with-semi-transparent-caption (*)
+  - Calleria. http://galleria.aino.se/
+  - Fancy box. http://fancybox.net/ (*)
+  - fancy zoom. http://www.cabel.name/2008/02/fancyzoom-10.html
+  - Exposure. http://exposureforjquery.wordpress.com/
+  - Yoxview. http://www.yoxigen.com/yoxview/
+  - SpaceGallery. http://eyecon.ro/spacegallery/
+  - Zommy. http://redeyeoperations.com/plugins/zoomy/
+  - JQZoom. http://www.mind-projects.it/projects/jqzoom/ (*)
+  - Virtual Tool. http://www.openstudio.fr/jQuery-virtual-tour.html?lang=en
+  - Sliding boxes & captions. http://buildinternet.com/2009/03/sliding-boxes-and-captions-with-jquery/
+  - Runway. http://www.simile-widgets.org/runway/ (*)
+  - Malsup. http://malsup.com/jquery/cycle/ (*)
+  - JCarousel. http://sorgalla.com/jcarousel/ (*)
+  - Fancy transitions. http://workshop.rs/projects/jqfancytransitions/ (*)
+  - Fancy Gallery. http://codecanyon.net/item/fancy-gallery-jquery-plugin/157532
+  - Nivo slider. http://nivo.dev7studios.com/
+  - Waterwheel. http://www.bkosborne.com/jquery-waterwheel-carousel
+  - Crop Images. http://deepliquid.com/content/Jcrop.html (*)
+  - Thumbs. http://joanpiedra.com/jquery/thumbs/(*)
+  - CSS Globe. http://cssglobe.com/post/1695/easiest-tooltip-and-image-preview-using-jquery
+  - Image Cube. http://keith-wood.name/imageCube.html
+  
+Players
+  - Fancy music player. http://codecanyon.net/item/fancy-music-player-jquery-plugin/241595?ref=jtop
+  - Media. http://jquery.malsup.com/media/
+
+Graphics & charts
+  - Arrows & boxes. http://www.headjump.de/article/arrows-and-boxes
+  - Flot. http://code.google.com/p/flot/
+  - Highcharts. http://highcharts.com/ (*)
+  - Thejit. http://thejit.org/ (*)
+  - JSCharts. http://www.jscharts.com/ (*)
+  - Dygraphs. http://dygraphs.com/ (*)
+  - Jsxgraph. http://jsxgraph.uni-bayreuth.de/wp/ (*)
+  - Chart. http://chart.inetsoft.com/
+  - Jqplot. http://www.jqplot.com/
+  - Sparkline. http://www.omnipotent.net/jquery.sparkline/ (*)
+  - Smile widgets. http://www.simile-widgets.org/ (*)
+        - Timeline. http://www.simile-widgets.org/timeline/
+		- Timeplot. http://www.simile-widgets.org/timeplot/
+  - Protovis. http://mbostock.github.com/protovis/ (*)
+  
+Annotation
+  - Coddrops. http://tympanus.net/Development/WebsiteTour/
+  - Sliding boxes & captions. http://buildinternet.com/2009/03/sliding-boxes-and-captions-with-jquery/
+  - Annotation Overlay. http://tympanus.net/Tutorials/AnnotationOverlayEffect/
+  - Simple Tooltips. http://www.sohtanaka.com/web-design/examples/element-tooltip/
+  - ColorTips. http://tutorialzine.com/2010/07/colortips-jquery-tooltip-plugin/
+  - Photo slider. http://www.queness.com/post/152/simple-jquery-image-slide-show-with-semi-transparent-caption (*)
+  - Qtip. http://craigsworks.com/projects/qtip/ (*)
+  - Tipsy. http://onehackoranother.com/projects/jquery/tipsy/
+  - Coda Bubbles. http://jqueryfordesigners.com/coda-popup-bubbles/
+  
+Question
+  - Memory. http://demo.superdit.com/jquery_memory_game/
+  - jigsaw. http://www.bennadel.com/blog/1009-jQuery-Demo-Creating-A-Sliding-Image-Puzzle-Plug-In.htm
+  - List reorder. http://www.utdallas.edu/~jrb048000/ListReorder/
+  - List reorder. http://www.shopdev.co.uk/blog/sortable-lists-using-jquery-ui/
+  
+Effects & Interaction
+  - Quickflip. http://jonraasch.com/blog/quickflip-2-jquery-plugin
+  - jQueryHeatMap. http://www.tympanus.net/Tutorials/jQueryHeatMap/
+  - Spy effect. http://jqueryfordesigners.com/simple-jquery-spy-effect/
+  - Fade. http://jqueryfordesigners.com/image-cross-fade-transition/
+  - Reflection. http://cow.neondragon.net/stuff/reflection/
+  - Malsup. http://malsup.com/jquery/cycle/
+  - Inner fade. http://medienfreunde.com/lab/innerfade/
+  - Fancy transitions. http://workshop.rs/projects/jqfancytransitions/
+  
+Containers & forms
+  - Spy effect. http://jqueryfordesigners.com/simple-jquery-spy-effect/ (*)
+  - Slide Tabbed. http://www.hieu.co.uk/blog/index.php/2009/01/28/how-easy-to-create-a-slide-tabbed-box-using-jquery/
+  - Timetabs. http://www.tn34.de/projekte/downloads/jQuery.tn34.timetabs.html
+  - Wigmo. http://wijmo.com/
+  - Easy accordion. http://www.madeincima.eu/blog/jquery-plugin-easy-accordion/  (*)
+  - Rounded corners. http://blue-anvil.com/archives/anti-aliased-rounded-corners-with-jquery/ (*)
+  - QuickSand. http://razorjack.net/quicksand/ (*)
+  - Slides. http://slides.html5rocks.com/#web-storage (*)
+  - Moving boxex. http://css-tricks.com/2223-moving-boxes/ (*)
+  - Horizontal slide Nav. http://www.chazzuka.com/horizontal-slide-nav-using-jquery-css-93/ (*)
+  - Runway. http://www.simile-widgets.org/runway/ (*)
+  - Fancy box. http://fancybox.net/ (*)
+  - Malsup. http://malsup.com/jquery/cycle/ (*)
+  - Inner fade. http://medienfreunde.com/lab/innerfade/
+  - Grab bag. http://onehackoranother.com/projects/jquery/jquery-grab-bag/autogrow-textarea.html
+  - Input hint. http://onehackoranother.com/projects/jquery/jquery-grab-bag/input-hint.html
+  - JCarousel. http://sorgalla.com/jcarousel/ (*)
+  - checkbox. http://code.google.com/p/jquery-checkbox/
+  - Table sorter. http://tablesorter.com
+  - Star rating. http://plugins.learningjquery.com/half-star-rating/ (*)
+  - Image fade. http://jqueryfordesigners.com/image-fade-revisited/
+  - Fancy transitions. http://workshop.rs/projects/jqfancytransitions/ (*)
+  - Menu. http://tympanus.net/codrops/2010/06/28/awesome-cufonized-fly-out-menu/
+  - Nivo slider. http://nivo.dev7studios.com/
+  - Waterwheel. http://www.bkosborne.com/jquery-waterwheel-carousel
+  - Filter. http://net.tutsplus.com/tutorials/javascript-ajax/creating-a-filterable-portfolio-with-jquery/ (*)
+  - Xbreadcrumbs. http://www.ajaxblender.com/xbreadcrumbs.html (*)
+  - Modalbox. http://okonet.ru/projects/modalbox/index.html (*)
+  - Slider. http://blog.egorkhmelev.com/2009/11/jquery-slider-safari-style/
+  
+Layouts & grid
+  - Masonry. http://masonry.desandro.com/ (*)
+  - 5 steps. http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-designing-grid-systems-part-1
+  - 960 gs. http://960.gs/ http://www.designinfluences.com/fluid960gs/12/ (*)  
+  - Blueprint. http://www.blueprintcss.org/ (*)
+  - Gridr. http://gridr.atomeye.com/
+  - Mindplay. grid.mindplay.dk
+  - 29 digital. http://www.29digital.net/grid/
+  - CSS Reset. http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/ (*)
+  - UI Layouts. http://layout.jquery-dev.net/demos.cfm (*)
+  - Scroll. http://tympanus.net/Tutorials/WebsiteScrolling/ (*)
+  - Wizards. http://www.jankoatwarpspeed.com/post/2009/09/28/webform-wizard-jquery.aspx
+  - Sprites. http://www.spritely.net/gallery/
+  
+  
+Editors
+  - Ttnymce. http://tinymce.moxiecode.com/ (*)
+  - Nicedit. http://nicedit.com/ (*)
+  - Grab bag. http://onehackoranother.com/projects/jquery/jquery-grab-bag/autogrow-textarea.html
+  - http://markitup.jaysalvat.com/home/ (*)
+  
+Icons
+  - Open clipart. http://www.openclipart.org/
+  - Iconfactory. http://iconfactory.com/software/
+  - Rar e8. http://www.rad-e8.com/
+  - Pixelpress. http://www.pixelpressicons.com/
+  - Intefacelift. http://interfacelift.com/icons
+  - Weloveicons. http://weloveicons.com/
+  - Iconspedia. http://www.iconspedia.com/

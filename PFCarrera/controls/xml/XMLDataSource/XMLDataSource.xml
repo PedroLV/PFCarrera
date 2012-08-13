@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDescriptor Name="XMLDataSource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
+	<Designer><![CDATA[<img src="controls/xml/XMLDataSource/img/toolboxIcon.png" /> ]]></Designer>
+	<Settings>
+		<AllowResize>none</AllowResize>
+		<ResizeContainer>false</ResizeContainer>
+		<ResizeContent>false</ResizeContent>
+		<IsDataSource>true</IsDataSource>
+	</Settings>
+	<Properties>
+		<Property Name="Schema" Category="Editor">
+			<PropertyType typeName="Designer.PropertyTypes.FileSourceValue">
+				<DefaultValue valueType="Designer.Resource">LearningClass</DefaultValue>
+			</PropertyType>
+		</Property>
+	</Properties>
+</GenericDescriptor>

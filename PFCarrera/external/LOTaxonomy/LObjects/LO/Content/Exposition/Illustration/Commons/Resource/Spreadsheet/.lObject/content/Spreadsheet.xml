@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+
+<ss:spreadsheet
+    xmlns:ss='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/spreadsheet'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/resource/spreadsheet ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Resource/Spreadsheet/.lClass/schema/Spreadsheet.xsd'>
+
+	<ss:title/>
+	<ss:caption/>
+	<ss:description/>
+	<ss:resource ss:uri=''>
+		<ss:property ss:name='propA' ss:value='a'/>
+		<ss:property ss:name='propB' ss:value='b'/>
+		<ss:property ss:name='propC' ss:value='c'/>
+	</ss:resource>
+
+</ss:spreadsheet>

@@ -1,0 +1,31 @@
+<le:lesson
+    xmlns:le='http://ltcs.uned.es/lo/content/structure/lesson'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/structure/lesson ./../../../../../../../LClasses/LO/Content/Structure/Lesson/.lClass/schema/Lesson.xsd'>
+    
+	<le:objectives>
+		<le:objective>
+			<le:title> Prevención laboral </le:title>
+			<le:description> El alumno obtiene conocimiento de prevencion laboral </le:description>
+			<le:expression> $currentUser.skills += 'prevención laboral' </le:expression>
+		</le:objective>
+		<le:objective>
+			<le:title> Promoción generencial </le:title>
+			<le:description> El alumno adquiere rol de gestor </le:description>
+			<le:expression> $currentUser.role = 'manager' </le:expression>
+		</le:objective>
+	</le:objectives>
+	
+	<le:title/>
+	<le:description/>
+	<le:image le:path='./../image.gif'> </le:image>
+	<le:quote le:ref='LO.Content.Reference.Quote'/>
+	<le:contents>
+		<le:abstract le:ref='LO.Content.Summary.Abstract'/>
+		<le:outline le:ref='LO.Content.Summary.Outline'/>
+		<le:topic le:ref='LO.Content.Structure.Topic'/>
+		<le:topic le:ref='LO.Content.Structure.Topic'/>
+		<le:topic le:ref='LO.Content.Structure.Topic'/>
+	</le:contents>
+	
+</le:lesson>

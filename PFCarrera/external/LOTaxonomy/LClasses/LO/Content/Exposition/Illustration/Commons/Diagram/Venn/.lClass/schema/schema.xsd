@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/venn'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:vn='http://ltcs.uned.es/lo/content/exposition/illustration/commons/diagram/venn'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='venn'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           maxOccurs='unbounded'
+           name='set'
+           type='vn:TSet'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TSet'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='element'
+         type='vn:TElement'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TElement'>
+    <xs:sequence>
+      <xs:element
+         name='label'
+         type='lo:TTitle'/>
+      <xs:element
+         name='caption'
+         type='lo:TText'/>
+    </xs:sequence>
+    <xs:attribute
+       name='icon'
+       type='lo:TLocalReference'/>
+    <xs:attribute
+       name='ref'
+       type='lo:TReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

@@ -1,0 +1,62 @@
+  
+  #testTable { 
+	width : 350px;
+	margin-left: auto; 
+	margin-right: auto; 
+  }
+  
+  #tablePagination { 
+	background-color: #FFFFFF; 
+	font-size: 0.8em; 
+	padding: 0px 5px; 
+	height: 20px
+  }
+  
+  #tablePagination_paginater { 
+	margin-left: auto; 
+	margin-right: auto;
+  }
+  
+  #tablePagination img { 
+	padding: 0px 2px; 
+  }
+  
+  #tablePagination_perPage { 
+	float: right; 
+	margin-right: 40px;
+  }
+  
+  #tablePagination_paginater { 
+	float: left;
+	margin-left: 40px;
+	display: inline;
+  }
+  
+  #tablePagination_firstPage {
+ 	width: 32px;
+  	height: 32px;
+	float: left;
+	background-image:url(../resource/images/tablePagination/first.png);
+  }
+  
+  #tablePagination_prevPage {
+ 	width: 32px;
+  	height: 32px;
+	float: left;
+	background-image:url(../resource/images/tablePagination/prev.png);
+  }
+  
+  #tablePagination_nextPage {
+ 	width: 32px;
+  	height: 32px;
+	float: left;
+	background-image:url(../resource/images/tablePagination/next.png);
+  }
+  
+  #tablePagination_lastPage {
+ 	width: 32px;
+  	height: 32px;
+	float: left;
+	clear both;
+	background-image:url(../resource/images/tablePagination/last.png);
+  }

@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+
+<ok:ok
+    xmlns:ok='http://ltcs.uned.es/lo/interactive/ok'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/interactive/ok ./../../../../../../LClasses/LO/Interactive/Ok/.lClass/schema/Ok.xsd'>
+
+	<ok:title/>
+	<ok:description/>
+	<ok:ok ok:name='aceptar' ok:label='Enviar'>Aceptado</ok:ok>
+	
+</ok:ok>

@@ -1,0 +1,9 @@
+<div class='ts-test'>
+	#set ( $questionRefs = $content.getAllTexts('ts:test/ts:questions//ts:question/@ts:ref') )
+	#foreach ($questionRef	in $questionRefs)		
+		#set ( $question = $renderer.render($questionRef) )
+		<div id='ts-test-question-${index}'>
+			${question.result}
+		</div>
+	#end	
+</div>

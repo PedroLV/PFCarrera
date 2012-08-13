@@ -1,0 +1,10 @@
+	
+<div class='def-definition'>
+	<div class='def-term'> 
+		<img src='${settings.getResource('defIcon').location}' />
+		${content.getText('def:definition/def:term')} 
+	</div>
+	<div class='def-description'>
+		${content.getText('def:definition/def:description')}
+	</div>
+</div>

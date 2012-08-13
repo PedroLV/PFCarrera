@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+
+<ca:complexAnswer
+    xmlns:ca='http://ltcs.uned.es/lo/evaluation/answer/complexanswer'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/answer/complexanswer ./../../../../../../../LClasses/LO/Evaluation/Answer/ComplexAnswer/.lClass/schema/ComplexAnswer.xsd'>
+
+	<ca:test ca:ref='LO'
+			 ca:class='LO.Evaluation.Questionaire.ContextualTest'/>
+	
+	<ca:answers>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+		<ca:answer ca:ref='LO.Evaluation.Answer.SimpleAnswer.12345'/>
+	</ca:answers>
+	
+</ca:complexAnswer>

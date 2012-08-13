@@ -1,0 +1,44 @@
+<fb:fillInBlanks
+    xmlns:fb='http://ltcs.uned.es/lo/evaluation/question/fillInBlanks'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/evaluation/question/fillInBlanks ./../../../../../../../LClasses/LO/Evaluation/Question/FillInBlanks/.lClass/schema/FillInBlanks.xsd'>
+    
+    <fb:title/>
+    <fb:question/>
+    <fb:text>
+	    Lorem ipsum dolor sit amet, nec nisl pulvinar pulvinar. Arcu vestibulum nec fusce, tempor blandit,
+	    turpis sed enim arcu convallis, proin pellentesque donec, nibh quam velit morbi in vestibulum. 
+	    Morbi phasellus sapien ornare dapibus. Gravida dolor erat, cursus a, nibh imperdiet sociis sit interdum
+	    cursus, dolor magna  tincidunt auctor. Ut facilisis et, nibh 
+	    
+	    <fb:blank fb:id='blank01' 
+	    		  fb:weight='5' 
+	    		  fb:correct='reg-exp'
+	    		  fb:type='vocabulary'>
+	    	<fb:vocabulary>
+	    		<fb:term fb:value='a'/>
+	    		<fb:term fb:value='b'/>
+	    		<fb:term fb:value='c'/>
+	    		<fb:term fb:value='d'/>
+	    	</fb:vocabulary>
+	    </fb:blank>
+	    
+	    dignissim, tincidunt at viverra, arcu bibendum. Pulvinar ultricies. Quam wisi rutrum mauris sed donec in, 
+	    turpis nunc pharetra, metus in sociosqu sodales dolor hendrerit, aptent leo ac id vel quis nullam. Justo
+	    vitae non praesent nibh, lacus varius ultricies condimentum, cras sodales dictum ad, pede facilisis ac turpis. 
+
+	    Conubia convallis molestie vestibulum, enim 
+	    
+	    <fb:blank fb:id='blank02' 
+	    		  fb:weight='5' 
+	    		  fb:correct='reg-exp'
+	    		  fb:type='date'>
+	    </fb:blank>
+	    
+	    ligula, ut lacus pellentesque in, nullam sit elit tellus aliquam tristique at. Sed mauris et aliquet vestibulum
+	    praesent nibh, ultricies ante at in ullamcorper quisque placerat. Dapibus orci porta ac enim, curabitur quis
+	    eget urna. Et ultricies proin duis, quam lacinia mi proin erat sagittis, volutpat sit in commodo, sociosqu et.
+    </fb:text>
+    
+
+</fb:fillInBlanks>

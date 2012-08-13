@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kw:keywords
+    xmlns:kw='http://ltcs.uned.es/lo/content/exposition/summary/keywords'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/summary/keywords ./../../../../../../../../LClasses/LO/Content/Exposition/Summary/Keywords/.lClass/schema/Keywords.xsd'>
+    
+	<kw:title/>
+	<kw:description/>
+	<kw:keywords>
+		<kw:key> XML </kw:key>
+		<kw:key> XML Schema </kw:key>
+		<kw:key> XML Pointer </kw:key>
+		<kw:key> DTD </kw:key>
+		<kw:key> XML Path </kw:key>
+	</kw:keywords>
+    
+</kw:keywords>

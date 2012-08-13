@@ -1,0 +1,10 @@
+<to:topic
+    xmlns:to='http://ltcs.uned.es/lo/content/structure/topic'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/structure/topic ./../../../../../../../LClasses/LO/Content/Structure/Topic/.lClass/schema/Topic.xsd'>
+    
+    <to:title/>
+    <to:description/>
+    <to:contents/>
+   
+</to:topic>

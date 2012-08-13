@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faq:faq
+	xmlns:faq='http://ltcs.uned.es/lo/content/exposition/orientation/faq'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/orientation/faq ./../../../../../../../../LClasses/LO/Content/Exposition/Orientation/Faq/.lClass/schema/Faq.xsd'>
+
+	<faq:title/>
+	<faq:description/>
+	<faq:questions>
+		<faq:faq>
+			<faq:question/>
+			<faq:answer/>
+		</faq:faq>
+		<faq:faq>
+			<faq:question/>
+			<faq:answer/>
+		</faq:faq>
+	</faq:questions>
+	
+</faq:faq>

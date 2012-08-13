@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema
+   attributeFormDefault='qualified'
+   elementFormDefault='qualified'
+   targetNamespace='http://ltcs.uned.es/lo/content/exposition/reference/directory'
+   xmlns:dir='http://ltcs.uned.es/lo/content/exposition/reference/directory'
+   xmlns:lo='http://ltcs.uned.es/lo'
+   xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:import
+     namespace='http://ltcs.uned.es/lo'
+     schemaLocation='./../../../../../../.lClass/schema/LO.xsd'/>
+
+  <xs:element
+     name='directory'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element
+           name='title'
+           type='lo:TTitle'/>
+        <xs:element
+           name='description'
+           type='lo:TText'/>
+        <xs:element
+           name='entries'
+           type='dir:TEntries'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType
+     name='TEntries'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='entry'
+         type='dir:TEntry'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TEntry'>
+    <xs:sequence>
+      <xs:element
+         name='title'
+         type='lo:TTitle'/>
+      <xs:element
+         minOccurs='0'
+         name='description'
+         type='lo:TText'/>
+      <xs:choice>
+        <xs:element
+           name='reference'
+           type='dir:TReference'/>
+        <xs:element
+           name='references'
+           type='dir:TReferences'/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReferences'>
+    <xs:sequence>
+      <xs:element
+         maxOccurs='unbounded'
+         name='reference'
+         type='dir:TReference'/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType
+     name='TReference'>
+    <xs:attribute
+       name='ref'
+       type='lo:TLocalReference'/>
+  </xs:complexType>
+
+</xs:schema>
+

@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+
+<fg:figure
+    xmlns:fg='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/figure'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://ltcs.uned.es/lo/content/exposition/illustration/commons/media/figure ./../../../../../../../../../../LClasses/LO/Content/Exposition/Illustration/Commons/Media/Figure/.lClass/schema/Figure.xsd'>
+	
+	<fg:title/>
+	<fg:caption/>
+	<fg:description/>
+	<fg:resource fg:uri=''>
+		<fg:property fg:name='width' fg:value='100'/>
+		<fg:property fg:name='height' fg:value='100'/>
+		<fg:property fg:name='zWwidth' fg:value='300'/>
+		<fg:property fg:name='zHeight' fg:value='300'/>
+		<fg:property fg:name='format' fg:value='jpg'/>
+	</fg:resource>
+	
+</fg:figure>
