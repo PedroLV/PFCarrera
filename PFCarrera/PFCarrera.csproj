@@ -3995,7 +3995,9 @@
     <None Include="external\LOTaxonomy\Scripts\lObject\versioningLObjectRepository.groovy" />
     <None Include="external\XSD\Check-rclass\.lClass\layout\autotest.vm" />
     <None Include="external\XSD\Check-rclass\.lClass\layout\teacher.vm" />
-    <None Include="external\XSD\Check-rclass\.lClass\layout\test.vm" />
+    <None Include="external\XSD\Check-rclass\.lClass\layout\test.vm">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="external\XSD\Check-rclass\.lClass\schema\mdata\general.mdata.xsd">
       <SubType>Designer</SubType>
     </None>

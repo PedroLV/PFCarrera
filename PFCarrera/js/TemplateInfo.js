@@ -5,13 +5,13 @@
 //El constructor recibe como parámetro el engine que se encargará de la transformación de todos los elementos de la plantilla.
 Designer.TemplateInfo = function () {
     var _files = new Array(); //files or directories
-    
+
     this.GetFiles = function () { return _files; }
     this.AddFile = function (io) {
         io.Parent = this;
         _files.push(io);
     }
-    this.TemplateEngine = null; //engine de que transformará el template.
+    this.TemplateEngine = { Name: 'jQuery Templates', RenderMethod: 'tmpl' }; //engine de que transformará el template.
 }
 //Modela un objeto abstracto de tipo Input OutPut
 Designer.IO = function () {
@@ -39,6 +39,7 @@ Designer.Directory.prototype = new Designer.IO();
 Designer.File = function () {
     this.Source = new String();
     this.Destination = new String();
+    this.Data = null; //en el caso de resursos embebidos data contendrá en binario el fichero que se grabará
     this.Parent = null;
 }
 Designer.File.prototype = new Designer.IO();

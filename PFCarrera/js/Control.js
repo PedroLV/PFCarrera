@@ -4,7 +4,7 @@
 *   Designer.js
 * fontselector.js
 * colorpicker.js
- * Designer.PropertyTypes*
+* Designer.PropertyTypes*
 */
 //
 //
@@ -775,6 +775,9 @@ Designer.ControlSettings = function () {
     /*Devuelve true si el control es un origen de datos válido para bindar */
     this.IsDataSource = false;
 
+    /*Tipo de origen de datos. Jquery, XmlDataSource, otros*/
+    this.SourceType = false;
+
     /*Devuelve true en caso de que sea un control contenedor de otros controles.*/
     this.IsContainer = false;
 
@@ -940,7 +943,7 @@ Designer.Resource = function (resourceURL, resourceType) {
 
     this.ResourceURL = resourceURL;
     this.ResourceType = resourceType;
-    
+
 
 }
 
@@ -965,6 +968,8 @@ Designer.ControlProperty = function (parent, name, proptype, category, options) 
     /*nombre de la propiedad, debe coincidir con el miembro de datos al que se está accediendo.*/
     this.Name = name;
     this.Category = category;
+    /*Descripción de para qué sirve la propiedad */
+    this.Description = '';
     /* Tipo de la propiedad */
     this.PropertyType = proptype;
     /* reglas de validación complejas */

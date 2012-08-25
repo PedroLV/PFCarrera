@@ -111,8 +111,16 @@
 		
 	</xs:complexType>
 
+	<xs:complexType name="TemplateEngineType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="0" default="jQuery Templates" maxOccurs="1"/>
+			<xs:element name="RenderMethod" type="xs:string" maxOccurs="1" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
   <xs:complexType name="TemplateInfoType">
       <xs:sequence>
+		<xs:element name="TemplateEngine" type="TemplateEngineType" maxOccurs="1" minOccurs="0" nillable="true" use="optional"/>
         <xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
