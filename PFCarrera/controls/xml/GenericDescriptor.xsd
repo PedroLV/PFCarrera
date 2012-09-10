@@ -26,15 +26,16 @@
 							<xs:element name="ResizeContainer" type="xs:boolean" default="false"/>
 							<xs:element name="ResizeContent" type="xs:boolean" default="true"/>
 							<xs:element name="IsContainer" type="xs:boolean" default="false" minOccurs="0"/>
-							<xs:element name="IsDataSource" type="xs:boolean" default="false" minOccurs="0"/>
-              <xs:element name="PositionMode" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:pattern value="Absolute|FlowLayout"/>
-                  </xs:restriction>
-                </xs:simpleType>
-                
-              </xs:element>
+							<xs:element name="IsComponent" type="xs:boolean" default="false" minOccurs="0"/>
+							<xs:element name="SourceType" type="xs:token" default="" minOccurs="0"/>
+							<xs:element name="PositionMode" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="Absolute|FlowLayout"/>
+									</xs:restriction>
+								</xs:simpleType>
+
+							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -45,12 +46,12 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-        <xs:element name="TemplateInfo" type="TemplateInfoType" minOccurs="0"  maxOccurs="1"/>
+				<xs:element name="TemplateInfo" type="TemplateInfoType" minOccurs="0"  maxOccurs="1"/>
 			</xs:sequence>
 			<xs:attribute name="Name" type="xs:token" use="required"/>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:simpleType name="ResizeMode">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="none"/>
@@ -80,6 +81,7 @@
 		</xs:attribute>
 		<xs:attribute name="cssStyle" type="xs:token" use="optional" default="null"/>
 		<xs:attribute name="Visible" type="xs:boolean" use="optional" default="true"/>
+		<xs:attribute name="Description" type="xs:token" use="optional" default=""/>
 	</xs:complexType>
 	<xs:complexType name="PropertyType">
 		<xs:sequence>
@@ -100,7 +102,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			
+
 		</xs:sequence>
 		<xs:attribute name="typeName" type="xs:token" use="required"/>
 		<xs:attribute name="HasHtmlContent" type="xs:boolean" use="optional"/>
@@ -108,7 +110,7 @@
 		<xs:attribute name="cssStyle" type="xs:token" use="optional"/>
 		<xs:attribute name="ReadOnly" type="xs:boolean" use="optional"/>
 		<xs:attribute name="TextToDisplayFormat" type="xs:token" use="optional"/>
-		
+
 	</xs:complexType>
 
 	<xs:complexType name="TemplateEngineType">
@@ -118,38 +120,38 @@
 		</xs:sequence>
 	</xs:complexType>
 
-  <xs:complexType name="TemplateInfoType">
-      <xs:sequence>
-		<xs:element name="TemplateEngine" type="TemplateEngineType" maxOccurs="1" minOccurs="0" nillable="true" use="optional"/>
-        <xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-  </xs:complexType>
-  
-  <xs:complexType name="Template">
-    <xs:sequence>
-      <xs:element name="Name" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
-      <xs:element name="Template" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
-      <xs:element name="Destination" type="xs:string" minOccurs="0" default="" maxOccurs="1"/>
-    </xs:sequence>
-    
+	<xs:complexType name="TemplateInfoType">
+		<xs:sequence>
+			<xs:element name="TemplateEngine" type="TemplateEngineType" maxOccurs="1" minOccurs="0" nillable="true" use="optional"/>
+			<xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 
-  </xs:complexType>
-  <xs:complexType name="File">
-    <xs:sequence>
-      <xs:element name="Source" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
-      <xs:element name="Destination" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Directory">
-    <xs:sequence>
-      <xs:element name="Name" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
-      <xs:element name="Path" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
-      <xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
+	<xs:complexType name="Template">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+			<xs:element name="Template" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+			<xs:element name="Destination" type="xs:string" minOccurs="0" default="" maxOccurs="1"/>
+		</xs:sequence>
+
+
+	</xs:complexType>
+	<xs:complexType name="File">
+		<xs:sequence>
+			<xs:element name="Source" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+			<xs:element name="Destination" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Directory">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+			<xs:element name="Path" type="xs:string" minOccurs="1" default="" maxOccurs="1"/>
+			<xs:element name="Directory" type="Directory" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="File" type="File" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="Template" type="Template" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 
 </xs:schema>

@@ -5,7 +5,8 @@
 		<AllowResize>none</AllowResize>
 		<ResizeContainer>false</ResizeContainer>
 		<ResizeContent>false</ResizeContent>
-		<IsDataSource>true</IsDataSource>
+		<IsComponent>true</IsComponent>
+		<SourceType>dataSource</SourceType>
 	</Settings>
 	<Properties>
 		<Property Name="Schema" Category="Editor">

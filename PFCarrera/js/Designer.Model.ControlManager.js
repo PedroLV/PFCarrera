@@ -182,10 +182,10 @@ Designer.ControlManager = function (props_container) {
                     c.ParentControl = Designer.Model.Grid;
                 }
                 //en función del padre y del control, pueden pasar 3 cosas:
-                if(c.ControlDescriptor.Settings.IsDataSource == true){
+                if(c.ControlDescriptor.Settings.IsComponent == true){
                     //1º El control es de tipo DataSource. Este control debe posicionarse en el área destinada a los controles de datos.
                     c.ParentControl = Designer.Model.DataSources;
-                    c.$element.addClass("_isDatasource");
+                    c.$element.addClass("_IsComponent");
                 }
 
                 c.ParentControl.AddControl(c, true) //añado el elemento a la colección del padre.
@@ -233,10 +233,10 @@ Designer.ControlManager = function (props_container) {
             c.ParentControl = tmpParent;
 
             //en función del padre y del control, pueden pasar 3 cosas:
-            if(c.ControlDescriptor.Settings.IsDataSource == true){
+            if(c.ControlDescriptor.Settings.IsComponent == true){
                 //1º El control es de tipo DataSource. Este control debe posicionarse en el área destinada a los controles de datos.
                 c.ParentControl = Designer.Model.DataSources;
-                c.$element.addClass("_isDatasource");
+                c.$element.addClass("_IsComponent");
             }
 
             //2º Padre contenedor de tipo FlowLayout. El control debe fluir dentro del padre.
@@ -337,7 +337,7 @@ Designer.ControlManager = function (props_container) {
                 stop: StopDrag, //método que se ejecutará cuando se mueva un control.
                 drag: onDragging
             });
-            if(!c.ControlDescriptor.Settings.IsDataSource){
+            if(!c.ControlDescriptor.Settings.IsComponent){
             $element.resizable({
                 //alsoResize: $element.children()[0],
                 autoHide: true
@@ -444,7 +444,7 @@ Designer.ControlManager = function (props_container) {
     /*Devuelve la lista de controles que satisfaga la función pasado como parametro. Si el parametro es null, devuelve todos los controles.
     * selector : función de filtrado.
     *
-    * ejemplo getControls( function(c) { return c.IsDataSourceControl;} ) devolverá los controles que tengan esa propiedad a true.
+    * ejemplo getControls( function(c) { return c.IsComponentControl;} ) devolverá los controles que tengan esa propiedad a true.
     */
     this.getControls = function (selector) {
         var controles = new Array();
@@ -464,9 +464,10 @@ Designer.ControlManager = function (props_container) {
         return controles;
     }
 
-    this.GetAvariableSources = function() {
+    /*Devuelve la lista de controles presentes en el diseño del tipo indicado por el parámetro*/
+    this.GetAvariableSources = function(sourceType) {
     
-          var avariableSources =  this.getControls( function(c) { return c.ControlDescriptor.Settings.IsDataSource;});
+          var avariableSources =  this.getControls( function(c) { return c.ControlDescriptor.Settings.SourceType == sourceType;});
           var resultado = new Array();
           resultado.push("");
           jQuery.each(avariableSources, function (i, c) {
@@ -560,7 +561,7 @@ Designer.ControlManager = function (props_container) {
             }
         }
         
-        if(sender.ControlDescriptor.Settings.IsDataSource == true){
+        if(sender.ControlDescriptor.Settings.IsComponent == true){
             if(args.target == "ID"){
                 var dependencias = sender.GetDependencyList();//iuID,target
                 

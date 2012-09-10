@@ -71,6 +71,23 @@
     <Content Include="controls\ControlManifest.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="controls\xml\FancyBox\Control.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="controls\xml\FancyBox\img\toolboxIcon.png" />
+    <Content Include="controls\xml\FancyBox\resources\blank.gif" />
+    <Content Include="controls\xml\FancyBox\resources\fancybox_loading.gif" />
+    <Content Include="controls\xml\FancyBox\resources\fancybox_overlay.png" />
+    <Content Include="controls\xml\FancyBox\resources\fancybox_sprite.png" />
+    <Content Include="controls\xml\FancyBox\resources\helpers\fancybox_buttons.png" />
+    <Content Include="controls\xml\FancyBox\resources\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="controls\xml\FancyBox\resources\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="controls\xml\FancyBox\resources\helpers\jquery.fancybox-media.js" />
+    <Content Include="controls\xml\FancyBox\resources\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="controls\xml\FancyBox\resources\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="controls\xml\FancyBox\resources\jquery.fancybox.css" />
+    <Content Include="controls\xml\FancyBox\resources\jquery.fancybox.js" />
+    <Content Include="controls\xml\FancyBox\resources\jquery.fancybox.pack.js" />
     <Content Include="controls\xml\GenericDescriptor.js" />
     <Content Include="controls\xml\Label\img\textlabel.png" />
     <Content Include="controls\xml\Label\Label.xml" />

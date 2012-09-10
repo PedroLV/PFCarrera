@@ -309,7 +309,7 @@
 				Designer.Config.SelectableConfig = {
 					start: function (event, ui) {
 						Designer.Model.DataSources.$element.selectable( "unselectAll");
-                        Designer.Model.ControlManager.UnSelect(function(c) { return c.ControlDescriptor.Settings.IsDataSource == true;}); //hacking para mozilla
+                        Designer.Model.ControlManager.UnSelect(function(c) { return c.ControlDescriptor.Settings.IsComponent == true;}); //hacking para mozilla
 						consola.Log("DATASOURCES UNSELECT --> Grid ");
 					}
 					,
@@ -335,7 +335,7 @@
 				Designer.Model.DataSources.$element.selectable({
                      start: function (event, ui) {
                         Designer.Model.Grid.$element.selectable( "unselectAll");
-                        Designer.Model.ControlManager.UnSelect(function(c) { return c.ControlDescriptor.Settings.IsDataSource == false;}); //hacking para mozilla
+                        Designer.Model.ControlManager.UnSelect(function(c) { return c.ControlDescriptor.Settings.IsComponent == false;}); //hacking para mozilla
                         consola.Log("GRID UNSELECT --> DataSources ");
                     }
                     ,

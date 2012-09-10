@@ -21,20 +21,20 @@
 		<Icon>toolbox.png</Icon>
 		<Type>js</Type>
 	</ToolBoxInfo>
-  <ToolBoxInfo Tab="contenedores">
-    <Text>Stack Panel</Text>
-    <ControlName>StackPanel</ControlName>
-    <URL>controls/xml/StackPanel/</URL>
-    <Icon>toolbox.png</Icon>
-    <Type>xml</Type>
-  </ToolBoxInfo>
-  <ToolBoxInfo Tab="contenedores">
-    <Text>Repeater</Text>
-    <ControlName>Repeater</ControlName>
-    <URL>controls/xml/Repeater/</URL>
-    <Icon>toolbox.png</Icon>
-    <Type>xml</Type>
-  </ToolBoxInfo>
+	<ToolBoxInfo Tab="contenedores">
+		<Text>Stack Panel</Text>
+		<ControlName>StackPanel</ControlName>
+		<URL>controls/xml/StackPanel/</URL>
+		<Icon>toolbox.png</Icon>
+		<Type>xml</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="contenedores">
+		<Text>Repeater</Text>
+		<ControlName>Repeater</ControlName>
+		<URL>controls/xml/Repeater/</URL>
+		<Icon>toolbox.png</Icon>
+		<Type>xml</Type>
+	</ToolBoxInfo>
 	<ToolBoxInfo Tab="contenedores">
 		<Text>Panel</Text>
 		<ControlName>Panel_Control</ControlName>
@@ -60,6 +60,13 @@
 		<Text>XMLDataSource</Text>
 		<ControlName>XMLDataSource</ControlName>
 		<URL>controls/xml/XMLDataSource/</URL>
+		<Icon>toolboxIcon.png</Icon>
+		<Type>xml</Type>
+	</ToolBoxInfo>
+	<ToolBoxInfo Tab="jquery">
+		<Text>FancyBox</Text>
+		<ControlName>Control</ControlName>
+		<URL>controls/xml/FancyBox/</URL>
 		<Icon>toolboxIcon.png</Icon>
 		<Type>xml</Type>
 	</ToolBoxInfo>

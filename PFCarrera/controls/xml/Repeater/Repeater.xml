@@ -6,7 +6,7 @@
 		<ResizeContainer>true</ResizeContainer>
 		<ResizeContent>true</ResizeContent>
     <IsContainer>true</IsContainer>
-		<IsDataSource>false</IsDataSource>
+		<IsComponent>false</IsComponent>
 	</Settings>
 	<Properties>
     <Property Name="Size" Category="Style" Behavior="Size">
@@ -35,6 +35,11 @@
         <DefaultValue>;;;Collection</DefaultValue>
       </PropertyType>
     </Property>
+	<Property  Name="Plugin" Category="jQuery">
+		<PropertyType HasHtmlContent="false" typeName="Designer.PropertyTypes.ControlSourceType">
+			<DefaultValue></DefaultValue>
+		</PropertyType>
+	</Property>
 	</Properties>
   <TemplateInfo>
     <Template>

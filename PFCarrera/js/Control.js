@@ -772,10 +772,12 @@ Designer.ControlSettings = function () {
     /* Indica que cuando se redimensiona el contenedor, hay que establecer el tamaño del contenido con el nuevo tamaño */
     this.ResizeContent = true;
 
-    /*Devuelve true si el control es un origen de datos válido para bindar */
-    this.IsDataSource = false;
+    /*Devuelve true si el control es de tipo componente, esto es, no aparece en la zona del diseñador, aparece en la barra de componentes. */
+    this.IsComponent = false;
 
-    /*Tipo de origen de datos. Jquery, XmlDataSource, otros*/
+    /*Tipo de origen de datos. Jquery, XmlDataSource, otros. 
+    Hay controles cuyos valores para algunas propiedades son controles presentes en el diseñador. 
+    Esta propiedad determina un tipología para controles que pueden ser bindados a propiedades de otros controles*/
     this.SourceType = false;
 
     /*Devuelve true en caso de que sea un control contenedor de otros controles.*/

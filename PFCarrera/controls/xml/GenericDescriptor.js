@@ -1,11 +1,11 @@
-﻿ /* Depends:
- *	Control.js
- *  EventManager.js
- *  Default.aspx
- */
+﻿/* Depends:
+*	Control.js
+*  EventManager.js
+*  Default.aspx
+*/
 
 /* este control recibe un xml donde vienen especificados todos los detalles del descriptor */
-function  GenericDescriptor(xml) {
+function GenericDescriptor(xml) {
 
     var _instance = this;
     /*******************************/
@@ -26,8 +26,8 @@ function  GenericDescriptor(xml) {
             /*es un flag para el diseñador. Indica si el control puede cambiar su tamaño. Valores posibles Enum.ResizeMode = { none: 0, all: 1, width: 2, height:3 }*/
             _instance.Settings.AllowResize = getResizeMode(settings.find('AllowResize').text());
             _instance.Settings.ResizeContent = settings.find('ResizeContent').text().toLowerCase() == 'true';
-            _instance.Settings.IsContainer = settings.find('IsContainer').text().toLowerCase() == 'true';
-            _instance.Settings.IsDataSource = settings.find('IsDataSource').text().toLowerCase() == 'true';
+            _instance.Settings.IsContainer = settings.find('IsContainer').text().toLowerCase() == 'true';//determina si el control tiene una zona con controles hijos.
+            _instance.Settings.IsComponent = settings.find('IsComponent').text().toLowerCase() == 'true';//determina si el control aparece en el diseñador, o bien aparece en la barra de componentes.
             _instance.Settings.PositionMode = getPositionMode(settings.find('PositionMode').text());
         }
         //***************************************
@@ -74,7 +74,7 @@ function  GenericDescriptor(xml) {
         }
         //***************************************
 
-        
+
     }
 
     function CreateProperty(parent, property) {
@@ -84,7 +84,7 @@ function  GenericDescriptor(xml) {
         if (htmlContent != null && htmlContent.length == 1) {
             propertyType.HtmlContent = $(htmlContent).text();
         }
-        
+
 
         $.each(piNode[0].attributes, function (i, attrib) {
             var name = attrib.name;
@@ -96,9 +96,10 @@ function  GenericDescriptor(xml) {
         /*propertyType.HasHtmlContent = piNode.attr("HasHtmlContent");
         propertyType.RenderTarget = piNode.attr("RenderTarget");
         propertyType.cssStyle = piNode.attr("cssStyle");*/
-        var newProperty = new Designer.ControlProperty(parent, property.attr("Name"), propertyType, Enum.Categories.Style); //TODO reparar la categoria de la propiedad
-        if (parent.Properties == null) {parent.Properties = new Array(); }
-        
+        var newProperty = new Designer.ControlProperty(parent, property.attr("Name"), propertyType, getCategoryEnum(property.attr("Category")));
+        newProperty.Description = property.attr("Description") != null ? property.attr("Description") : "";
+        if (parent.Properties == null) { parent.Properties = new Array(); }
+
 
         var propertiesXML = piNode.children('Properties');
         if (propertiesXML.length == 1) {
@@ -113,15 +114,15 @@ function  GenericDescriptor(xml) {
                 if (valueType != null && valueType != '') {
                     valueType += ', ';
                 }
-                valueType += "\""+ subProperty.attr("Name") +"\"" + ":" + JSON.stringify(subPropertyType.GetDefaultValue());
+                valueType += "\"" + subProperty.attr("Name") + "\"" + ":" + JSON.stringify(subPropertyType.GetDefaultValue());
                 //Propiedad interna a un propertyType
                 CreateProperty(newProperty.PropertyType, subProperty);
 
-                newProperty.PropertyType.GetDefaultValue = function () { return JSON.parse('{' +valueType + '}'); }
+                newProperty.PropertyType.GetDefaultValue = function () { return JSON.parse('{' + valueType + '}'); }
             });
         }
         parent.Properties.push(newProperty);
-        
+
 
     }
 
@@ -152,7 +153,6 @@ function  GenericDescriptor(xml) {
             tmp.Name = getNode(templateXML, "Name");
             tmp.Destination = getNode(templateXML, "Destination");
             parent.AddFile(tmp);
-
         });
 
 
@@ -160,7 +160,7 @@ function  GenericDescriptor(xml) {
     /*******************************/
 
     //funcion auxiliar
-    function getNode(parent ,name, defaultValue) {
+    function getNode(parent, name, defaultValue) {
         var node = parent.children(name);
         if (node != null && node.length == 1) {
             return $(node).text();
@@ -168,13 +168,11 @@ function  GenericDescriptor(xml) {
             return defaultValue ? defaultValue : '';
         }
     }
-        
+
     /*Este metodo se ejecuta cuando se registra el descriptor del control en el diseñador */
     this.RegisterToolBox = function (tbInfo) {
 
-                    
         this.ToolBoxInfo = tbInfo;
-
     };
 
 
@@ -187,17 +185,17 @@ function  GenericDescriptor(xml) {
     //TODO getCategory.. meter tantas como existan en el enum.
 
     /*Obtiene el valor de la propiedad AllowResize a partir del texto pasado como parámetro*/
-    function getResizeMode(str){
-        
-        if(str == 'all'){
+    function getResizeMode(str) {
+
+        if (str == 'all') {
             return Enum.ResizeMode.all;
-        }else if(str == 'width'){
+        } else if (str == 'width') {
             return Enum.ResizeMode.width;
-        }else if(str == 'height'){
+        } else if (str == 'height') {
             return Enum.ResizeMode.height;
-        }else if(str == 'none'){
+        } else if (str == 'none') {
             return Enum.ResizeMode.none;
-        }else {
+        } else {
             return Enum.ResizeMode.none;
         }
     }
@@ -214,13 +212,34 @@ function  GenericDescriptor(xml) {
         }
     }
 
+    /*Obtiene el tipo enumerado Enum.Category a partir de un string*/
+    function getCategoryEnum(str) {
+
+        if (str == 'Style') {
+            return Enum.Categories.Style;
+        } else if (str == 'Data') {
+            return Enum.Categories.Data;
+        }
+        else if (str == 'Control') {
+            return Enum.Categories.Control;
+        }
+        else if (str == 'Settings') {
+            return Enum.Categories.Settings;
+        }
+        else if (str == 'Editor') {
+            return Enum.Categories.Editor;
+        } else {
+            return Enum.Categories.Style;
+        }
+    }
+
     /*Obtiene el editor a partir de los valores pasados como argumentos de la función.*/
     function getPropertyEditor(str, defaultValue, cssValue) {
 
         var valor = null;
         if (defaultValue == null || jQuery.trim(defaultValue.text()) == '') {
 
-        }else{
+        } else {
             valor = defaultValue.text();
         }
         var cssValor = null;
@@ -275,10 +294,6 @@ function  GenericDescriptor(xml) {
         else {
             return eval("new " + str + "(defaultValue, cssValor);");
         }
-        
+
     }
 }
-
-
-
-//

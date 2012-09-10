@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Este control se utiliza para añadir ficheros de recursos.-->
 <GenericDescriptor Name="XMLDataSource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
 	<Designer><![CDATA[<img src="controls/xml/XMLDataSource/img/toolboxIcon.png" /> ]]></Designer>
 	<Settings>
 		<AllowResize>none</AllowResize>
 		<ResizeContainer>false</ResizeContainer>
 		<ResizeContent>false</ResizeContent>
-		<IsDataSource>true</IsDataSource>
+		<IsComponent>true</IsComponent>
 	</Settings>
 	<Properties>
 		<Property Name="Schema" Category="Editor">

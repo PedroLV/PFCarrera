@@ -859,10 +859,10 @@ Designer.PropertyTypes.DataSourceType = function (defaultValue, cssName) {
 
     /* el texto que muestra en el editor */
     this.TextToDisplay = function (exp) { return this.Properties[1].PropertyType.TextToDisplay(exp.Width); }
-    var listaDataSources = new Designer.PropertyTypes.ListValue('', Designer.Model.ControlManager.GetAvariableSources());
+    var listaDataSources = new Designer.PropertyTypes.ListValue('', Designer.Model.ControlManager.GetAvariableSources('dataSource'));
     listaDataSources.IsValidSource = true;
     listaDataSources.UpdateValues = function () {
-        listaDataSources.ValuesToDisplay = Designer.Model.ControlManager.GetAvariableSources();
+        listaDataSources.ValuesToDisplay = Designer.Model.ControlManager.GetAvariableSources('dataSource');
 
     };
     this.InitProperties = function () {
@@ -1079,3 +1079,116 @@ Designer.PropertyTypes.FileSourceValue = function (defaultValue) {
     this.ID = 23;
 }
 Designer.PropertyTypes.FileSourceValue.prototype = new Designer.PropertyTypes.BasePropertyType();
+
+Designer.PropertyTypes.ControlSourceType = function (defaultValue, cssName) {
+    var _internal = null;
+    if (defaultValue != null) {
+        if (typeof defaultValue == 'string' || defaultValue.jquery) {
+            var arrdefault = defaultValue.jquery ? defaultValue.text().split(";") : defaultValue.split(";");
+            _internal = { Source: arrdefault.length > 0 ? arrdefault[0] : ""};
+        } else {
+            _internal = { Source: ""};
+        }
+    }
+    else {
+        _defaultValue = { Source: ""};
+    }
+
+    this.GetDefaultValue = function () {
+        return { Source: _internal.Source };
+    }
+
+    this.ReadOnly = true; //indica si el editor es readOnly para las propiedades que tienen desplegables
+    this.cssStyle = null; //indica el attributo css al que hace referencia esta propiedad
+    /* Determina si esta propiedad puede ser establecida o leída cuando hay varios controles seleccionados.  */
+    this.AllowMultiSelect = false; //no se puede gestionar con varios controles seleccionados  a la vez.
+
+    /* el texto que muestra en el editor */
+    this.TextToDisplay = function (exp) { return this.Properties[1].PropertyType.TextToDisplay(exp.Width); }
+    var listaDataSources = new Designer.PropertyTypes.ListValue('', Designer.Model.ControlManager.GetAvariableSources('jquery'));
+    listaDataSources.IsValidSource = true;
+    listaDataSources.UpdateValues = function () {
+        listaDataSources.ValuesToDisplay = Designer.Model.ControlManager.GetAvariableSources('jquery');
+    };
+    this.InitProperties = function () {
+        var sourceProperty = new Designer.ControlProperty(this, "Source", listaDataSources, null, { onBeforeRender: listaDataSources.UpdateValues });
+        sourceProperty.onChange = Designer.Model.ControlManager.SetIDDependency; //TODO que cuando cambie, borre el Member.
+        //Propiedad que se linka al origen de datos.
+        var targetProperty = new Designer.ControlProperty(this, "Target", new Designer.PropertyTypes.StringValue(), null, null);
+        targetProperty.Visible = false;
+        //Tipo de nodo que es posible linkar
+        var allowedTypesProperty = new Designer.ControlProperty(this, "AllowedTypes", new Designer.PropertyTypes.StringValue(), null, null);
+        allowedTypesProperty.Visible = false;
+        //Miembro del origen de datos que se linka
+        var memberProperty = new Designer.ControlProperty(this, "Member", new Designer.PropertyTypes.DataMemberType(), null, null)
+        memberProperty.onChange = function (sender, args) {
+            if (args.propValue.Member != '') {
+                var Arr_dataSource = Designer.Model.ControlManager.getControls(function (c) { return c.ID == args.propValue.Source; });
+                if (Arr_dataSource == null || Arr_dataSource.length == 0 || Arr_dataSource.length > 1) {
+                    Designer.Model.EventManager.HandleMessage(("Error, no se encontró el control {0} origen de datos para poder establecer el relleno de muestra para la propiedad {1}.").format(args.propValue.Source, args.propValue.Target), null, Enum.MessageType.Error);
+                    args.cancel = true;
+                    return false;
+                }
+                var dataSourceControl = Arr_dataSource[0];
+                if (dataSourceControl.Cache == null) {
+                    Designer.Model.EventManager.HandleMessage(("Error, el control {0} no está inicializado correctamente.").format(args.propValue.Source), null, Enum.MessageType.Error);
+                    args.cancel = true;
+                    return false;
+                }
+
+                var elementType = dataSourceControl.Cache[0].FindType(args.propValue.Member);
+                if (elementType == null) {
+                    Designer.Model.EventManager.HandleMessage(("Error, no se encontró el tipo de nodo para el xPath {0}.").format(args.propValue.Member), null, Enum.MessageType.Error);
+                    args.cancel = true;
+                    return false;
+                } else {
+                    var allow = true;
+                    //comprobación allowedTypes tipos permitidos.
+                    if (args.propValue.AllowedTypes && args.propValue.AllowedTypes != '') {
+                        if (args.propValue.AllowedTypes.indexOf('Collection') >= 0) {
+                            if (!elementType.IsCollection) {
+                                allow = false;
+                            }
+                        }
+                        if (args.propValue.AllowedTypes.indexOf('ComplexType') >= 0) {
+                            if (!elementType.Type.IsComlexType) {
+                                allow = false;
+                            } else {
+                                allow = true;
+                            }
+                        }
+                    }
+                    if (!allow) {
+                        Designer.Model.EventManager.HandleMessage(("Error, el nodo seleccionado no es válido. Sólo se permiten nodos de tipo: {0}.").format(args.propValue.AllowedTypes), null, Enum.MessageType.Error);
+                        args.cancel = true;
+                        return false;
+                    }
+
+                }
+
+                if (args.propValue.Target != null && args.propValue.Target != '') {
+                    sender.SetPropertyValue(args.propValue.Target, args.propValue.Target, elementType.Type.SampleValue, null);
+                }
+
+            }
+
+        };
+
+
+        //function (propName, member, memberValue, context)
+        this.Properties = new Array(
+            sourceProperty
+            , memberProperty
+            , targetProperty//
+            , allowedTypesProperty
+            ); // condensed array
+    }
+
+
+
+    /*Override. Devuelve la propiedad source porque la propiedad source contiene la referencia al origen de datos. */
+    this.GetValidSource = function () { return this.Properties[0]; };
+
+    this.ID = 21;
+}
+Designer.PropertyTypes.ControlSourceType.prototype = new Designer.PropertyTypes.BasePropertyType();

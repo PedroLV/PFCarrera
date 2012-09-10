@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDescriptor Name="Label" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://controls/xml/GenericDescriptor.xsd" xsi:noNamespaceSchemaLocation="../GenericDescriptor.xsd" >
+  <Designer><![CDATA[<img src="controls/xml/FancyBox/img/toolboxIcon.png" /> ]]></Designer>
+	<Settings>
+    <AllowResize>none</AllowResize>
+    <ResizeContainer>false</ResizeContainer>
+    <ResizeContent>false</ResizeContent>
+    <IsComponent>true</IsComponent>
+    <SourceType>jquery</SourceType>
+	</Settings>
+	<Properties>
+		<Property Name="Paddings" Category="Style" Description="Space inside fancyBox around content.">
+			<PropertyType typeName="Designer.PropertyTypes.Paddings">
+				<DefaultValue valueType="Designer.Padding"></DefaultValue>
+		  </PropertyType>
+		</Property>
+    <Property Name="Margin" Category="Style" Description="Minimum space between viewport and fancyBox.">
+      <PropertyType typeName="Designer.PropertyTypes.Paddings">
+        <DefaultValue valueType="Designer.Padding"></DefaultValue>
+      </PropertyType>
+    </Property>
+		<Property  Name="WidthValue" Category="Settings" Description="Default width for 'iframe' and 'swf' content. Also for 'inline', 'ajax' and 'html' if 'autoSize' is set to 'false'. Can be numeric or 'auto'.
+Number, String; Default value: 800">
+			<PropertyType typeName="Designer.PropertyTypes.NumericValue">
+				<DefaultValue>800</DefaultValue>
+			</PropertyType>
+		</Property>
+    <Property  Name="HeightValue" Category="Settings" Description="Default height for 'iframe' and 'swf' content. Also for 'inline', 'ajax' and 'html' if 'autoSize' is set to 'false'. Can be numeric or 'auto'
+Number, String; Default value: 600">
+      <PropertyType typeName="Designer.PropertyTypes.NumericValue">
+        <DefaultValue>600</DefaultValue>
+      </PropertyType>
+    </Property>
+    <Property  Name="MinWidth" Category="Settings" Description="Minimum width fancyBox should be allowed to resize to Number; Default value: 100">
+      <PropertyType typeName="Designer.PropertyTypes.NumericValue">
+        <DefaultValue>800</DefaultValue>
+      </PropertyType>
+    </Property>
+    <Property  Name="MinHeight" Category="Settings" Description="Minimum width fancyBox should be allowed to resize to Number; Default value: 100">
+      <PropertyType typeName="Designer.PropertyTypes.NumericValue">
+        <DefaultValue>600</DefaultValue>
+      </PropertyType>
+    </Property>
+    <Property  Name="AutoSize" Category="Settings" Description="If true, then sets both autoHeight and autoWidth to true Boolean; Default value: true">
+      <PropertyType typeName="Designer.PropertyTypes.BoolValue">
+        <DefaultValue></DefaultValue>
+      </PropertyType>
+    </Property>
+	<Property  Name="EnableEscapeButton" Category="Settings" Description="Toggle if pressing Esc button closes FancyBox; Default value: true">
+		<PropertyType typeName="Designer.PropertyTypes.BoolValue">
+			<DefaultValue></DefaultValue>
+		</PropertyType>
+	</Property>
+	<Property  Name="ShowCloseButton" Category="Settings" Description="Toggle close button; Default value: true">
+		<PropertyType typeName="Designer.PropertyTypes.BoolValue">
+			<DefaultValue></DefaultValue>
+		</PropertyType>
+	</Property>
+	<Property  Name="showNavArrows" Category="Settings" Description="Toggle navigation arrows; Default value: true">
+		<PropertyType typeName="Designer.PropertyTypes.BoolValue">
+			<DefaultValue></DefaultValue>
+		</PropertyType>
+	</Property>
+
+		
+	</Properties>
+	<TemplateInfo>
+		<Template>
+			<Name></Name>
+			<Template>
+				<![CDATA[
+	  <div>
+			  <div>
+				 <label id="${ID}" >${Text} </label>
+			  </div>
+		  </div>
+	  ]]>
+
+			</Template>
+			<Destination></Destination>
+		</Template>
+
+
+	</TemplateInfo>
+</GenericDescriptor>
+
